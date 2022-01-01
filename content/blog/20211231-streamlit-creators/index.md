@@ -1,6 +1,6 @@
 ---
 title: I am now a Streamlit Creator!
-date: "2021-12-31T22:00:00.000+09:00"
+date: "2021-12-31T23:00:00.000+09:00"
 description: I became a member of the Streamlit Creators program!
 ---
 
@@ -13,7 +13,7 @@ As written in the page, if you become a member of it,
 * they invite you to internal hackathon events!
 * they invite you to internal meetings!
 
-I actually received the swag on this month 😃
+I actually received the swag this month 😃
 
 https://twitter.com/whitphx/status/1472930605486993408
 
