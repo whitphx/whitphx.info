@@ -4,14 +4,13 @@ date: "2021-12-31T23:00:00.000+09:00"
 description: I became a member of the Streamlit Creators program!
 ---
 
-[Streamlit](https://streamlit.io/) is hosting [the Creators program](https://streamlit.io/creators) and invites some community members to it due to their contributions.
+[Streamlit](https://streamlit.io/) is hosting [the Creators program](https://streamlit.io/creators) and invites some community members to it due to their contributions to the community.
 
 A few months after I released my first OSS related to Streamlit, [`streamlit-webrtc`](https://github.com/whitphx/streamlit-webrtc), and posted [an article about it](https://discuss.streamlit.io/t/new-component-streamlit-webrtc-a-new-way-to-deal-with-real-time-media-streams/8669) at the community forum on January 2021, I got an invitation for the membership!
 
-As written in the page, if you become a member of it,
+As written on the page, if you become a member of it,
 * they give you original swag!
-* they invite you to internal hackathon events!
-* they invite you to internal meetings!
+* they invite you to internal meetings and hackathons!
 
 I actually received the swag this month 😃
 
