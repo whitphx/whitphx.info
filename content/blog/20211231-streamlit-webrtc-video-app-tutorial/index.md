@@ -2,6 +2,7 @@
 title: Developing web-based real-time video/audio processing apps quickly with Streamlit
 date: "2021-12-31T22:00:00.000+09:00"
 description: Streamlit is a powerful and easy-to-use Python framework for rapid web development. We can build real-time video/audio apps on top of it with a few lines of code.
+tags: ["dev"]
 ---
 
 # Overview

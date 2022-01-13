@@ -118,6 +118,42 @@ module.exports = {
             output: "/rss.xml",
             title: "whitphx Blog RSS Feed",
           },
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { tags: { in: "dev" } } },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                      tags
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.dev.xml",
+            title: "whitphx Blog RSS Feed, dev posts only",
+          },
         ],
       },
     },

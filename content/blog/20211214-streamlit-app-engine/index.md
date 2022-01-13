@@ -2,6 +2,7 @@
 title: How to deploy Streamlit apps to Google App Engine
 date: "2021-12-14T22:00:00.000+09:00"
 description:
+tags: ["dev"]
 ---
 
 # Things to know
@@ -18,7 +19,7 @@ Streamlit heavily relies on WebSockets for the communication between the server 
 You **do not have to** use a custom runtime (an original Docker image).
 The flexible environment offers an official Python runtime as https://cloud.google.com/appengine/docs/flexible/python/runtime and you can use it.
 
-You can also use a custom runtime. For example, it is a nice option when you want to use a different Python version from the one provided as the official runtime or when you already have a working Docker image.
+Still, you can also use a custom runtime. For example, it is a nice option when you want to use a different Python version or when you already have a working Docker image.
 
 NOTE:
 As of 2021/12/12, [the document](https://cloud.google.com/appengine/docs/flexible/python/runtime) says the Python version on the built-in Python3 runtime is `3.7.2`, but it is actually `3.6.10` known from `sys.version` at least in the `asia-northeast1` zone (Tokyo).
