@@ -15,14 +15,14 @@ Since such apps are web-based, they can be deployed to the cloud, shared with us
 
 This tech stack is useful for creating demos and prototyping ideas of video/audio apps such as human or object detection, style transfer, image filters, speech recognition, video chat apps, and more.
 
-![](./images/streamlit-webrtc-object-detection-demo-15sec.gif)
+![](./images/streamlit-webrtc-object-detection-demo-15sec.gif)<br>
 *A sample web-based object detection app. Users can change the threshold interactively during execution. [Online demo🎈](https://share.streamlit.io/whitphx/streamlit-webrtc-example/main/app.py)*
 
 
-![](./images/streamlit-webrtc-style-transfer-demo-20sec.gif)
+![](./images/streamlit-webrtc-style-transfer-demo-20sec.gif)<br>
 *A sample web-based style transfer app. Users can change model type and model parameters interactively during execution. [Online demo🎈](https://share.streamlit.io/whitphx/style-transfer-web-app/main/app.py)*
 
-You can see more examples at [the _examples_ section](#examples)
+You can see more examples at [the _examples_ section](#examples).
 
 NOTE:
 These sample apps are hosted on the public cloud ([Streamlit Cloud](https://streamlit.io/cloud)), and the video and audio streams are transmitted to and processed at the cloud server. While those data are only processed on memory and not saved to any storage, however, if you are concerned, please do not use them.
