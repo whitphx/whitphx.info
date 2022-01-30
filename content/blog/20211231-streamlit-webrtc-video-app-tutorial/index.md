@@ -53,9 +53,9 @@ Compared to the GUI apps like above using `cv2.VideoCapture` and `cv2.imshow` th
 * Easy to share and run:
   * If we deploy the apps on the cloud, we can share the apps with our users simply by sending the URLs.
   * The users can use the apps only by accessing them through web browsers. It does not require any set-ups or external dependencies.
-* Usable on smartphones
+* Usable on smartphones:
   * Because all the users need is web browsers, the users can use the apps on their smartphones. It's convenient if we can show demos on such portable devices.
-* User-friendly UIs.
+* User-friendly UIs:
   * Developers can use text inputs, sliders, or other web-based components to accept user inputs or show data. Such web-based UIs are more friendly for users than desktop GUIs in recent days.
 
 # Tutorial
@@ -256,7 +256,7 @@ It makes some restrictions as below.
 * Streamlit methods such as `st.write()` cannot be used inside `.recv()`.
 * Communications between inside and outside `.recv()` must be thread-safe.
 
-In the previous example, we passed values from the global scope to `.recv()` since we cannot use `global` and refer to these values from inside `.recv()`.
+In the previous example, we passed values from the global scope to `.recv()` through the instance attributes since we cannot use `global` and refer to these values from inside `.recv()`.
 
 # Deploy the app to the cloud
 We are going to make the web app available to everyone by deploying it to the cloud.
@@ -321,7 +321,7 @@ This section is a copy of the sample list at https://github.com/whitphx/streamli
 
 ## Showcase including following examples and more
 [⚡️Repository](https://github.com/whitphx/streamlit-webrtc-example), [🎈Online demo](https://share.streamlit.io/whitphx/streamlit-webrtc-example/main/app.py)
-* Object detection
+* Object detection (This is the sample app a screenshot of which is at the beginning of this article)
 * OpenCV filter
 * Uni-directional video streaming
 * Audio processing
@@ -338,10 +338,14 @@ $ streamlit run https://raw.githubusercontent.com/whitphx/streamlit-webrtc-examp
 It converts your voice into text in real time.
 This app is self-contained; it does not depend on any external API.
 
+![](./images/stt-sample.gif)
+
 ## Real-time video style transfer
 [⚡️Repository](https://github.com/whitphx/style-transfer-web-app), [🎈Online demo](https://share.streamlit.io/whitphx/style-transfer-web-app/main/app.py)
 
 It applies a wide variety of style transfer filters to real-time video streams.
+
+![](./images/streamlit-webrtc-style-transfer-demo-20sec.gif)
 
 ## Video chat
 [⚡️Repository](https://github.com/whitphx/streamlit-video-chat-example)
@@ -349,10 +353,14 @@ It applies a wide variety of style transfer filters to real-time video streams.
 
 You can create video chat apps with ~100 lines of Python code.
 
+![](./images/video-chat-example.jpg)
+
 ## Tokyo 2020 Pictogram
 [⚡️Repository](https://github.com/whitphx/Tokyo2020-Pictogram-using-MediaPipe): [🎈Online demo](https://share.streamlit.io/whitphx/tokyo2020-pictogram-using-mediapipe/streamlit-app)
 
 [MediaPipe](https://google.github.io/mediapipe/) is used for pose estimation.
+
+https://twitter.com/whitphx/status/1422115806196867072
 
 # What about audio?
 You can deal with audio streams in a similar way as video. If you define a class with `.recv()` method and pass it to the `audio_processor_factory` argument, the callback will be executed with audio frames.
