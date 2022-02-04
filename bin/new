@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+const path = require("path")
+const fsPromises = require("fs/promises")
+const formatDate = require("date-fns/format")
+const formatDateISO = require("date-fns/formatISO")
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+
+const ROOT = path.resolve(path.join(__dirname, "../"))
+
+const createNewPost = async (options) => {
+  const now = new Date();
+  const datePrefix = formatDate(now, "yyyyMMdd");
+  const dirName = `${datePrefix}-${options.slug}`;
+  const dirPath = path.join(ROOT, "./content/blog", dirName);
+
+  const indexMdPath = path.join(dirPath, "index.md")
+  const indexMdContent = `---
+title:
+date: "${formatDateISO(now)}"
+description:
+tags: []
+---
+`
+
+  const imageDirPath = path.join(dirPath, "./images")
+
+  console.log(`Create a directory ${dirPath}`);
+  await fsPromises.mkdir(dirPath, { recursive: true });
+
+  console.log(`Create a file ${indexMdPath}`)
+  await fsPromises.writeFile(indexMdPath, indexMdContent)
+
+  console.log(`Create a directory ${imageDirPath}`);
+  await fsPromises.mkdir(imageDirPath, { recursive: true });
+}
+
+const argv = yargs(hideBin(process.argv))
+  .command('$0 <slug>', 'Create a new blog entry', () => {}, createNewPost)
+  .parse()
