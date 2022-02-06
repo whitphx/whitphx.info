@@ -1,7 +1,7 @@
 ---
 title: How to install Python for Intel chip on M1 Mac
 date: "2022-02-06T17:37:59+09:00"
-description:
+description: We sometimes need to install Intel-compatible Python runtime on M1 mac to use older Python versions and/or to use some packages that include compiled binaries incompatible with Arm.
 tags: ["dev"]
 ---
 
