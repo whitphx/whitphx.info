@@ -12,6 +12,12 @@ To install Python 3.8.7 on M1 mac, for example,
 arch -arch x86_64 env PATH=${PATH/\/opt\/homebrew\/bin:/} pyenv install 3.8.7
 ```
 
+Note that you have to run this command without Rosetta. You can check the architecture on which the shell is running with `arch` command as below. It returns `arm64` when running without Rosetta.
+```shell
+$ arch
+arm64
+```
+
 This is from [M1版とIntel版のHomebrewを併用するときpyenvがうまく動かない問題を解決する - Qiita](https://qiita.com/tomtsutom0122/items/52487730001247fdc2c5)
 
 If you encounter platform compatibility problems during package installation, upgrading pip sometimes resolves it.
