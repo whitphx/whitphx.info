@@ -5,7 +5,7 @@ description: We sometimes need to install Intel-compatible Python runtime on M1 
 tags: ["dev"]
 ---
 
-# TL;DR
+## TL;DR
 
 To install Python 3.8.7 on M1 mac, for example,
 ```shell
@@ -25,19 +25,19 @@ $ arch
 arm64
 ```
 
-# Prerequisites
+## Prerequisites
 * Install `homebrew` both for Arm and x86_64.
 * Set up `pyenv`
 
-# When is this necessary?
-## When you have to use Python versions that do not have Arm build
+## When is this necessary?
+### When you have to use Python versions that do not have Arm build
 For example, Python <=3.8.
 
-## When you have to use packages that do not have Arm build
+### When you have to use packages that do not have Arm build
 Some Python packages include binaries compiled for each specific platform.
 If you use such packages and they do not have Arm-compatible binaries, you have to use Intel-compatible Python runtime, even if the Python runtime itself has Arm-compatible version.
 
-# Example case
+## Example case
 I tried to use [`streamlit-webrtc`](https://github.com/whitphx/streamlit-webrtc/) with Python 3.9 on M1 Mac.
 
 NOTE: For app development using `streamlit-webrtc`, see [this post](../20211231-streamlit-webrtc-video-app-tutorial/).

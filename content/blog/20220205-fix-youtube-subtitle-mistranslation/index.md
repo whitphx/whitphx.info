@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=uD4izuDMUQA
 
 私は別にプロの翻訳者とかではないし、翻訳の実績と呼べるものもないのだが、勢いでやってしまった。
 
-# 字幕編集プラットフォームAmara
+## 字幕編集プラットフォームAmara
 動画の概要欄を見ると、字幕・翻訳を手伝うためのリンクが書いてあった。
 > Help us caption & translate this video!
 >
@@ -32,7 +32,7 @@ YouTube動画についてる日本語字幕はどこから来たの？
 
 [^1]: 存在している言語は→ Completed subtitles (24): Arabic [ar], Catalan [ca], German [de], Greek [el], English [en], Spanish (Latin America) [es-419], Estonian [et], Finnish [fi], French [fr], Hindi [hi], Indonesian [id], Italian [it], Korean [ko], Kurdish [ku], Lithuanian [lt], Polish [pl], Portuguese [pt], Portuguese, Brazilian [pt-br], Romanian [ro], Russian [ru], Swedish [sv], Thai [th], Turkish [tr], Vietnamese [vi]. Incomplete subtitles (16): Bengali [bn], Czech [cs], Spanish [es], Persian [fa], Filipino [fil], Hungarian [hu], Interlingua [ia], Georgian [ka], Khmer [km], Malayalam [ml], Mongolian [mn], Malay [ms], Dutch [nl], Ukrainian [uk], Urdu [ur], Chinese, Simplified [zh-cn]
 
-# 作者にメールで問い合わせ
+## 作者にメールで問い合わせ
 しょうがないので作者にメールで問い合わせた。
 
 ググって出てきた連絡先[^2]に、日本語字幕に誤訳を見つけたので直したいがどうすればよいか、みたいな内容のメールを送った。
@@ -40,7 +40,7 @@ YouTube動画についてる日本語字幕はどこから来たの？
 すぐ返事があり、快諾いただけた。
 字幕ファイルを送るからそれを編集して送り返してくれ、それをそのままアップロードする、とのこと。
 
-# 字幕ファイル
+## 字幕ファイル
 字幕ファイルはSubrip形式（`.srt`）のテキストファイル。
 このフォーマットは初見だったが、中身はシンプル。
 
@@ -48,22 +48,22 @@ YouTube動画についてる日本語字幕はどこから来たの？
 
 当該箇所をテキストエディタ（VSCode + [Subtitles Editor](https://marketplace.visualstudio.com/items?itemName=pepri.subtitles-editor)）で編集し、送り返した。
 
-# 反映された
+## 反映された
 修正版をアップロードした旨の返信をすぐ頂けた。
 
 ただ、この後全編通して見たらまた直したい箇所がたくさん出てきてしまった…
 もっとやるかも。
 
-# おまけ：修正内容
+## おまけ：修正内容
 9:10~9:30くらいのところ。
 
-## 修正した箇所の原文
+### 修正した箇所の原文
 
 > You could imagine living conscious systems which have a very different pace and therefore, can extend out, at least, a lot further than you'd imagine otherwise.
 
 > You could have a living system where if it had a thought every 10 trillion years that would seem normal.
 
-## 元の訳文
+### 元の訳文
 
 > そこで、遠い宇宙には全く異なる速度に基づいた、意識を持つ生命体もあると想像できる。
 > そうならば私たちの想像も及ばぬ広い領域を理解する生命体であるかもしれない。
@@ -72,7 +72,7 @@ YouTube動画についてる日本語字幕はどこから来たの？
 > たとえ10兆年に一度の出来事であるとしても
 > 何の不思議もない。
 
-## 修正した訳文
+### 修正した訳文
 
 > 全く異なる活動速度を持ち、想像以上に生存期間を長く引き伸ばした、意識を持つ生命を想像できる。
 
