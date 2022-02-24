@@ -32,7 +32,7 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
-  --font-body: var(--fontFamily-serif);
+  --font-body: var(--fontFamily-sans);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
   --fontWeight-medium: 500;
@@ -40,7 +40,7 @@
   --fontWeight-bold: 700;
   --fontWeight-extrabold: 800;
   --fontWeight-black: 900;
-  --fontSize-root: 16px;
+  --fontSize-root: 20px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
@@ -48,12 +48,12 @@
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
-  --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 2.074rem;
-  --fontSize-6: 2.488rem;
-  --fontSize-7: 2.986rem;
+  --fontSize-2: 1.15rem;
+  --fontSize-3: 1.3225rem;
+  --fontSize-4: 1.520875rem;
+  --fontSize-5: 1.74900625rem;
+  --fontSize-6: 2.0113571875rem;
+  --fontSize-7: 2.3130607656rem;
   --color-primary: #005b99;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
@@ -79,12 +79,14 @@ html {
 
 body {
   font-family: var(--font-body);
+  font-weight: var(--fontWeight-medium);
   font-size: var(--fontSize-1);
   color: var(--color-text);
 }
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
+  font-size: var(--fontSize-0);
 }
 
 hr {
@@ -202,7 +204,7 @@ blockquote {
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
+  font-size: var(--fontSize-1);
   font-style: italic;
   margin-bottom: var(--spacing-8);
 }
@@ -236,6 +238,13 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
+}
+
+/* remark classes */
+
+.footnotes {
+  font-weight: var(--fontWeight-normal);
+  font-size: var(--fontSize-0);
 }
 
 /* Custom classes */
@@ -289,6 +298,7 @@ a:focus {
 .bio {
   display: flex;
   margin-bottom: var(--spacing-16);
+  font-size: var(--fontSize-0);
 }
 
 .bio p {
