@@ -40,7 +40,14 @@ Errors as below appear in such cases.
 
 This problem occurs with the file uploader/downloader components because they use normal stateless HTTP POST/GET requests while other components work on top of WebSocket connections consistent over sessions.
 
-While I know this problem occurs at least with these components, I'm not sure whether there is another component which have this problem. I have not checked all.
+While I know this problem occurs at least with these components, I'm not sure whether there are other components that have this problem. I have not checked all.
+
+NOTE:
+Restricting the number of instances to 1 has a drawback as it may cause some downtimes.
+[As the document says](https://cloud.google.com/appengine/docs/flexible/python/how-instances-are-managed), the flexible instances are restarted once a week, which leads to downtime when there are not multiple instances.
+While this problem has already been stated in the following posts, the only solution suggested was to set the minimum number of instances as more than one, although it conflicts with the solution explained in this article. I could not find a solution that covers both problems.
+* [Do App Engine Flexible Environment VM instance restarts take advantage of automatic scaling? (Stack Overflow)](https://stackoverflow.com/questions/46758419/do-app-engine-flexible-environment-vm-instance-restarts-take-advantage-of-automa)
+* [Rolling restarts are causing are app engine app to go offline. Is there a way to change the config to prevent that from happening? (Stack Overflow)](https://stackoverflow.com/questions/53047941/rolling-restarts-are-causing-are-app-engine-app-to-go-offline-is-there-a-way-to)
 
 NOTE:
 App Engine offers the [session affinity](https://cloud.google.com/appengine/docs/flexible/ruby/using-websockets-and-session-affinity#session_affinity) setting, but it does not help in this case because it is only for HTTP long polling like `socket.io` as [documented](https://cloud.google.com/appengine/docs/flexible/ruby/using-websockets-and-session-affinity#session_affinity) though this problem is due to a different reason.
