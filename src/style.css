@@ -82,6 +82,8 @@ body {
   font-weight: var(--fontWeight-medium);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 footer {
