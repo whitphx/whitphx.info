@@ -40,7 +40,7 @@
   --fontWeight-bold: 700;
   --fontWeight-extrabold: 800;
   --fontWeight-black: 900;
-  --fontSize-root: 20px;
+  --fontSize-root: 16px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
@@ -60,6 +60,12 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --fontSize-root: 20px;
+  }
 }
 
 /* HTML elements */
