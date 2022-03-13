@@ -2,29 +2,30 @@
 title: How to deploy Streamlit apps to Google App Engine
 date: "2021-12-14T22:00:00.000+09:00"
 description:
+tags: ["dev"]
 ---
 
-# Things to know
+## Things to know
 There are some things to know when you deploy Streamlit apps to App Engine.
 
-## The flexible environment is mandatory
+### The flexible environment is mandatory
 You have to choose the flexible environment because it supports WebSockets and the standard environment does not.
 Streamlit heavily relies on WebSockets for the communication between the server and the client.
 
 ![App Engine environment comparison on WebSockets support](./images/websocket-comparison.png)
 *This is a screenshot of https://cloud.google.com/appengine/docs/the-appengine-environments on 2021/12/12. The left is about the standard env and the right is the flexible env.*
 
-## Custom runtime is not necessary
+### Custom runtime is not necessary
 You **do not have to** use a custom runtime (an original Docker image).
 The flexible environment offers an official Python runtime as https://cloud.google.com/appengine/docs/flexible/python/runtime and you can use it.
 
-You can also use a custom runtime. For example, it is a nice option when you want to use a different Python version from the one provided as the official runtime or when you already have a working Docker image.
+Still, you can also use a custom runtime. For example, it is a nice option when you want to use a different Python version or when you already have a working Docker image.
 
 NOTE:
 As of 2021/12/12, [the document](https://cloud.google.com/appengine/docs/flexible/python/runtime) says the Python version on the built-in Python3 runtime is `3.7.2`, but it is actually `3.6.10` known from `sys.version` at least in the `asia-northeast1` zone (Tokyo).
 And Streamlit officially supports only Python>=3.7 while it is technically possible to be installed with Python 3.6, so maybe you should set up a custom runtime with Python>=3.7 following the section below.
 
-## The number of instances should be 1 if `st.file_uploader` or `st.download_button` is used
+### The number of instances should be 1 if `st.file_uploader` or `st.download_button` is used
 If your app contains `st.file_uploader` or `st.download_button`, you should set the maximum number of instances to 1. For that configuration, see https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml#services.
 
 App Engine typically distributes the requests evenly among available instances so the file upload/download requests sometimes reach the instance different from the one where the session exists when there are multiple instances.
@@ -39,12 +40,19 @@ Errors as below appear in such cases.
 
 This problem occurs with the file uploader/downloader components because they use normal stateless HTTP POST/GET requests while other components work on top of WebSocket connections consistent over sessions.
 
-While I know this problem occurs at least with these components, I'm not sure whether there is another component which have this problem. I have not checked all.
+While I know this problem occurs at least with these components, I'm not sure whether there are other components that have this problem. I have not checked all.
+
+NOTE:
+Restricting the number of instances to 1 has a drawback as it may cause some downtimes.
+[As the document says](https://cloud.google.com/appengine/docs/flexible/python/how-instances-are-managed), the flexible instances are restarted once a week, which leads to downtime when there are not multiple instances.
+While this problem has already been stated in the following posts, the only solution suggested was to set the minimum number of instances as more than one, although it conflicts with the solution explained in this article. I could not find a solution that covers both problems.
+* [Do App Engine Flexible Environment VM instance restarts take advantage of automatic scaling? (Stack Overflow)](https://stackoverflow.com/questions/46758419/do-app-engine-flexible-environment-vm-instance-restarts-take-advantage-of-automa)
+* [Rolling restarts are causing are app engine app to go offline. Is there a way to change the config to prevent that from happening? (Stack Overflow)](https://stackoverflow.com/questions/53047941/rolling-restarts-are-causing-are-app-engine-app-to-go-offline-is-there-a-way-to)
 
 NOTE:
 App Engine offers the [session affinity](https://cloud.google.com/appengine/docs/flexible/ruby/using-websockets-and-session-affinity#session_affinity) setting, but it does not help in this case because it is only for HTTP long polling like `socket.io` as [documented](https://cloud.google.com/appengine/docs/flexible/ruby/using-websockets-and-session-affinity#session_affinity) though this problem is due to a different reason.
 
-# Recipes
+## Recipes
 I will show some examples deploying Streamlit apps to App Engine in different situations.
 
 Each of them can be deployed with the command below.
@@ -54,7 +62,7 @@ $ gcloud app deploy
 
 All sample resources are available at https://github.com/whitphx/streamlit-appengine-samples .
 
-## Basic setup
+### Basic setup
 This is the simplest one.
 
 * No custom runtime
@@ -63,7 +71,7 @@ This is the simplest one.
 
 https://github.com/whitphx/streamlit-appengine-samples/tree/main/helloworld
 
-### File list
+#### File list
 ```
 .
 ├── app.yaml
@@ -71,7 +79,7 @@ https://github.com/whitphx/streamlit-appengine-samples/tree/main/helloworld
 └── streamlit-app.py
 ```
 
-### `app.yaml`
+#### `app.yaml`
 ```yaml
 runtime: python
 env: flex
@@ -87,13 +95,13 @@ entrypoint: streamlit run streamlit-app.py --server.port $PORT
 * `entrypoint` is configured to run the Streamlit process with the specified port number via the `$PORT` environment variable.
   * See https://cloud.google.com/appengine/docs/flexible/python/runtime#application_startup
 
-### `requirements.txt`
+#### `requirements.txt`
 ```txt
 streamlit~=1.2.0
 
 ```
 
-### `streamlit-app.py`
+#### `streamlit-app.py`
 ```python
 import streamlit as st
 
@@ -104,10 +112,10 @@ name = st.text_input("Your name?")
 st.write(f"Hello, {name or 'world'}!")
 ```
 
-# File uploader and downloader
+## File uploader and downloader
 This is a sample with a file uploader and a downloader.
 
-## File list
+### File list
 ```
 .
 ├── app.yaml
@@ -115,7 +123,7 @@ This is a sample with a file uploader and a downloader.
 └── streamlit-app.py
 ```
 
-### `app.yaml`
+#### `app.yaml`
 ```yaml
 runtime: python
 env: flex
@@ -138,13 +146,13 @@ If you want to use the manual scaling, use `manual_scaling.instances` instead.
 
 For these settings, see https://cloud.google.com/appengine/docs/flexible/python/reference/app-yaml#services.
 
-### `requirements.txt`
+#### `requirements.txt`
 ```txt
 streamlit~=1.2.0
 
 ```
 
-### `streamlit-app.py`
+#### `streamlit-app.py`
 ```python
 import streamlit as st
 
@@ -158,7 +166,7 @@ if uploaded_file:
 
 ```
 
-# Custom runtime
+## Custom runtime
 This sample uses a custom runtime with `Dockerfile`.
 
 Ref: https://cloud.google.com/appengine/docs/flexible/custom-runtimes/build
@@ -171,7 +179,7 @@ Ref: https://cloud.google.com/appengine/docs/flexible/custom-runtimes/build
 └── streamlit-app.py
 ```
 
-### `app.yaml`
+#### `app.yaml`
 ```yaml
 runtime: custom
 env: flex
@@ -181,7 +189,7 @@ env: flex
 * Set `runtime: custom` to use a custom runtime.
 * `entrypoint` is not needed as it is defined in `Dockerfile`.
 
-### `Dockerfile`
+#### `Dockerfile`
 
 ```Dockerfile
 FROM gcr.io/google-appengine/python
@@ -211,13 +219,13 @@ ENTRYPOINT [ "streamlit", "run", "streamlit-app.py", "--server.port", "8080" ]
   * See https://cloud.google.com/appengine/docs/flexible/custom-runtimes/build#listening_to_port_8080
 
 
-### `requirements.txt`
+#### `requirements.txt`
 ```txt
 streamlit~=1.2.0
 
 ```
 
-### `streamlit-app.py`
+#### `streamlit-app.py`
 ```python
 import sys
 

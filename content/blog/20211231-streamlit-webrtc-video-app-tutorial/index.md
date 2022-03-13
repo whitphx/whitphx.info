@@ -2,9 +2,10 @@
 title: Developing web-based real-time video/audio processing apps quickly with Streamlit
 date: "2021-12-31T22:00:00.000+09:00"
 description: Streamlit is a powerful and easy-to-use Python framework for rapid web development. We can build real-time video/audio apps on top of it with a few lines of code.
+tags: ["dev"]
 ---
 
-# Overview
+## Overview
 
 In this article, we will see how we can create browser-ready real-time video/audio processing apps with [Streamlit](https://streamlit.io/).
 
@@ -14,20 +15,20 @@ Since such apps are web-based, they can be deployed to the cloud, shared with us
 
 This tech stack is useful for creating demos and prototyping ideas of video/audio apps such as human or object detection, style transfer, image filters, speech recognition, video chat apps, and more.
 
-![](./images/streamlit-webrtc-object-detection-demo-15sec.gif)
+![](./images/streamlit-webrtc-object-detection-demo-15sec.gif)<br>
 *A sample web-based object detection app. Users can change the threshold interactively during execution. [Online demo🎈](https://share.streamlit.io/whitphx/streamlit-webrtc-example/main/app.py)*
 
 
-![](./images/streamlit-webrtc-style-transfer-demo-20sec.gif)
+![](./images/streamlit-webrtc-style-transfer-demo-20sec.gif)<br>
 *A sample web-based style transfer app. Users can change model type and model parameters interactively during execution. [Online demo🎈](https://share.streamlit.io/whitphx/style-transfer-web-app/main/app.py)*
 
-You can see more examples at [the _examples_ section](#examples)
+You can see more examples at [the _examples_ section](#examples).
 
 NOTE:
 These sample apps are hosted on the public cloud ([Streamlit Cloud](https://streamlit.io/cloud)), and the video and audio streams are transmitted to and processed at the cloud server. While those data are only processed on memory and not saved to any storage, however, if you are concerned, please do not use them.
 As for the following contents in this article, we can execute all of them on our local. In addition, you can try the examples above on your local by following the instructions at [the _examples_ section](#examples).
 
-# The advantages of web-based apps
+## The advantages of web-based apps
 We have been typically using OpenCV to build real-time demo apps of image or video processing. Some of you (especially developers or researchers in such fields) may have seen the following code or similar many times.
 
 ```python
@@ -52,12 +53,12 @@ Compared to the GUI apps like above using `cv2.VideoCapture` and `cv2.imshow` th
 * Easy to share and run:
   * If we deploy the apps on the cloud, we can share the apps with our users simply by sending the URLs.
   * The users can use the apps only by accessing them through web browsers. It does not require any set-ups or external dependencies.
-* Usable on smartphones
+* Usable on smartphones:
   * Because all the users need is web browsers, the users can use the apps on their smartphones. It's convenient if we can show demos on such portable devices.
-* User-friendly UIs.
+* User-friendly UIs:
   * Developers can use text inputs, sliders, or other web-based components to accept user inputs or show data. Such web-based UIs are more friendly for users than desktop GUIs in recent days.
 
-# Tutorial
+## Tutorial
 We will create a simple web-based real-time video processing app with ~10 or 20 LoC.
 Please try this tutorial in an environment where a webcam and a microphone are available.
 
@@ -68,7 +69,7 @@ In this tutorial, we will write code in `app.py`. Please create an empty `app.py
 $ touch app.py
 ```
 
-## Install necessary packages
+### Install necessary packages
 Next, we have to install the packages necessary for this tutorial.
 ```shell
 $ pip install -U streamlit streamlit-webrtc opencv-python-headless
@@ -77,7 +78,7 @@ $ pip install -U streamlit streamlit-webrtc opencv-python-headless
 * `streamlit-webrtc`: A custom component of Streamlit which deals with real-time video and audio streams.
 * `opencv-python-headless`: OpenCV. We choose the headless version here because we will construct the UI with Streamlit.
 
-## First contact with Streamlit
+### First contact with Streamlit
 
 NOTE:
 Please skip this section if you have experience in Streamlit.
@@ -118,7 +119,7 @@ You write Python code with Streamlit components like `st.title()` and `st.write(
 In the next section, we will see how to develop a real-time video processing app on top of Streamlit.
 Apart from that, Streamlit itself covers more use cases such as machine learning, data science, or more general purposes. For such use cases, please see [the official Streamlit tutorial](https://docs.streamlit.io/library/get-started/create-an-app) for example.
 
-## Introduce the real-time video/audio streaming component
+### Introduce the real-time video/audio streaming component
 Update the `app.py` as below.
 
 ```python
@@ -145,7 +146,7 @@ The `webrtc_streamer(key="example")` above is a Streamlit component which deals 
 The `key` argument is a unique ID in the script to identify the component instance. We have set it as `"example"` here, but you can use any string for it.
 The component in this example only receives video and audio from the client-side webcam and microphone and outputs the raw streams. It's the most basic version of the component. We are going to enhance its functionality by adding other options in the following sections.
 
-## Development of a real-time video processing application
+### Development of a real-time video processing application
 
 Update the `app.py` as follows.
 ```python
@@ -196,7 +197,7 @@ If we use object detection or style transfer for that part, the app would be lik
 
 [^4]: [The source code of the object detection app](https://github.com/whitphx/streamlit-webrtc/blob/d6ce5b51e6c367a2e9488b8a50bfc652fee3b936/app.py#L309-L451) and [the style transfer app](https://github.com/whitphx/style-transfer-web-app/blob/2c835d11010b8d5c9acc8c8d681c9dfd0687b2ac/input.py#L37-L96).
 
-## Receive user inputs
+### Receive user inputs
 Update the `app.py` as below.
 
 ```python
@@ -244,7 +245,7 @@ The explanations of the code follow:
 * The slider UI is created with `st.slider()` in Streamlit apps.
   * `st.slider()` is a built-in Streamlit component. Its official API reference is https://docs.streamlit.io/library/api-reference/widgets/st.slider.
 
-## Execution model of `recv()` and an important notice about it
+### Execution model of `recv()` and an important notice about it
 <!-- One major difference between OpenCV and `streamlit-webrtc` is the callback usage. -->
 Unlike OpenCV, `streamlit-webrtc` requires callbacks to process image and audio frames.
 The callback `.recv()` is one major difference between OpenCV GUI and `streamlit-webrtc`, and there are a few things you have to be aware of about it.
@@ -255,12 +256,12 @@ It makes some restrictions as below.
 * Streamlit methods such as `st.write()` cannot be used inside `.recv()`.
 * Communications between inside and outside `.recv()` must be thread-safe.
 
-In the previous example, we passed values from the global scope to `.recv()` since we cannot use `global` and refer to these values from inside `.recv()`.
+In the previous example, we passed values from the global scope to `.recv()` through the instance attributes since we cannot use `global` and refer to these values from inside `.recv()`.
 
-# Deploy the app to the cloud
+## Deploy the app to the cloud
 We are going to make the web app available to everyone by deploying it to the cloud.
 
-## Configure WebRTC
+### Configure WebRTC
 To deploy the app to the cloud, we have to add `rtc_configuration` parameter to the `webrtc_streamer()`.
 
 ```python
@@ -284,7 +285,7 @@ We configured the code to use a free STUN server provided by Google in the examp
 
 The value of the `rtc_configuration` argument will be passed to the [`RTCPeerConnection`](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection) constructor on the frontend.
 
-## HTTPS
+### HTTPS
 We have to serve web apps on remote hosts via HTTPS to use webcams or microphones.
 
 Not only the `webrtc_streamer()` component we used here but also any frontend apps that access the client-side webcams or microphones use [`MediaDevices.getUserMedia()`](https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia) API. This API does not work in an "insecure context."
@@ -295,7 +296,7 @@ The [document](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/get
 
 As a result, we need HTTPS to serve web apps on remote hosts which access the client-side webcams or microphones.
 
-## Streamlit Cloud
+### Streamlit Cloud
 I recommend [Streamlit Cloud](https://streamlit.io/cloud) for Streamlit app hosting.
 You can deploy the apps from GitHub repositories with a few clicks, and it automatically serves the apps via HTTPS.
 And Streamlit Cloud seems to provide better runtime than Heroku free-tier, while Streamlit Cloud provides a large deployment capacity for free.
@@ -308,19 +309,19 @@ Its GitHub repository is https://github.com/whitphx/streamlit-webrtc-article-tut
 
 Note that `requirements.txt` has been added to install the necessary dependencies (`streamlit-webrtc` and `opencv-python-headless`) in the Streamlit Cloud environment: https://github.com/whitphx/streamlit-webrtc-article-tutorial-sample/blob/main/requirements.txt
 
-# Notice
+## Notice
 As written above, the video and audio streams sourced from the client devices are transmitted to and processed at the server.
 
 So, this library is not scalable and depends on network connectivity. You may think of it mainly for prototyping or demo purpose.
 
 You also have to consider hosting the apps in local networks if there are concerns about transmitting media to the remote cloud server.
 
-# Examples
+## Examples
 This section is a copy of the sample list at https://github.com/whitphx/streamlit-webrtc.
 
-## Showcase including following examples and more
+### Showcase including following examples and more
 [⚡️Repository](https://github.com/whitphx/streamlit-webrtc-example), [🎈Online demo](https://share.streamlit.io/whitphx/streamlit-webrtc-example/main/app.py)
-* Object detection
+* Object detection (This is the sample app a screenshot of which is at the beginning of this article)
 * OpenCV filter
 * Uni-directional video streaming
 * Audio processing
@@ -331,29 +332,37 @@ $ pip install streamlit-webrtc opencv-python-headless matplotlib pydub
 $ streamlit run https://raw.githubusercontent.com/whitphx/streamlit-webrtc-example/main/app.py
 ```
 
-## Real-time Speech-to-Text
+### Real-time Speech-to-Text
 [⚡️Repository](https://github.com/whitphx/streamlit-stt-app), [🎈Online demo](https://share.streamlit.io/whitphx/streamlit-stt-app/main/app_deepspeech.py)
 
 It converts your voice into text in real time.
 This app is self-contained; it does not depend on any external API.
 
-## Real-time video style transfer
+![](./images/stt-sample.gif)
+
+### Real-time video style transfer
 [⚡️Repository](https://github.com/whitphx/style-transfer-web-app), [🎈Online demo](https://share.streamlit.io/whitphx/style-transfer-web-app/main/app.py)
 
 It applies a wide variety of style transfer filters to real-time video streams.
 
-## Video chat
+![](./images/streamlit-webrtc-style-transfer-demo-20sec.gif)
+
+### Video chat
 [⚡️Repository](https://github.com/whitphx/streamlit-video-chat-example)
 (Online demo not available)
 
 You can create video chat apps with ~100 lines of Python code.
 
-## Tokyo 2020 Pictogram
+![](./images/video-chat-example.jpg)
+
+### Tokyo 2020 Pictogram
 [⚡️Repository](https://github.com/whitphx/Tokyo2020-Pictogram-using-MediaPipe): [🎈Online demo](https://share.streamlit.io/whitphx/tokyo2020-pictogram-using-mediapipe/streamlit-app)
 
 [MediaPipe](https://google.github.io/mediapipe/) is used for pose estimation.
 
-# What about audio?
+https://twitter.com/whitphx/status/1422115806196867072
+
+## What about audio?
 You can deal with audio streams in a similar way as video. If you define a class with `.recv()` method and pass it to the `audio_processor_factory` argument, the callback will be executed with audio frames.
 In the case of audio, the input argument and the returned value of the callback are instances of [the `AudioFrame` class](https://pyav.org/docs/develop/api/audio.html#module-av.audio.frame).
 

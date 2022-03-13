@@ -2,6 +2,7 @@
 title: 5 mins talk about Streamlit and real-time video streaming at PyConJP 2021
 date: "2022-01-07T22:00:00.000+09:00"
 description:
+tags: ["dev"]
 ---
 
 I had an opportunity to have a lightning talk at PyCon JP 2021[^1] and its video has been recorded and published 😃
