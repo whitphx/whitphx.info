@@ -43,4 +43,11 @@ So, you should be aware of the following things to support solving the problem.
 
 I will be adding the list items. If you have ideas to add to the list, please let me know [through Twitter](https://twitter.com/whitphx) or by [creating GitHub Issues](https://github.com/whitphx/whitphx.info/issues) or [Pull Requests](https://github.com/whitphx/whitphx.info/pulls).
 
+# More resources
+* [How to Ask Programming Questions — ProPublica](https://www.propublica.org/nerds/how-to-ask-programming-questions)
+* [How to Ask for Programming Help | Coding Killed the Cat](https://codingkilledthecat.wordpress.com/2012/06/26/how-to-ask-for-programming-help/)
+* [How do I ask a good question? - Help Center - Code Review Stack Exchange](https://codereview.stackexchange.com/help/how-to-ask)
+* [How to ask programming questions in just 5 steps - BreatheCode](https://content.breatheco.de/how-to/ask)
+* [How to Ask Questions About Programming | by Martin Andersson Aaberge | Better Programming](https://betterprogramming.pub/how-to-ask-questions-about-programming-dcd948fcd2bd)
+
 [^1]: Precisely, the code block with ` ``` ` is an extended Markdown syntax, such as [GitHub-flavored Markdown (GFM)](https://github.github.com/gfm/). Anyway, many web forums are supporting it.
