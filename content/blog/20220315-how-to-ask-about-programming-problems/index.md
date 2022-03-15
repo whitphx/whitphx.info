@@ -34,7 +34,7 @@ So, you should be aware of the following things to support solving the problem.
   * Why do you want to solve this problem? What do you want build after solving the problem? What kind of software/product are you developing?
   * Such information is sometimes so important rather than the error description itself. Do not omit it just by your decision.
 * Do format the source code and the logs.
-  * For example, if Markdown can be used in the forum, put ` ``` ` surrounding the code or logs[^1].
+  * For example, if Markdown can be used in the forum, put ` ``` ` (three backticks) surrounding the code or logs[^1].
   * Markdown can be used in many web forums. Learn Markdown syntax. You have to use at least code blocks. See https://www.markdownguide.org/extended-syntax/#fenced-code-blocks.
   * Non-formatted code and logs are very hard to read.
 * Don't post the source code or the logs as screenshots.
