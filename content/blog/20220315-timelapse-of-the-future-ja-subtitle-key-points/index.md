@@ -129,3 +129,12 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 
 …と偉そうに言っているが、実はここはDeepLの翻訳そのままである。
 まさに"a blaze of glory"の訳をどうしようか悩んでいたところで、DeepLがそこをバッサリ切った訳を出してきて気付かされた。テクノロジー万歳。
+
+---
+
+> You could imagine living conscious systems which have a very different pace and therefore can extend out, at least a lot farther than you'd imagine otherwise.
+> You could have a living system where if it had a thought every 10 trillion years that would seem normal.
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| そうならば私たちの想像も及ばぬ広い領域を理解する生命体であるかもしれない。<br/>生命体が存在すること、<br/>たとえ10兆年に一度の出来事であるとしても<br/>何の不思議もない。 | 遠い宇宙には全く異なる速度に基づいた、意識を持つ生命体もあると想像できる。<br/>10兆年に1回思考するのが普通であるような生命体もあり得るだろう |
