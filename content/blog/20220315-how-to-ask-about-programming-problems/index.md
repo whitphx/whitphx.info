@@ -41,4 +41,6 @@ So, you should be aware of the following things to support solving the problem.
   * They cannot be copied to the clipboard. It takes much effort to run the code or google the logs. It's so annoying.
 * Do paste the images or the screenshots if you have visual results related to the problem.
 
+I will be adding the list items. If you have ideas to add to the list, please let me know [through Twitter DM](https://twitter.com/whitphx) or by [creating GitHub Issues](https://github.com/whitphx/whitphx.info/issues) or [Pull Requests](https://github.com/whitphx/whitphx.info/pulls).
+
 [^1]: Precisely, the code block with ` ``` ` is an extended Markdown syntax, such as [GitHub-flavored Markdown (GFM)](https://github.github.com/gfm/). Anyway, many web forums are supporting it.
