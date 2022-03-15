@@ -2,7 +2,7 @@
 title: How to ask about programming problems
 date: "2022-03-15T20:20:08+09:00"
 description: There are some points you need to know when you ask about programming problems on forums.
-tags: []
+tags: ["dev"]
 ---
 
 # Objective
