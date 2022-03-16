@@ -5,6 +5,8 @@ description: There are some points you need to know when you ask about programmi
 tags: ["dev"]
 ---
 
+*Updated:* [How do I ask a good question? - Help Center - Stack Overflow](https://stackoverflow.com/help/how-to-ask) has already explained almost all things this article says.
+
 # Objective
 This article explains some things you should know when asking programming problems such as "X is not working" or "What's this error?".
 * This article mainly explains superficial and formal techniques that make the questions readable and likely to get responses.
