@@ -13,9 +13,9 @@ This article explains some things you should know when asking programming proble
 * This article is NOT focusing on soft skills or moral advice like "be polite."
 
 # The most important idea
-The principal is to pay as much effort as possible to save the respondents' time and effort to understand and solve the problem.
+The principle is to pay as much effort as possible to save the respondents' time and effort to understand and solve the problem.
 
-The problem-solving process includes, for example,
+The problem-solving process they may do includes, for example,
 * reproducing the bug in their own environment by running the actual code
 * reading the logs
 * googling the error messages
@@ -34,7 +34,7 @@ So, you should be aware of the following things to support solving the problem.
     * create a shorter code snippet that reproduces the same problem and post it.
 * Do share the background or the high-level requirements.
   * Why do you want to solve this problem? What do you want build after solving the problem? What kind of software/product are you developing?
-  * Such information is sometimes so important rather than the error description itself. Do not omit it just by your decision.
+  * Such information is sometimes much important rather than the specific error description itself. Do not omit it just by your decision.
 * Do format the source code and the logs.
   * For example, if Markdown can be used in the forum, put ` ``` ` (three backticks) surrounding the code or logs[^1].
   * Markdown can be used in many web forums. Learn Markdown syntax. You have to use at least code blocks. See https://www.markdownguide.org/extended-syntax/#fenced-code-blocks.
