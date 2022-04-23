@@ -3,6 +3,7 @@ title: 人気YouTube動画の日本語字幕に修正を送った
 date: "2022-02-05T01:25:35+09:00"
 description:
 tags: []
+lang: ja
 ---
 
 https://www.youtube.com/watch?v=uD4izuDMUQA
