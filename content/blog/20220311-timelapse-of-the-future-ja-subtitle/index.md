@@ -1,8 +1,9 @@
 ---
-title: "TIMELAPSE OF THE FUTUREの日本語字幕編集プロジェクト"
+title: "TIMELAPSE OF THE FUTURE の日本語字幕編集プロジェクト"
 date: "2022-03-11T23:40:33+09:00"
 description:
 tags: []
+lang: ja
 ---
 
 [以前のポスト](../20220205-fix-youtube-subtitle-mistranslation/)で、人気宇宙動画"TIMELAPSE OF THE FUTURE"の日本語字幕を１カ所修正したと書いた。
