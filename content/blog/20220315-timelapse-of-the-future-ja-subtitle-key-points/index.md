@@ -5,16 +5,26 @@ description:
 tags: []
 ---
 
-雑に数えて、元の字幕230字幕中、約半分の116字幕に手を入れた。
-日本語としての自然さを改善したものから、明らかに意味が間違っている訳の修正までさまざまあるが、そのうちいくつかをピックアップしてまとめておく。
-特に以下の修正箇所を挙げた。挙げていないものも全てこだわって訳したが（だからこそ修正したのだが）
-* 修正訳を考えるに当たって特に頭を捻ったもの
-* 専門用語の修正
-* 意味の間違いの修正
-  * 特に天文学、物理学の知識に基づいて補完できるものについては、その補足説明
+[TIMELAPSE OF THE FUTURE の日本語字幕編集プロジェクト](../20220311-timelapse-of-the-future-ja-subtitle/)に書いた通り、YouTube動画[TIMELAPSE OF THE FUTURE: A Journey to the End of Time (4K)](https://www.youtube.com/watch?v=uD4izuDMUQA)の日本語字幕を修正した。
 
-科学的な文章の翻訳はなんとかなるものの、
-文芸的な文章もいくつかあり、それらの翻訳には特に苦労したし結局あまり自信を持てていない。
+[TIMELAPSE OF THE FUTURE: A Journey to the End of Time (4K)](https://www.youtube.com/watch?v=uD4izuDMUQA)
+
+雑に数えてみたら、元の字幕230字幕中、約半分の116字幕に手を入れていた。
+日本語としての自然さを改善したものから、明らかに意味が間違っている訳の修正までさまざまあるが、そのうちいくつかをピックアップしてまとめておく。
+
+# その前に感想
+
+普段から一般向けの科学系の英文記事を読んだりはするし、情報系の学生だった頃は英語で論文も読んでいたので、理系な英文の翻訳はなんとかなった。
+
+一方で、文学的表現もあったり、例えばクライマックスにドーンと表示される文章や偉人の名言のようにカッコよく訳すことが大事な箇所もあったりで、
+それらの翻訳には特に苦労したし結局あまり自信を持てていない。
+
+元の訳の誤訳を直した箇所は、まあ究極的には正しく英文を読めば正しく訳せるというだけなのだが、やはり一般向けレベルで良いので天文学、物理学の知識があると訳しやすいところも多かった。
+専門用語のアテがついたり、突拍子もなく聞こえる内容も背景知識を知っていると自信を持って訳せたり。
+
+# 修正点
+
+## 00:35
 
 > We will travel through time exponentially, doubling our speed every 5 seconds.
 
@@ -29,7 +39,7 @@ tags: []
 <!-- 意味を忠実に訳すにしても、日本語として不自然になったり冗長になったりするのは避けるようにした。 -->
 <!-- "We will travel through time"という文を日本語訳では名詞化して「時間旅行」にまとめたのはちょっと頭を捻った -->
 
----
+## 01:18
 
 > The Earth is going into one of these jumps and you don't know what is going to be on the other side of those jumps.
 > The Earth is always jumping.
@@ -51,14 +61,14 @@ tags: []
 
 ここは、地球上の事物が常に変化している、という文脈を汲んで、「変動」や「躍動」と訳した。
 原文の"jump"自体、普通の用法というより、poeticな表現として使われている。
-そのニュアンスを残すため、日本語として自然でありつつ、比喩・擬人化をできる限り感じさせる語彙を選んだつもりだ。「変化」だと無機質だが、「変動」「躍動」だと有機的なニュアンスが加わり、「地球がジャンプする」的な擬人化にも近さを感じないだろうか。
+そのニュアンスを残すため、日本語として自然でありつつ、比喩・擬人化をできる限り感じさせる語彙を選んだつもり。「変化」だと無機質だが、「変動」「躍動」だと有機的なニュアンスが加わり、「地球がジャンプする」的な擬人化にも近さを感じないだろうか。
 
 "jump"の訳語を見つけた後はすんなり訳せた。
 
 ちなみに、[Weblioで"jump"の意味を調べる](https://ejje.weblio.jp/content/jump)と、
 JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げていることに後から気づいた。
 
----
+## 01:33
 
 > Things move on this planet. Things are not still! Everything is turning.
 
@@ -71,7 +81,7 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 ところで、元の訳の「万物は流転する」には感銘を受けた。これは自分では思いつけないと思う。
 謹んでそのまま使わせていただいた。
 
----
+## 01:58
 
 > [Supervolcano eruption]
 
@@ -80,7 +90,7 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 | 9万年　スーパー火山噴火 | [破局噴火] |
 
 専門用語の訳語の問題。
-[破局噴火 - Wikipedia](https://ja.wikipedia.org/wiki/%E7%A0%B4%E5%B1%80%E5%99%B4%E7%81%AB)[^2]。
+[破局噴火 - Wikipedia](https://ja.wikipedia.org/wiki/%E7%A0%B4%E5%B1%80%E5%99%B4%E7%81%AB)[^1]。
 
 これは画面下部に表示される出来事や時代の名前。元の訳には年代も付いているが、今回の修正にあたって全て外した。また英語字幕に合わせてブラケットで囲うフォーマットに統一した。
 
@@ -90,9 +100,9 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
   * これは動画構成の都合上仕方のないところで、画面下部の年数は一定のペースで指数関数的に増加していくが、動画のシーン切り替えが完璧にそれに追従できるわけではない。
   * 必要な場合は動画そのものから読めば良いので、字幕には不正確な年数は入れないこととした。
 
-[^2]: [Wikipediaによると](https://ja.wikipedia.org/wiki/%E7%A0%B4%E5%B1%80%E5%99%B4%E7%81%AB)、正確には"supervolcano eruption"の訳語として「破局噴火」が考えられたのではないらしい。
+[^1]: [Wikipediaによると](https://ja.wikipedia.org/wiki/%E7%A0%B4%E5%B1%80%E5%99%B4%E7%81%AB)、正確には"supervolcano eruption"の訳語として「破局噴火」が考えられたのではないらしい。
 
----
+## 04:30
 
 > "With the death of the last sun, the age of starlight comes to an end."
 
@@ -102,13 +112,13 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 
 "the age of starlight"の訳を「星空の時代」から「星が輝く時代」に変えた。
 
-これは[宇宙のエンドゲーム](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E3%82%A8%E3%83%B3%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)における当該時代区分の訳がそうなっているのに合わせたからだ。
+これは[宇宙のエンドゲーム](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E3%82%A8%E3%83%B3%E3%83%89%E3%82%B2%E3%83%BC%E3%83%A0)における当該時代区分の訳がそうなっているのに合わせたから。
 このシーンで画面下部に表示されている"Degenerate era"も、この後でてくる"Black hole era"も、この書籍から取られていると思われるので、参照元として適切だろう。
 ちなみに本書では"the age of starlight"ではなく"Stelliferous Era"だが、同じものを指していると解釈し、同じ訳語を当てた。
 
 また、より原文の意味に近くなった。
 
----
+## 05:06
 
 > With no fuel left to burn, a white dwarf's faint glow comes from the last residual heat from its extinguished furnace.
 
@@ -125,7 +135,7 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 
 ところで、このような状態を指す「火の消えた炉」という表現は、ほぼ原文の直訳になっている。英語は詩的な表現が得意ですね。
 
----
+## 08:26
 
 > Long dormant black holes flare up in a blaze of glory.
 
@@ -139,34 +149,22 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 …と偉そうに言っているが、実はここはDeepLの翻訳そのままである。
 まさに"a blaze of glory"の訳をどうしようか悩んでいたところで、DeepLがそこをバッサリ切った訳を出してきて気付かされた。テクノロジー万歳。
 
----
+## 09:10
 
 > You could imagine living conscious systems which have a very different pace and therefore can extend out, at least a lot farther than you'd imagine otherwise.
 > You could have a living system where if it had a thought every 10 trillion years that would seem normal.
 
 | 元の訳 | 修正版 |
 | ----- | ----- |
-| そうならば私たちの想像も及ばぬ広い領域を理解する生命体であるかもしれない。<br/>生命体が存在すること、<br/>たとえ10兆年に一度の出来事であるとしても<br/>何の不思議もない。 | 遠い宇宙には全く異なる速度に基づいた、意識を持つ生命体もあると想像できる。<br/>10兆年に1回思考するのが普通であるような生命体もあり得るだろう |
+| そうならば私たちの想像も及ばぬ広い領域を理解する生命体であるかもしれない。<br/>生命体が存在すること、<br/>たとえ10兆年に一度の出来事であるとしても<br/>何の不思議もない。 | 全く異なる生命活動の速度を持ち、想像以上に生存期間を長く引き伸ばした、意識を持つ生命体を想像できる<br/>10兆年に1回思考するのが普通であるような生命体もあり得るだろう |
 
-全編の修正作業をする前に、最初に作者に修正提案を行った箇所。この件については[以前のポスト](../20220205-fix-youtube-subtitle-mistranslation)に書いた。
-ここは純粋に誤訳の修正。
+ここは、全編の修正作業をする前に、最初に作者に修正提案を行った箇所。この件については[以前のポスト](../20220205-fix-youtube-subtitle-mistranslation)に書いた。
+純粋に誤訳の修正。
 
-[宇宙の終焉 - 有限の宇宙で文明を永続させる方法 (Wikipedia)](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E7%B5%82%E7%84%89#.E6.9C.89.E9.99.90.E3.81.AE.E5.AE.87.E5.AE.99.E3.81.A7.E6.96.87.E6.98.8E.E3.82.92.E6.B0.B8.E7.B6.9A.E3.81.95.E3.81.9B.E3.82.8B.E6.96.B9.E6.B3.95)あたりが関連する知識になると思う。エントロピーが上昇した宇宙では、思考（活動）のクロックを下げて生命活動を維持するという考え方。
-
----
-
-> So you might have islands in time of intelligence.
- 知性体は時間の大海で孤島のように
- 隔絶されているのかもしれない。
-
-時間の大海に、知性体が存在する瞬間が孤島のように現れるかもしれない
+[宇宙の終焉 - 有限の宇宙で文明を永続させる方法 (Wikipedia)](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E7%B5%82%E7%84%89#.E6.9C.89.E9.99.90.E3.81.AE.E5.AE.87.E5.AE.99.E3.81.A7.E6.96.87.E6.98.8E.E3.82.92.E6.B0.B8.E7.B6.9A.E3.81.95.E3.81.9B.E3.82.8B.E6.96.B9.E6.B3.95)あたりが関連する知識になると思う。エントロピーが上昇した宇宙では、知的生命体は思考（活動）のクロックを下げて生命活動を維持するという考え方。
 
 
- 宇宙の神秘は永遠の扉の向こうに秘蔵される
-+The secrets of the cosmos are locked away forever.
-+宇宙の神秘には永遠に手が届かなくなる
-
-
+## 13:23
 
 > life, as we know it, is only possible for
 > one thousandth of a billion billion billionth,billion billion billion billion billion billionth, of a percent.
@@ -181,9 +179,9 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 
 https://youtu.be/uD4izuDMUQA?t=803
 
----
+## 16:08
 
-> ...and they (=gravitational wave) will travel out from these black holes at the speed of light as they ring down and coalesce into one, spinning, quiet black hole.
+> ...and they (=the gravitational waves) will travel out from these black holes at the speed of light as they ring down and coalesce into one, spinning, quiet black hole.
 
 | 元の訳 | 修正版 |
 | ----- | ----- |
@@ -194,7 +192,7 @@ https://youtu.be/uD4izuDMUQA?t=803
 
 物理的に考えても、系の角運動量は保存されるなので、融合した後は停止するのでなく回転ブラックホールになると思えば、誤訳に気付ける。
 
----
+## 17:37
 
 > ... the black holes begin to evaporate.
 
@@ -204,7 +202,7 @@ https://youtu.be/uD4izuDMUQA?t=803
 
 宇宙科学系の日本語文献における、ブラックホールの"evaporation"の定訳はそのまま「蒸発」。
 
----
+## 20:35
 
 > And the universe, we think, will die in ice, trillions upon trillions of years from now.
 
@@ -213,7 +211,7 @@ https://youtu.be/uD4izuDMUQA?t=803
 | それゆえ、宇宙は氷の中で死ぬと私たちは考える<br>今から数兆年の数兆倍先の未来に | そのため、宇宙は冷たい死に至ると考えられる<br>果てしなく遠い先の未来に |
 
 "the universe will die in ice"の直訳「宇宙は氷の中で死ぬ」は日本語として不自然。
-ここは[宇宙が絶対零度に冷却されて低温死（cold death）に至る](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E7%B5%82%E7%84%89)ことを少し文芸的に言っているだけなので、「宇宙は冷たい死に至る」と訳した。もう少し文芸的に、かつ"ice"の語感を残して「宇宙は凍てついて死に至る」とかでもよかったかもしれない。
+ここは[宇宙が絶対零度に冷却されて低温死（cold death）に至る](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E7%B5%82%E7%84%89)ことを少し文芸的に言っているだけなので、「宇宙は冷たい死に至る」と訳した。もう少し文芸的に、かつ"ice"の語感を残して「宇宙は凍てつき死に至る」とかでもよかったかもしれない。
 
 また、この"trillions upon trillions of years"は簡潔な英語表現がないほどの大きな年数を表しているのであって、厳密に「数兆年の数兆倍」（=10^12*10^12=10^24）という意味ではない。
 実際、動画中の年数表記は "N trillion trillion trillion trillion trillion trillion years" = N * 10^(12 * 6) = N * 10^72年である。
@@ -221,7 +219,8 @@ https://youtu.be/uD4izuDMUQA?t=803
 
 ということで、"trillions upon trillions of years from now"は「果てしなく遠い先の未来に」とした。
 
----
+## 24:47
+
 > if you have an atom smasher, that can constrict tremendous amount of energy at a single point,
 
 | 元の訳 | 修正版 |
@@ -231,9 +230,9 @@ https://youtu.be/uD4izuDMUQA?t=803
 誤訳の修正。正しく英文を読めばこうなる、以上のことは言えない…
 元の訳は"atom"に引きずられて変な方向に行ってしまったのかな？
 
-しかしここも、物理学の知識があれば「途方もないエネルギーを一点に閉じ込めている原子」やら、それを「こじ開ける」やらがおかしいと気付けるはず[^3]。
+しかしここも、物理学の知識があれば「途方もないエネルギーを一点に閉じ込めている原子」やら、それを「こじ開ける」やらがおかしいと気付けるはず[^2]。
 
-[^3]: 核反応を連想するかもしれないが、あれで原子1個から取り出せるエネルギーは当然、赤ちゃん宇宙を生み出すほどの「途方もないエネルギー」ではない。
+[^2]: 核反応を連想するかもしれないが、あれで原子1個から取り出せるエネルギーは当然、赤ちゃん宇宙を生み出すほどの「途方もないエネルギー」ではない。
 
 また"atom smasher"の訳に関して、
 
@@ -247,6 +246,7 @@ https://youtu.be/uD4izuDMUQA?t=803
 迷ったが、カッコ書きで併記して「原子破壊装置（粒子加速器）」と訳した（字幕翻訳としては邪道かもしれないが…）。
 どちらか選ぶなら、日本語訳としては「粒子加速器」だろう。
 
+## 24:53
 > you can perhaps open up a gateway - A 'Baby universe'.
 
 | 元の訳 | 修正版 |
@@ -258,8 +258,10 @@ Ref: [竹内薫 (2010).『図解入門よくわかる最新宇宙論の基本と
 
 また、元の訳の『「ベービー宇宙」への戸口』も誤り。赤ちゃん宇宙イコール、（脱出のための）出口=gateway、といういう文構造。
 
+## 25:11
 
----
+ここは長いがまとめて載せてしまう。
+マルチバースの進化に関して、なかなか面白い内容を話しているところ。
 
 > And this also raises a very intriguing possibility, sheer pure speculation of course,<br>
 > that perhaps any universe that has intelligent life in it, will create baby universes, will create 'Lifeboats', and will proliferate child universes.<br>
@@ -279,12 +281,6 @@ Ref: [竹内薫 (2010).『図解入門よくわかる最新宇宙論の基本と
 新たな宇宙を創造出来る文明が生まれ、<br>
 そこからさらに繁殖することができるかもしれない<br>
 
- 00:25:11,920 --> 00:25:16,672
- 全く憶測の域を出ないが、ここから非常に興味深い可能性が導き出される
-+
-+全く憶測の域を出ないが、ここから非常に興味深い可能性が導き出される
-+知的生命体が存在する宇宙は、いずれ生命の救命ボートたる赤ちゃん宇宙を作る。つまり、そのような宇宙は全て子供宇宙を産む、という可能性だ
-
 ### 修正した訳
 
 全く憶測の域を出ないが、ここから非常に興味深い可能性が導き出される<br>
@@ -293,7 +289,7 @@ Ref: [竹内薫 (2010).『図解入門よくわかる最新宇宙論の基本と
 つまり、知的生命体が存在しない宇宙は「生殖能力がない」- 子を持てない。<br>
 対して、温度がちょうどよく地球のような星が存在する宇宙では、子供宇宙を創り出せる文明が生まれ、従って宇宙そのものが繁殖していく。<br>
 
----
+## 28:12
 
 > TIME BECOMES MEANINGLESS
 
@@ -306,8 +302,7 @@ Ref: [竹内薫 (2010).『図解入門よくわかる最新宇宙論の基本と
 
 科学知識で修正する訳より、こういう訳の修正の方がセンスがものをいう感じがして難しい。
 
-
----
+## 28:37
 
 > "Everything has its wonders, even darkness and silence...<br>
 > ...and I learn, whatever state I may be in, therein to be content."<br>
@@ -317,20 +312,20 @@ Ref: [竹内薫 (2010).『図解入門よくわかる最新宇宙論の基本と
 | ----- | ----- |
 | 奇跡はどこにでもある。暗闇にも、静寂にも..<br>そして学ぶ、どんな状況であれ、そこに満足を見出すと。 | 奇跡はどこにでもある。暗闇にも、静寂にも……<br>そしてどんな時も、それで満たされることを知る。 |
 
-ここも文芸的な訳で難しい！それに、偉人の名言の訳はより重みがある…[^4]
+ここも文芸的な訳で難しい！それに、偉人の名言の訳はより重みがある…[^3]
 
-[^4]: そもそも偉人の名言なら定訳があるかと思って調べてみたものの、素人が翻訳の題材にしている例はいくつかあったが、こなれた定訳と言ったものは見つからなかった。
+[^3]: そもそも偉人の名言なら定訳があるかと思って調べてみたものの、素人が翻訳の題材にしている例はいくつかあったが、こなれた定訳と言ったものは見つからなかった。
 
 前半の"Everything has its wonders, even darkness and silence..."は元の訳をそのまま使わせてもらった。正直違和感はあるのだが、良い訳を思いつけなかった。
 というのも、"wonder"の訳は「奇跡」で良いのだろうか…
-日本語の「奇跡」というと、"miracle"を想像してしまいがちな気がする。"wonder"はそれとは違い、自然の中にある超越的なもの、それに対する畏敬の念や不思議な感覚、みたいなニュアンスだと思う。センス・オブ・ワンダーの"wonder"。ただこれを短い日本語訳にまとめる力が自分になかった…
+日本語の「奇跡」というと、"miracle"を想像してしまいがちな気がする。"wonder"はそれとは違い、自然の中にある超越的なもの、それに対する畏敬の念や不思議な感覚、みたいなニュアンスだと思う。センス・オブ・ワンダーの"wonder"。ただこれを簡潔な日本語訳にまとめる力が自分になかった。
 [「驚き」の類義語を調べてみたり](https://thesaurus.weblio.jp/content/%E9%A9%9A%E3%81%8D)、["wonder"の含まれる例文の訳例を調べてみたり](https://context.reverso.net/%E7%BF%BB%E8%A8%B3/%E8%8B%B1%E8%AA%9E-%E6%97%A5%E6%9C%AC%E8%AA%9E/wonder+in+a)して、
 「驚き」「神秘」「不思議」「驚異」「感嘆」あたりを考えてみたけど、結局しっくりこなくてやめた。
 
 
 後半は元の訳を修正した。
-
-以下の例文の訳を参考にした。
+意味は外していないと思うが、語順や単語選択が日本語としてこなれていないので直した。
+また、以下の例文"Learn to be contented"の訳が参考になった。
 
 > Learn to be contented! = 足るを知れ<br>
 > https://ejje.weblio.jp/content/learn+to
