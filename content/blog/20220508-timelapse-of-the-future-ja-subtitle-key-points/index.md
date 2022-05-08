@@ -1,6 +1,6 @@
 ---
 title: TIMELAPSE OF THE FUTURE 日本語訳のポイント
-date: "2022-03-15T22:50:53+09:00"
+date: "2022-05-08T22:50:53+09:00"
 description: TIMELAPSE OF THE FUTUREの字幕を日本語訳する際に、特に頭を捻った・知識を動員した箇所の解説
 tags: []
 lang: ja
