@@ -6,6 +6,15 @@ tags: []
 ---
 
 雑に数えて、元の字幕230字幕中、約半分の116字幕に手を入れた。
+日本語としての自然さを改善したものから、明らかに意味が間違っている訳の修正までさまざまあるが、そのうちいくつかをピックアップしてまとめておく。
+特に以下の修正箇所を挙げた。挙げていないものも全てこだわって訳したが（だからこそ修正したのだが）
+* 修正訳を考えるに当たって特に頭を捻ったもの
+* 専門用語の修正
+* 意味の間違いの修正
+  * 特に天文学、物理学の知識に基づいて補完できるものについては、その補足説明
+
+科学的な文章の翻訳はなんとかなるものの、
+文芸的な文章もいくつかあり、それらの翻訳には特に苦労したし結局あまり自信を持てていない。
 
 > We will travel through time exponentially, doubling our speed every 5 seconds.
 
@@ -138,3 +147,190 @@ JST科学技術用語日英対訳辞書が「躍動」を訳語として挙げ�
 | 元の訳 | 修正版 |
 | ----- | ----- |
 | そうならば私たちの想像も及ばぬ広い領域を理解する生命体であるかもしれない。<br/>生命体が存在すること、<br/>たとえ10兆年に一度の出来事であるとしても<br/>何の不思議もない。 | 遠い宇宙には全く異なる速度に基づいた、意識を持つ生命体もあると想像できる。<br/>10兆年に1回思考するのが普通であるような生命体もあり得るだろう |
+
+全編の修正作業をする前に、最初に作者に修正提案を行った箇所。この件については[以前のポスト](../20220205-fix-youtube-subtitle-mistranslation)に書いた。
+ここは純粋に誤訳の修正。
+
+[宇宙の終焉 - 有限の宇宙で文明を永続させる方法 (Wikipedia)](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E7%B5%82%E7%84%89#.E6.9C.89.E9.99.90.E3.81.AE.E5.AE.87.E5.AE.99.E3.81.A7.E6.96.87.E6.98.8E.E3.82.92.E6.B0.B8.E7.B6.9A.E3.81.95.E3.81.9B.E3.82.8B.E6.96.B9.E6.B3.95)あたりが関連する知識になると思う。エントロピーが上昇した宇宙では、思考（活動）のクロックを下げて生命活動を維持するという考え方。
+
+---
+
+> So you might have islands in time of intelligence.
+ 知性体は時間の大海で孤島のように
+ 隔絶されているのかもしれない。
+
+時間の大海に、知性体が存在する瞬間が孤島のように現れるかもしれない
+
+
+ 宇宙の神秘は永遠の扉の向こうに秘蔵される
++The secrets of the cosmos are locked away forever.
++宇宙の神秘には永遠に手が届かなくなる
+
+
+
+> life, as we know it, is only possible for
+> one thousandth of a billion billion billionth,billion billion billion billion billion billionth, of a percent.
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| ...生命が可能となるが、その期間の割合は<br>10億分の1を9回乗じ、さらにそれの1000分の1パーセントにすぎない | 生命が存在できる。その期間の割合は、<br>1000分の1の、10億分の10億分の10億分の10億分の10億分の10億分の10億分の10億分の10億分の1パーセント
+(10^(-84)%) |
+
+原文の、"billion"を何回も畳みかける表現を再現した。
+特に動画（↓）でナレーションを聞くとその大切さが分かると思う。"billion"を9回繰り返すことで数字の大きさが強調されている。
+
+https://youtu.be/uD4izuDMUQA?t=803
+
+---
+
+> ...and they (=gravitational wave) will travel out from these black holes at the speed of light as they ring down and coalesce into one, spinning, quiet black hole.
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| ブラックホール同士の回転がやがて終わり静かに融合、停止するまで、この波動は光の速度で伝わってゆく | これらのブラックホールから発生した重力波は光速で伝播していく。<br>二つのブラックホールは融合し、一つの静かな回転ブラックホールになる。 |
+
+ここは誤訳の修正。
+「ブラックホール同士の回転がやがて終わり静かに融合、停止するまで」は原文にない内容を訳出してしまっている。
+
+物理的に考えても、系の角運動量は保存されるなので、融合した後は停止するのでなく回転ブラックホールになると思えば、誤訳に気付ける。
+
+---
+
+> ... the black holes begin to evaporate.
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| ブラックホールさえも消滅し始める | ブラックホールさえも蒸発し始める |
+
+宇宙科学系の日本語文献における、ブラックホールの"evaporation"の定訳はそのまま「蒸発」。
+
+---
+
+> And the universe, we think, will die in ice, trillions upon trillions of years from now.
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| それゆえ、宇宙は氷の中で死ぬと私たちは考える<br>今から数兆年の数兆倍先の未来に | そのため、宇宙は冷たい死に至ると考えられる<br>果てしなく遠い先の未来に |
+
+"the universe will die in ice"の直訳「宇宙は氷の中で死ぬ」は日本語として不自然。
+ここは[宇宙が絶対零度に冷却されて低温死（cold death）に至る](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E7%B5%82%E7%84%89)ことを少し文芸的に言っているだけなので、「宇宙は冷たい死に至る」と訳した。もう少し文芸的に、かつ"ice"の語感を残して「宇宙は凍てついて死に至る」とかでもよかったかもしれない。
+
+また、この"trillions upon trillions of years"は簡潔な英語表現がないほどの大きな年数を表しているのであって、厳密に「数兆年の数兆倍」（=10^12*10^12=10^24）という意味ではない。
+実際、動画中の年数表記は "N trillion trillion trillion trillion trillion trillion years" = N * 10^(12 * 6) = N * 10^72年である。
+また、[宇宙の終焉#ブラックホールの蒸発 (Wikipedia)](https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E3%81%AE%E7%B5%82%E7%84%89#%E3%83%96%E3%83%A9%E3%83%83%E3%82%AF%E3%83%9B%E3%83%BC%E3%83%AB%E3%81%AE%E8%92%B8%E7%99%BA)によれば、銀河質量ブラックホールが蒸発しきるのに10^100年かかる。
+
+ということで、"trillions upon trillions of years from now"は「果てしなく遠い先の未来に」とした。
+
+---
+> if you have an atom smasher, that can constrict tremendous amount of energy at a single point,
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| もし途方もないエネルギーを一点に閉じ込めている原子をこじ開けることが出来るとしたら | もし途方もない量のエネルギーを一点に集中させられる原子破壊装置（粒子加速器）があれば、 |
+
+誤訳の修正。正しく英文を読めばこうなる、以上のことは言えない…
+元の訳は"atom"に引きずられて変な方向に行ってしまったのかな？
+
+しかしここも、物理学の知識があれば「途方もないエネルギーを一点に閉じ込めている原子」やら、それを「こじ開ける」やらがおかしいと気付けるはず[^3]。
+
+[^3]: 核反応を連想するかもしれないが、あれで原子1個から取り出せるエネルギーは当然、赤ちゃん宇宙を生み出すほどの「途方もないエネルギー」ではない。
+
+また"atom smasher"の訳に関して、
+
+> Atom smasher is an older, popular name for a particle accelerator.
+> https://atomic.lindahall.org/what-is-an-atom-smasher.html
+
+とのことなので、英語圏では"particle accelerator"より"atom smasher"の方が通りがいいのだろうか。
+
+それぞれの日本語訳は[「粒子加速器」](https://ejje.weblio.jp/content/particle+accelerator)と[「原子（核）破壊装置」](https://ejje.weblio.jp/content/atom+smasher)だが、日本語圏では「粒子加速器」の方が馴染みがあるのではないだろうか。
+
+迷ったが、カッコ書きで併記して「原子破壊装置（粒子加速器）」と訳した（字幕翻訳としては邪道かもしれないが…）。
+どちらか選ぶなら、日本語訳としては「粒子加速器」だろう。
+
+> you can perhaps open up a gateway - A 'Baby universe'.
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| おそらく「ベービー宇宙」への戸口を<br>開くことが可能になる | 出口を作り出せるかもしれない - 「赤ちゃん宇宙」だ |
+
+"baby universe"の定訳は「赤ちゃん宇宙」。
+Ref: [竹内薫 (2010).『図解入門よくわかる最新宇宙論の基本と仕組み: 宇宙137億年を旅する』. 秀和システム, 198p.](https://books.google.co.jp/books?id=CjUHA1yxTRUC&pg=PA198&lpg=PA198&dq=%22%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E5%AE%87%E5%AE%99%22#v=onepage&q=%22%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93%E5%AE%87%E5%AE%99%22&f=false)
+
+また、元の訳の『「ベービー宇宙」への戸口』も誤り。赤ちゃん宇宙イコール、（脱出のための）出口=gateway、といういう文構造。
+
+
+---
+
+> And this also raises a very intriguing possibility, sheer pure speculation of course,<br>
+> that perhaps any universe that has intelligent life in it, will create baby universes, will create 'Lifeboats', and will proliferate child universes.<br>
+> So an evolution may take place among universes, in the multiverse. Survival of the fittest may take place.<br>
+> So those universes which do not have intelligent life are 'infertile', they have no children.<br>
+> But those universes that have mild temperatures, stars like ours, would create civilizations that could open up child universes and they would then proliferate.<br>
+
+### 元の訳
+
+全く憶測の域を出ないが、ここから非常に興味深い可能性が導き出される<br>
+知的生命体が存在する宇宙があるならば,<br>
+彼らは「ベービー宇宙」と「救命艇」を創りだし、創造された宇宙を無数に増やすだろう<br>
+その多元宇宙のどこかで進化が起こるかもしれない<br>
+適者生存の可能性がある<br>
+知的な生命が存在しない宇宙は子を持つことがない<br>
+しかし、私たちが住む適度な温度と星を持つ宇宙では<br>
+新たな宇宙を創造出来る文明が生まれ、<br>
+そこからさらに繁殖することができるかもしれない<br>
+
+ 00:25:11,920 --> 00:25:16,672
+ 全く憶測の域を出ないが、ここから非常に興味深い可能性が導き出される
++
++全く憶測の域を出ないが、ここから非常に興味深い可能性が導き出される
++知的生命体が存在する宇宙は、いずれ生命の救命ボートたる赤ちゃん宇宙を作る。つまり、そのような宇宙は全て子供宇宙を産む、という可能性だ
+
+### 修正した訳
+
+全く憶測の域を出ないが、ここから非常に興味深い可能性が導き出される<br>
+知的生命体が存在する宇宙は、いずれ生命の救命ボートたる赤ちゃん宇宙を作る。つまり、そのような宇宙は全て子供宇宙を産む、という可能性だ<br>
+ひいては、複数の宇宙（マルチバース）の中で進化、つまりは適者生存が起きるかもしれない<br>
+つまり、知的生命体が存在しない宇宙は「生殖能力がない」- 子を持てない。<br>
+対して、温度がちょうどよく地球のような星が存在する宇宙では、子供宇宙を創り出せる文明が生まれ、従って宇宙そのものが繁殖していく。<br>
+
+---
+
+> TIME BECOMES MEANINGLESS
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| 時間は無意味となる | 時間は意味を失う |
+
+クライマックス。
+直訳よりも、日本語としてこなれている訳に直してみた。
+
+科学知識で修正する訳より、こういう訳の修正の方がセンスがものをいう感じがして難しい。
+
+
+---
+
+> "Everything has its wonders, even darkness and silence...<br>
+> ...and I learn, whatever state I may be in, therein to be content."<br>
+> \- Helen Keller
+
+| 元の訳 | 修正版 |
+| ----- | ----- |
+| 奇跡はどこにでもある。暗闇にも、静寂にも..<br>そして学ぶ、どんな状況であれ、そこに満足を見出すと。 | 奇跡はどこにでもある。暗闇にも、静寂にも……<br>そしてどんな時も、それで満たされることを知る。 |
+
+ここも文芸的な訳で難しい！それに、偉人の名言の訳はより重みがある…[^4]
+
+[^4]: そもそも偉人の名言なら定訳があるかと思って調べてみたものの、素人が翻訳の題材にしている例はいくつかあったが、こなれた定訳と言ったものは見つからなかった。
+
+前半の"Everything has its wonders, even darkness and silence..."は元の訳をそのまま使わせてもらった。正直違和感はあるのだが、良い訳を思いつけなかった。
+というのも、"wonder"の訳は「奇跡」で良いのだろうか…
+日本語の「奇跡」というと、"miracle"を想像してしまいがちな気がする。"wonder"はそれとは違い、自然の中にある超越的なもの、それに対する畏敬の念や不思議な感覚、みたいなニュアンスだと思う。センス・オブ・ワンダーの"wonder"。ただこれを短い日本語訳にまとめる力が自分になかった…
+[「驚き」の類義語を調べてみたり](https://thesaurus.weblio.jp/content/%E9%A9%9A%E3%81%8D)、["wonder"の含まれる例文の訳例を調べてみたり](https://context.reverso.net/%E7%BF%BB%E8%A8%B3/%E8%8B%B1%E8%AA%9E-%E6%97%A5%E6%9C%AC%E8%AA%9E/wonder+in+a)して、
+「驚き」「神秘」「不思議」「驚異」「感嘆」あたりを考えてみたけど、結局しっくりこなくてやめた。
+
+
+後半は元の訳を修正した。
+
+以下の例文の訳を参考にした。
+
+> Learn to be contented! = 足るを知れ<br>
+> https://ejje.weblio.jp/content/learn+to
