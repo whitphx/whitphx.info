@@ -10,7 +10,7 @@ lang: ja
 
 [TIMELAPSE OF THE FUTURE: A Journey to the End of Time (4K)](https://www.youtube.com/watch?v=uD4izuDMUQA)
 
-雑に数えてみたら、元の字幕230字幕中、約半分の116字幕に手を入れていた。
+雑に数えてみたら、全230字幕中、約半分の116字幕に手を入れていた。
 日本語としての自然さを改善したものから、明らかに意味が間違っている訳の修正までさまざまあるが、そのうちいくつかをピックアップしてまとめておく。
 
 # その前に感想
