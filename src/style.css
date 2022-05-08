@@ -62,6 +62,20 @@
   --color-accent: #d1dce5;
 }
 
+:root:lang(ja) {
+  --fontSize-root: 18px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --fontSize-root: 18px;
+  }
+
+  :root:lang(ja) {
+    --fontSize-root: 20px;
+  }
+}
+
 /* HTML elements */
 
 *,
