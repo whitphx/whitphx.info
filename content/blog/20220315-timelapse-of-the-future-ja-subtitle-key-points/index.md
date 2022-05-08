@@ -1,8 +1,9 @@
 ---
 title: TIMELAPSE OF THE FUTURE 日本語訳のポイント
 date: "2022-03-15T22:50:53+09:00"
-description:
+description: TIMELAPSE OF THE FUTUREの字幕を日本語訳する際に、特に頭を捻った・知識を動員した箇所の解説
 tags: []
+lang: ja
 ---
 
 [TIMELAPSE OF THE FUTURE の日本語字幕編集プロジェクト](../20220311-timelapse-of-the-future-ja-subtitle/)に書いた通り、YouTube動画[TIMELAPSE OF THE FUTURE: A Journey to the End of Time (4K)](https://www.youtube.com/watch?v=uD4izuDMUQA)の日本語字幕を修正した。
