@@ -12,7 +12,7 @@ I created [`react-ymd-date-select`](https://whitphx.github.io/react-ymd-date-sel
 [whitphx/react-ymd-date-select - GitHub](https://github.com/whitphx/react-ymd-date-select)
 
 We sometimes need Y-M-D dropdown UI like the screenshot above rather than calendar UI.
-For example, when asking users to select their birth dates, Y-M-D dropdown is preferable because calendar widgets are usually difficult to seek to far old years, and conversely, its benefits are not needed such as being able to intuitively show days of week.
+For example, when asking users to select their birth dates, Y-M-D dropdown is preferable because calendar widgets are usually difficult to seek to far old years, and conversely, its benefits such as intuitively showing days-of-week are not needed.
 
 I actually encountered such a situation, however, I could not find any existing packages that meet my needs.
 In turn, building it by myself looks simple, but actually, there are some nuts as below.
@@ -22,11 +22,11 @@ In turn, building it by myself looks simple, but actually, there are some nuts a
 
 And sometimes there come more requirements like
 * To set the default year.
-* To make it Y-M dropdown (hide the day).
+* To show only year and month selects (hide the day dropdown).
 
-So, to handle there stuff, I made a library [`react-ymd-date-select`](https://whitphx.github.io/react-ymd-date-select/).
+So, to handle these, I made a library [`react-ymd-date-select`](https://whitphx.github.io/react-ymd-date-select/).
 
-With the `useDateSelect()` hook provided by this library, you can create original Y-M-D components like the sample below, focusing on the view behavior - cumbersome logic has been encapsulated into the hook.
+With the `useDateSelect()` hook provided by this library, you can create original Y-M-D components like the sample below, focusing on the view behavior as cumbersome logic has been encapsulated into the hook.
 
 The `value` prop and the argument of `onChange()` are string formatted in `yyyy-MM-DD`, which is ISO8601 format, and the same as the value of the native `<input type="date" />`. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date#value
 
