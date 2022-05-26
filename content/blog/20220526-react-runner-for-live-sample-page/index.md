@@ -19,7 +19,7 @@ To do that,
 * [React Live](https://github.com/FormidableLabs/react-live)
   * This does not support `import` statements in the sample code.
 * [Sandpack](https://sandpack.codesandbox.io/) ([`@codesandbox/sandpack-react`](https://www.npmjs.com/package/@codesandbox/sandpack-react))
-  * This does not support nested paths such as `import * from "package/subpath"`
+  * This does not support nested paths such as `import Something from "package/subpath"`
     * https://github.com/codesandbox/codesandbox-client/issues/6499
 * Embedding sample code at build time with bundler's setting as such as raw-loader for Webpack.
   * This requires 2 imports per example as below, but I did not like that due to its redundancy.
@@ -67,7 +67,7 @@ A component library of the famous online code editor, [CodeSandbox](https://code
 
 As my project was using React, its variant for React, [`@codesandbox/sandpack-react`](https://www.npmjs.com/package/@codesandbox/sandpack-react) was the candidate.
 
-This was also a nice library, but I could not choose it because it does not support imports from nested paths such as `import * from "package/subpath"`.
+This was also a nice library, but I could not choose it because it does not support imports from nested paths such as `import Something from "package/subpath"`.
 
 My library was built both for ESM and CommonJS and the CommonJS version allowed such nested imports, so I wanted to show that.
 
