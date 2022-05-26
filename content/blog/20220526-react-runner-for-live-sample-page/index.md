@@ -7,13 +7,14 @@ tags: ["dev"]
 
 I recently [created a React component library](../20220511-react-ymd-date-select) and wanted to publish a demo page for it that shows what the library can do with sample code.
 
-The actual demo page is like the following. There are a code editor with preset sample code and a rendering result of the React component side by side. Both are embedded in the demo page along with other elements.
+The actual demo page is like the following. There are **a code editor with preset sample code and a rendering result of the React component side by side**. Both are embedded in the demo page along with other elements.
 [![](./images/demo_screenshot.png)](https://whitphx.github.io/react-ymd-date-select/)
 [The demo page of `react-ymd-date-select`](https://whitphx.github.io/react-ymd-date-select/)
 
 # TL;DR
 
-**[React Runner](https://github.com/nihgwu/react-runner) was the best in my situation**, compared to the following libraries and methods.
+To do that,
+**[React Runner](https://github.com/nihgwu/react-runner) was the best in my situation**, compared to the following alternatives.
 
 * [React Live](https://github.com/FormidableLabs/react-live)
   * This does not support `import` statements in the sample code.
