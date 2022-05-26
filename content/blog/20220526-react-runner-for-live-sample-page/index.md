@@ -50,6 +50,9 @@ To do that,
 ## React Runner
 [React Runner](https://github.com/nihgwu/react-runner) satisfied all my needs.
 
+One drawback of this is that it requires all the libraries that might be imported in the samples to be bundled into the web page. While it's natural and technically inevitable, it leads to bigger bundle size.
+[Sandpack](#sandpack) below may not have this problem.
+
 ## React Live
 [React Live](https://github.com/FormidableLabs/react-live)
 
@@ -70,6 +73,9 @@ As my project was using React, its variant for React, [`@codesandbox/sandpack-re
 This was also a nice library, but I could not choose it because it does not support imports from nested paths such as `import Something from "package/subpath"`.
 
 My library was built both for ESM and CommonJS and the CommonJS version allowed such nested imports, so I wanted to show that.
+
+If this limitation is not a problem for you, Sandpack may be the best for you.
+
 
 ## Embedding sample code at build time
 
