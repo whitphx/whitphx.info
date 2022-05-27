@@ -22,6 +22,7 @@ To do that,
   * This does not support nested paths such as `import Something from "package/subpath"`
     * https://github.com/codesandbox/codesandbox-client/issues/6499
 * Embedding sample code at build time with bundler's setting as such as raw-loader for Webpack.
+  * We can't create editable live samples only with this.
   * This requires 2 imports per example as below, but I did not like that due to its redundancy.
     ```tsx
     import SampleComponent from "./components/Sample"
