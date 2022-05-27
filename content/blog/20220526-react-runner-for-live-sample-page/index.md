@@ -76,7 +76,6 @@ My library was built both for ESM and CommonJS and the CommonJS version allowed 
 
 If this limitation is not a problem for you, Sandpack may be the best for you.
 
-
 ## Embedding sample code at build time
 
 Some bundlers allow to import the file contents as string instead of normal modules.
