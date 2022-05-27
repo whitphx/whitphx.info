@@ -60,7 +60,7 @@ One drawback of this is that it requires all the libraries that might be importe
 A popular library for this purpose. For example, [Chakra UI's doc](https://chakra-ui.com/) is using this for its editable examples like the screenshot below.
 [![](./images/chakra-ui-editable-example.png)](https://chakra-ui.com/docs/components/layout/box)
 
-The author of [React Runner](https://github.com/nihgwu/react-runner) wrote that it was inspired by React Live.
+The author of [React Runner](https://github.com/nihgwu/react-runner) [wrote](https://github.com/nihgwu/react-runner#react-live-runner) that it was inspired by React Live.
 From its design, React Runner looks like a superset of React Live.
 
 I did not use React Live because I wanted to show complete and self-contained sample code including `import` statements, but React Live did not support it.
