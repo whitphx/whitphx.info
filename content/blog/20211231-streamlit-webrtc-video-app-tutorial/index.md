@@ -232,7 +232,6 @@ You will find that there are 2 sliders in this example.
 You can modify the parameters of `cv2.Canny()` through the sliders, even during execution in real time.
 
 ![](./images/streamlit-webrtc-tutorial-parameters.gif)
-<!-- TODO: Replace a new screenshot as the slider position changed -->
 
 With this update,
 * We added `threshold1` and `threshold2` variables.
