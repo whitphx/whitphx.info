@@ -24,9 +24,19 @@ This tech stack is useful for creating demos and prototyping ideas of video/audi
 
 You can see more examples at [the _examples_ section](#examples).
 
-NOTE:
+**NOTE:**
 These sample apps are hosted on the public cloud ([Streamlit Cloud](https://streamlit.io/cloud)), and the video and audio streams are transmitted to and processed at the cloud server. While those data are only processed on memory and not saved to any storage, however, if you are concerned, please do not use them.
 As for the following contents in this article, we can execute all of them on our local. In addition, you can try the examples above on your local by following the instructions at [the _examples_ section](#examples).
+
+**NOTE:**
+I had a presentation about this topic at [EuroPython 2022](https://ep2022.europython.eu/) titled as ["Real-time browser-ready computer vision apps with Streamlit."](https://ep2022.europython.eu/session/real-time-browser-ready-computer-vision-apps-with-streamlit)
+The talk video is available below:
+
+https://www.youtube.com/watch?v=uVD6B8WLMTo&t=16118s
+
+**UPDATE:**
+This article has been updated on 2022/09/02 using the newly introduced API of `streamlit-webrtc` that has been available since [v0.40.0](https://github.com/whitphx/streamlit-webrtc/blob/main/CHANGELOG.md#0400---2022-06-07).
+The diff is [here](https://github.com/whitphx/whitphx.info/pull/17).
 
 ## The advantages of web-based apps
 We have been typically using OpenCV to build real-time demo apps of image or video processing. Some of you (especially developers or researchers in such fields) may have seen the following code or similar many times.
@@ -159,16 +169,15 @@ st.title("My first Streamlit app")
 st.write("Hello, world")
 
 
-class VideoProcessor:
-    def recv(self, frame):
-        img = frame.to_ndarray(format="bgr24")
+def callback(frame):
+    img = frame.to_ndarray(format="bgr24")
 
-        img = cv2.cvtColor(cv2.Canny(img, 100, 200), cv2.COLOR_GRAY2BGR)
+    img = cv2.cvtColor(cv2.Canny(img, 100, 200), cv2.COLOR_GRAY2BGR)
 
-        return av.VideoFrame.from_ndarray(img, format="bgr24")
+    return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
-webrtc_streamer(key="example", video_processor_factory=VideoProcessor)
+webrtc_streamer(key="example", video_frame_callback=callback)
 ```
 
 Try it out by clicking the "START" button like the previous section.
@@ -176,26 +185,24 @@ With this new example, you can find that an image filter is applied to the video
 
 ![](./images/streamlit-webrtc-tutorial-edge.gif)
 
-We have defined a class and its method `VideoProcessor#recv()`, a callback that receives an input frame and returns an output frame. We also put image processing (edge detection in this example) code inside the callback. As a result, we have injected the image processing code into the real-time video app through the callback.
+We have defined a callback that receives an input frame and returns an output frame. We also put image processing (edge detection in this example) code inside the callback. As a result, we have injected the image processing code into the real-time video app through the callback.
 
 Detailed explanations about the code follow.
-* `webrtc_streamer()` can take a class object with `.recv()` method as its `video_processor_factory` argument[^2].
-* The `.recv()` receives and returns input and output image frames. These are instances of the [`VideoFrame`](https://pyav.org/docs/develop/api/video.html#av.video.frame.VideoFrame) class from [`PyAV`](https://github.com/PyAV-Org/PyAV).
+* `webrtc_streamer()` can take a function object through the `video_frame_callback` argument as a callback.
+* The callback receives and returns input and output image frames. These are instances of the [`VideoFrame`](https://pyav.org/docs/develop/api/video.html#av.video.frame.VideoFrame) class from [`PyAV`](https://github.com/PyAV-Org/PyAV).
   * The `PyAV` library is a Python binding of `ffmpeg`, which provides video and audio capabilities. It is installed as a dependency of `streamlit-webrtc`.
-* The argument of `.recv()` is an image frame in the input video stream sourced from the webcam. It can be converted into a NumPy array with `frame.to_ndarray()`.
-* The returned value from `.recv()` is displayed on the screen. In the sample above, a new `VideoFrame` object to be returned is generated from a NumPy array, with `av.VideoFrame.from_ndarray(img, format="bgr24")`[^3].
+* The argument of the callback is an image frame in the input video stream sourced from the webcam. It can be converted into a NumPy array with `frame.to_ndarray()`.
+* The returned value from the callback is displayed on the screen. In the sample above, a new `VideoFrame` object to be returned is generated from a NumPy array, with `av.VideoFrame.from_ndarray(img, format="bgr24")`[^1].
 * Any code can be put inside the callback. In the example above, we have used an edge detection filter `cv2.Canny(img, 100, 200)` (and a grayscale converter `cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)`) as an example.
 
-[^2]: Precisely, "an object with a callback method named `recv`" can be passed to the `video_processor_factory` argument. It means that a class object can be the argument because, in Python, a class object is a callable returning its instance object.
-
-[^3]: Some experienced readers have noticed that we have not set the timing information of each frame. `streamlit-webrtc` automatically sets such info to each frame when returned from the callback. It is also possible for the developers to set it manually, and `streamlit-webrtc` does nothing in that case.
+[^1]: Some experienced readers have noticed that we have not set the timing information of each frame. `streamlit-webrtc` automatically sets such info to each frame when returned from the callback. It is also possible for the developers to set it manually, and `streamlit-webrtc` does nothing in that case.
 
 Now, we have created a browser-ready real-time video processing app!
 We used a simple Canny edge detector in this example, and you can replace it with any image processing code in your original app.
 
-If we use object detection or style transfer for that part, the app would be like the screenshots at the beginning of this article[^4].
+If we use object detection or style transfer for that part, the app would be like the screenshots at the beginning of this article[^2].
 
-[^4]: [The source code of the object detection app](https://github.com/whitphx/streamlit-webrtc/blob/d6ce5b51e6c367a2e9488b8a50bfc652fee3b936/app.py#L309-L451) and [the style transfer app](https://github.com/whitphx/style-transfer-web-app/blob/2c835d11010b8d5c9acc8c8d681c9dfd0687b2ac/input.py#L37-L96).
+[^2]: [The source code of the object detection app](https://github.com/whitphx/streamlit-webrtc/blob/d6ce5b51e6c367a2e9488b8a50bfc652fee3b936/app.py#L309-L451) and [the style transfer app](https://github.com/whitphx/style-transfer-web-app/blob/2c835d11010b8d5c9acc8c8d681c9dfd0687b2ac/input.py#L37-L96).
 
 ### Receive user inputs
 Update the `app.py` as below.
@@ -209,24 +216,19 @@ import cv2
 st.title("My first Streamlit app")
 st.write("Hello, world")
 
-
-class VideoProcessor:
-    def __init__(self) -> None:
-        self.threshold1 = 100
-        self.threshold2 = 200
-
-    def recv(self, frame):
-        img = frame.to_ndarray(format="bgr24")
-
-        img = cv2.cvtColor(cv2.Canny(img, self.threshold1, self.threshold2), cv2.COLOR_GRAY2BGR)
-
-        return av.VideoFrame.from_ndarray(img, format="bgr24")
+threshold1 = st.slider("Threshold1", min_value=0, max_value=1000, step=1, value=100)
+threshold2 = st.slider("Threshold2", min_value=0, max_value=1000, step=1, value=200)
 
 
-ctx = webrtc_streamer(key="example", video_processor_factory=VideoProcessor)
-if ctx.video_processor:
-    ctx.video_processor.threshold1 = st.slider("Threshold1", min_value=0, max_value=1000, step=1, value=100)
-    ctx.video_processor.threshold2 = st.slider("Threshold2", min_value=0, max_value=1000, step=1, value=200)
+def callback(frame):
+    img = frame.to_ndarray(format="bgr24")
+
+    img = cv2.cvtColor(cv2.Canny(img, threshold1, threshold2), cv2.COLOR_GRAY2BGR)
+
+    return av.VideoFrame.from_ndarray(img, format="bgr24")
+
+
+webrtc_streamer(key="example", video_frame_callback=callback)
 ```
 
 Then click the "START" button.
@@ -235,28 +237,24 @@ You can modify the parameters of `cv2.Canny()` through the sliders, even during 
 
 ![](./images/streamlit-webrtc-tutorial-parameters.gif)
 
-The explanations of the code follow:
-* We added `.threshold1` and `.threshold2` attributes to the `VideoProcessor` class. They are used as parameters of `cv2.Canny()` inside the `.recv()`.
-* `webrtc_streamer` returns a context object, so we assign it to the `ctx` variable.
-* A class object passed to `webrtc_streamer()` via the `video_processor_factory` argument will be instantiated and set to `ctx.video_processor`.
-  * It is not set when the video stream is not active, so we check its existence with the `if` clause.
-* So, in this example, the instance of `VideoProcessor` class will be set to `ctx.video_processor`, and we can access its `.threshold1` and `.threshold2` attributes. Then we assign the slider values to these attributes so that the parameters of `cv2.Canny()` can be changed via the sliders.
-  * I will explain later why we don't (can't) pass the slider values to `cv2.Canny()` directly.
-* The slider UI is created with `st.slider()` in Streamlit apps.
-  * `st.slider()` is a built-in Streamlit component. Its official API reference is https://docs.streamlit.io/library/api-reference/widgets/st.slider.
+With this update,
+* We added `threshold1` and `threshold2` variables.
+* We added two slider components with `st.slider()` and assigned their values to these variables.
+  * `st.slider()` is a built-in component of Streamlit. Its official API reference is https://docs.streamlit.io/library/api-reference/widgets/st.slider.
+* We then passed these variables to `cv2.Canny()` inside the callback as its parameters.
 
-### Execution model of `recv()` and an important notice about it
+Now we have interactive inputs to control the real-time video filter!
+
+### Execution model of the callback and an important notice about it
 <!-- One major difference between OpenCV and `streamlit-webrtc` is the callback usage. -->
 Unlike OpenCV, `streamlit-webrtc` requires callbacks to process image and audio frames.
-The callback `.recv()` is one major difference between OpenCV GUI and `streamlit-webrtc`, and there are a few things you have to be aware of about it.
+This callback-based design is one major difference between OpenCV GUI and `streamlit-webrtc`, and there are a few things you have to be aware of about it.
 
-Please note that `.recv()` is executed in a forked thread different from the main thread where the Streamlit app code runs.
+Please note that the callback is executed in a forked thread different from the main thread where the Streamlit app code runs.
 It makes some restrictions as below.
-* The `global` keyword does not work as expected inside `.recv()`.
-* Streamlit methods such as `st.write()` cannot be used inside `.recv()`.
-* Communications between inside and outside `.recv()` must be thread-safe.
-
-In the previous example, we passed values from the global scope to `.recv()` through the instance attributes since we cannot use `global` and refer to these values from inside `.recv()`.
+* The `global` keyword does not work as expected inside the callback.
+* Streamlit methods such as `st.write()` cannot be used inside the callback.
+* Communications between inside and outside the callback must be thread-safe.
 
 ## Deploy the app to the cloud
 We are going to make the web app available to everyone by deploying it to the cloud.
@@ -265,9 +263,9 @@ We are going to make the web app available to everyone by deploying it to the cl
 To deploy the app to the cloud, we have to add `rtc_configuration` parameter to the `webrtc_streamer()`.
 
 ```python
-ctx = webrtc_streamer(
+webrtc_streamer(
     key="example",
-    video_processor_factory=VideoProcessor,
+    video_frame_callback=callback,
     rtc_configuration={  # Add this line
         "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]
     }
@@ -277,11 +275,11 @@ This configuration is necessary to establish the media streaming connection when
 
 `streamlit_webrtc` uses WebRTC for its video and audio streaming.
 It has to access a "STUN server" in the global network for the remote peers (precisely, peers over the NATs) to establish WebRTC connections.
-As we don't see the details about STUN servers in this article, please google it if interested with keywords such as STUN, TURN, or NAT traversal.
+While we don't look at the details about STUN servers in this article, please google it with keywords such as STUN, TURN, or NAT traversal if interested.
 
-We configured the code to use a free STUN server provided by Google in the example above. You can also use any other available STUN servers[^5].
+We configured the code to use a free STUN server provided by Google in the example above. You can also use any other available STUN servers[^3].
 
-[^5]: I once received a report that it took so long to make a connection with the library. The reason was that the reporter used Google's STUN server from the Chinese network. It was solved by changing the server. https://github.com/whitphx/streamlit-webrtc/issues/283#issuecomment-889753789
+[^3]: I once received a report that it took so long to make a connection with the library. The reason was that the reporter used Google's STUN server from the Chinese network. It was solved by changing the server. https://github.com/whitphx/streamlit-webrtc/issues/283#issuecomment-889753789
 
 The value of the `rtc_configuration` argument will be passed to the [`RTCPeerConnection`](https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection) constructor on the frontend.
 
@@ -363,7 +361,7 @@ You can create video chat apps with ~100 lines of Python code.
 https://twitter.com/whitphx/status/1422115806196867072
 
 ## What about audio?
-You can deal with audio streams in a similar way as video. If you define a class with `.recv()` method and pass it to the `audio_processor_factory` argument, the callback will be executed with audio frames.
+You can deal with audio streams in a similar way as video. If you define a callback function and pass it to the `audio_frame_callback` argument, the callback will be executed with audio frames.
 In the case of audio, the input argument and the returned value of the callback are instances of [the `AudioFrame` class](https://pyav.org/docs/develop/api/audio.html#module-av.audio.frame).
 
-Please see the source code of [a sample app changing the audio gain](https://github.com/whitphx/streamlit-webrtc/blob/d6ce5b51e6c367a2e9488b8a50bfc652fee3b936/app.py#L233-L273) or the Speech-to-Text app in the examples above.
+Please see the source code of [a sample app changing the audio gain](https://github.com/whitphx/streamlit-webrtc/blob/c172483efd4566b18d3500e914285079117b5b35/pages/audio_filter.py) or the Speech-to-Text app in the examples above.
