@@ -24,15 +24,19 @@ This tech stack is useful for creating demos and prototyping ideas of video/audi
 
 You can see more examples at [the _examples_ section](#examples).
 
-NOTE:
+**NOTE:**
 These sample apps are hosted on the public cloud ([Streamlit Cloud](https://streamlit.io/cloud)), and the video and audio streams are transmitted to and processed at the cloud server. While those data are only processed on memory and not saved to any storage, however, if you are concerned, please do not use them.
 As for the following contents in this article, we can execute all of them on our local. In addition, you can try the examples above on your local by following the instructions at [the _examples_ section](#examples).
 
-NOTE:
+**NOTE:**
 I had a presentation about this topic at [EuroPython 2022](https://ep2022.europython.eu/) titled as ["Real-time browser-ready computer vision apps with Streamlit."](https://ep2022.europython.eu/session/real-time-browser-ready-computer-vision-apps-with-streamlit)
 The talk video is available below:
 
 https://www.youtube.com/watch?v=uVD6B8WLMTo&t=16118s
+
+**UPDATE:**
+This article has been updated on 2022/09/02 using the newly introduced API of `streamlit-webrtc` that has been available since [v0.40.0](https://github.com/whitphx/streamlit-webrtc/blob/main/CHANGELOG.md#0400---2022-06-07).
+The diff is [here](https://github.com/whitphx/whitphx.info/pull/17).
 
 ## The advantages of web-based apps
 We have been typically using OpenCV to build real-time demo apps of image or video processing. Some of you (especially developers or researchers in such fields) may have seen the following code or similar many times.
