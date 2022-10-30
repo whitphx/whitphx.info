@@ -132,13 +132,13 @@ Note that some SNS and URL shortening services cut off the long URLs, so you sho
 
 This URL mechanism is inspired by [Shinylive](https://shiny.rstudio.com/py/docs/shinylive.html).
 
-### File creation
+### Adding files
 
 By clicking the "+" button at the file tabs area, you can create a new file.
 
-![](./images/stlite_sharing_files_add_button.png)
+You can also upload files from your local env (the files are never "uploaded" to any remote servers. They are sent to the virtual file system on your browser.) Though this uploader, **you can also add binary files**.
 
-// TODO
+![](./images/stlite_sharing_add_and_upload.png)
 
 ### Files in directories and Multipage apps support
 
