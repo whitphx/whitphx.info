@@ -12,7 +12,7 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
   * Offline capability
   * Data privacy
   * Scalability
-  * Multi platform: web, desktop, mobile
+  * Multi platform
 * In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite app on your web site or create an offline desktop application.
 
 ## Streamlit: a great Python web app framework
@@ -23,7 +23,7 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 
 <video controls="" loop=""><source src="https://s3-us-west-2.amazonaws.com/assets.streamlit.io/videos/hero-video.mp4"></video>
 
-Streamlit launches a web server and also serves a frontend app that is a single page application (SPA) whose contents are dynamically constructed according to the Python script written by the app developer. Then the frontend app continuously communicates with the web server upon some events and triggers some Python code executions to return some contents that are dynamically applied to the frontend page.
+Streamlit launches a web server and also serves a frontend app that is a single page application (SPA) whose contents are dynamically constructed according to the Python script written by the app developer. Then the frontend app continuously communicates with the web server and triggers the Python code executions on the server upon some events to get some results that dynamically update the frontend view.
 Due to this unique server-client architecture, we can construct interactive web apps only by writing the logics in server-side Python.
 
 // TODO: figure
@@ -32,45 +32,49 @@ Due to this unique server-client architecture, we can construct interactive web 
 
 There had been an epoch-making invent in the Python world - [Pyodide](https://pyodide.org/) that is a CPython runtime compiled for WebAssembly (Wasm) running on browsers (and NodeJS).
 
-![Pyodide logo](https://pyodide.org/en/stable/_static/pyodide-logo.png)
+[![Pyodide logo](https://pyodide.org/en/stable/_static/pyodide-logo.png)](https://pyodide.org/)
 
 So I customized Streamlit to run on Pyodide runtime and released it as "[stlite](https://github.com/whitphx/stlite)"!
 
-Upon this approach, the entry point is a JavaScript file that mounts the Streamlit frontend SPA into the HTML page, loads the Pyodide environment, then imports the Streamlit Python server on the Pyodide environment **on the web browser**.
+[![stlite logo](https://raw.githubusercontent.com/whitphx/stlite/main/docs/images/logo.svg)](https://github.com/whitphx/stlite)
 
-With this architecture, thanks to Pyodide, the Python runtime is no longer necessary on the server side since it is on the web browser.
+On _stlite_, the entry point is a JavaScript file that mounts the Streamlit frontend SPA into the HTML page, loads the Pyodide environment, and launches the Streamlit Python server on the Pyodide environment **on the web browser**.
+
+With this architecture, thanks to Pyodide, the Python runtime no longer exists on the server side since it runs on the web browser.
 The web server is only for serving the static files such as HTML, JS, and CSS.
 
 // TODO: figure
 
 ## Benefits
-(This section and the next are highly inspired by [the blog post about Shinylive](https://shiny.rstudio.com/py/docs/shinylive.html).)
 
 As it runs completely on the browsers, the serverless Streamlit, _stlite_ has some benefits that the original Streamlit does not have.
 
+(This section and the next are highly inspired by [the blog post about Shinylive](https://shiny.rstudio.com/py/docs/shinylive.html).)
+
 ### Offline capability
-As the Streamlit "server" also runs on the browser, all the necessary components resides on the client side, so once all the resources are loaded from the remote server, the app can run in offline.
+As even the Streamlit "server" runs on the browser, all the components resides on the client side, so once all the resources are loaded from the web server, the app can run in offline.
 
-If you serve the stlite web app as a [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/), it is truly installable stand-alone application.
+If you serve the stlite web app as a [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/), it becomes an installable stand-alone application.
 
-stlite also supports bundling desktop applications (e.g. `.exe` files for Windows) too, as described below.
+_stlite_ also supports bundling desktop applications (e.g. `.exe` files) too, as we will see in the following section.
 
 ### Data privacy
-Since the app runs on your browser, even when you do "upload" some files to the app, these files are NEVER sent to any remote servers and only processed within your machine.
+Since the entire app runs on your browser, even when you do "upload" some files from the file uploader on the page, these files are NEVER sent to any remote servers and only processed within your machine.
 
 This feature is sometimes beneficial especially in the applications of data science, machine learning, or statistics where Streamlit is widely used for.
-### Distributed computing, less server-side workload
-With stlite, the main workload moves from the server to each browser, so
+
+### Scalability
+The main workload such as data science or machine learning computation in Python moves from the server to each browser, so the system becomes scalable. It can be seen as one type of distributed computing.
 
 ### Multi platform: web, desktop, mobile
 As it runs on web browsers, it can also be an installable app (PWA), can be bundled into a desktop app (Electron) or a mobile app (Capacitor).
 
 ### Online editing experience
-The online editor & real-time preview service for Streamlit apps is available. It is **stlite sharing** we will see below soon.
-Precisely, this is not purely because of WebAssembly, but the Wasm-based architecture made it easier to create this service, which had not existed before.
+I developed the online editor & real-time preview service for Streamlit apps based on _stlite_ - **stlite sharing** that we will see below soon.
+Precisely, this is not purely because of WebAssembly, but the Wasm-based architecture made it easier to create this service which could have not existed before.
 
 ## Disadvantages
-On the other hand, _stlite_ and Pyodide has some disadvantages.
+On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
 
 ### Some packages do not work
 Some C extension packages such as TensorFlow cannot be installed because C extensions must be built for the Pyodide runtime specifically.
