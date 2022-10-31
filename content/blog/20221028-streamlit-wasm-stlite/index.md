@@ -12,25 +12,25 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
   * Offline capability
   * Data privacy
   * Scalability
-  * Multi platform
-* In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite app on your web site or create an offline desktop application.
+  * Multi-platform availability
+* In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite apps on your web site or create offline desktop applications.
 
 ## Streamlit: a great Python web app framework
 
-![Streamlit logo](https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.svg)
+[![Streamlit logo](https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.svg)](https://streamlit.io/)
 
 [Streamlit](https://streamlit.io/) is a web app framework with which we can create interactive web apps only with Python coding. It is especially famous and popular for data apps development as it well supports many data widgets cooperating the DS/ML Python ecosystem, while it also covers a wide range of general purpose web development.
 
 <video controls="" loop=""><source src="https://s3-us-west-2.amazonaws.com/assets.streamlit.io/videos/hero-video.mp4"></video>
 
 Streamlit launches a web server and also serves a frontend app that is a single page application (SPA) whose contents are dynamically constructed according to the Python script written by the app developer. Then the frontend app continuously communicates with the web server and triggers the Python code executions on the server upon some events to get some results that dynamically update the frontend view.
-Due to this unique server-client architecture, we can construct interactive web apps only by writing the logics in server-side Python.
+Due to this unique server-client architecture, we can construct interactive web apps only by writing the logics in the server-side Python code.
 
 // TODO: figure
 
 ## stlite: a client-side Streamlit powered by Pyodide
 
-There had been an epoch-making invent in the Python world - [Pyodide](https://pyodide.org/) that is a CPython runtime compiled for WebAssembly (Wasm) running on browsers (and NodeJS).
+There had been an epoch-making invent in the Python world - [Pyodide](https://pyodide.org/). It is a CPython runtime compiled for WebAssembly (Wasm) that runs on web browsers (and NodeJS).
 
 [![Pyodide logo](https://pyodide.org/en/stable/_static/pyodide-logo.png)](https://pyodide.org/)
 
@@ -54,24 +54,24 @@ As it runs completely on the browsers, the serverless Streamlit, _stlite_ has so
 ### Offline capability
 As even the Streamlit "server" runs on the browser, all the components resides on the client side, so once all the resources are loaded from the web server, the app can run in offline.
 
-If you serve the stlite web app as a [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/), it becomes an installable stand-alone application.
+<!-- If you serve the stlite web app as a [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/), it becomes an installable stand-alone application.
 
-_stlite_ also supports bundling desktop applications (e.g. `.exe` files) too, as we will see in the following section.
+_stlite_ also supports bundling desktop applications (e.g. `.exe` files) too, as we will see in the following section. -->
 
 ### Data privacy
 Since the entire app runs on your browser, even when you do "upload" some files from the file uploader on the page, these files are NEVER sent to any remote servers and only processed within your machine.
 
-This feature is sometimes beneficial especially in the applications of data science, machine learning, or statistics where Streamlit is widely used for.
+This feature is sometimes beneficial especially in the applications of data science, machine learning, or statistics where Streamlit is widely used for, as these often have strict privacy rules.
 
 ### Scalability
-The main workload such as data science or machine learning computation in Python moves from the server to each browser, so the system becomes scalable. It can be seen as one type of distributed computing.
+The main workload such as machine learning computation written in Python moves from the server to each browser, so the system becomes scalable. It can be seen as one type of distributed computing.
 
-### Multi platform: web, desktop, mobile
-As it runs on web browsers, it can also be an installable app (PWA), can be bundled into a desktop app (Electron) or a mobile app (Capacitor).
+### Multi-platform: web, desktop, mobile
+As it runs on web browsers, it can also be an installable app ([PWA](https://web.dev/progressive-web-apps/)), and can be bundled into a desktop app (Electron) or a mobile app (Capacitor).
 
 ### Online editing experience
 I developed the online editor & real-time preview service for Streamlit apps based on _stlite_ - **stlite sharing** that we will see below soon.
-Precisely, this is not purely because of WebAssembly, but the Wasm-based architecture made it easier to create this service which could have not existed before.
+Precisely, this is not purely because of WebAssembly, but the Wasm-based architecture made it easier to create such a service which could have not existed before.
 
 ## Disadvantages
 On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
