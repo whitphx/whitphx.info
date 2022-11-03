@@ -26,7 +26,7 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 Streamlit launches a web server and also serves a frontend app that is a single page application (SPA) whose contents are dynamically constructed according to the Python script written by the app developer. Then the frontend app continuously communicates with the web server and triggers the Python code executions on the server upon some events to get some results that dynamically update the frontend view.
 Due to this unique server-client architecture, we can construct interactive web apps only by writing the logics in the server-side Python code.
 
-// TODO: figure
+![](./images/stlite_archtecture/stlite_archtecture.001.png)
 
 ## stlite: a client-side Streamlit powered by Pyodide
 
@@ -43,7 +43,7 @@ On _stlite_, the entry point is a JavaScript file that mounts the Streamlit fron
 With this architecture, thanks to Pyodide, the Python runtime no longer exists on the server side since it runs on the web browser.
 The web server is only for serving the static files such as HTML, JS, and CSS.
 
-// TODO: figure
+![](./images/stlite_archtecture/stlite_archtecture.002.png)
 
 ## Benefits
 
