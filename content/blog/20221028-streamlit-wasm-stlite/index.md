@@ -178,6 +178,25 @@ With a recent release of Pyodide [0.21](https://blog.pyodide.org/posts/0.21-rele
 
 https://twitter.com/whitphx/status/1583352801195065346
 
+### Loading apps from GitHub or Gist
+
+Instead of the encoded URL hash explained above,
+you can host your Python script somewhere and pass its URL to **stlite sharing** via the URL hash as below.
+
+```
+https://share.stlite.net/#https://...py
+```
+
+If the URL is of GitHub or Gist, you can pass the preview page URL instead of the raw file URL.
+For example, https://share.stlite.net/#https://github.com/napoles-uach/test/blob/main/app.py works.
+
+When you need to install some packages, use the following format.
+```
+https://share.stlite.net/#url=<Script URL>?req=<Package1>&req=<Package2>
+```
+This is the example of this format installing `opencv-python` and `matplotlib`: https://share.stlite.net/#url=https://github.com/whitphx/stlite-sample/blob/main/opencv-image-processing.py&req=opencv-python&req=matplotlib \
+There is also the Gist version: https://share.stlite.net/#url=https://gist.github.com/whitphx/f23b7b2bbda19cd421121bd72ebf2101&req=opencv-python&req=matplotlib
+
 ## Host your Streamlit app on your web site
 
 _stlite_ also supports self-hosting the apps.
