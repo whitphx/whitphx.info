@@ -1,6 +1,6 @@
 ---
 title: "Streamlit meets WebAssembly - stlite"
-date: "2022-10-28T17:09:20+09:00"
+date: "2022-11-04T18:17:00+09:00"
 description:
 tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 ---
