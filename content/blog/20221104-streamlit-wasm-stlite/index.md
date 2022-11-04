@@ -8,7 +8,7 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 ## TL;DR
 * I created a **WebAssembly** (**Wasm**) port of **Streamlit**, "_stlite_".
 * You can try it out and share your apps on "[**stlite sharing**](https://edit.share.stlite.net/)", the online code editor + app sharing platform for _stlite_.
-* The Wasm-based runtime provides many benefits such as offline capability, data privacy, scalability, and multi-platform availability.
+* The Wasm-based runtime provides many benefits such as offline capability, data privacy, and scalability.
 * In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite apps [on your web site](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) or create [offline desktop applications](https://github.com/whitphx/stlite/tree/main/packages/desktop-cli#readme). So you can create multi-platform apps only with Python coding.
 
 ## Streamlit: a great Python web app framework
@@ -56,7 +56,8 @@ As it runs completely on the browsers, _stlite_ has some benefits that the origi
   The main workload such as machine learning computation written in Python moves from the server to each browser, so the system becomes scalable.
 
 * **Multi-platform (web, desktop, mobile)**:
-  As it runs on web browsers, it can also be an installable app ([PWA](https://web.dev/progressive-web-apps/)), and can be bundled into a desktop app with Electron. Building mobile apps is also on the read map.
+  As it runs on web browsers, it can also be an installable app ([PWA](https://web.dev/progressive-web-apps/)), and can be bundled into a desktop app with Electron. Building mobile apps is also on the read map. \
+  As a result, you can create interactive apps only in Python with Streamlit and bundle them for each platform.
 
 * **Online editing experience**:
   I developed the online editor & real-time preview service for Streamlit apps based on _stlite_ - **stlite sharing** that we will see below soon.\
