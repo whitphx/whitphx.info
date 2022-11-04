@@ -8,11 +8,7 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 ## TL;DR
 * I created a **WebAssembly** (**Wasm**) port of **Streamlit**, "_stlite_".
 * You can try it out and share your apps on "[**stlite sharing**](https://edit.share.stlite.net/)", the online code editor + app sharing platform for _stlite_.
-* The Wasm-based runtime provides many benefits such as
-  * Offline capability
-  * Data privacy
-  * Scalability
-  * Multi-platform availability
+* The Wasm-based runtime provides many benefits such as offline capability, data privacy, scalability, and multi-platform availability.
 * In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite apps [on your web site](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) or create [offline desktop applications](https://github.com/whitphx/stlite/tree/main/packages/desktop-cli#readme).
 
 ## Streamlit: a great Python web app framework
