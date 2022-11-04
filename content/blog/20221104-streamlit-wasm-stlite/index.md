@@ -24,7 +24,7 @@ Due to this unique server-client architecture, we can construct interactive web 
 
 ![](./images/stlite_archtecture/stlite_archtecture.001.png)
 
-## stlite: a client-side Streamlit powered by Pyodide
+## stlite: client-side Streamlit powered by Pyodide
 
 There had been an epoch-making invent in the Python world - [Pyodide](https://pyodide.org/). It is a CPython runtime compiled for WebAssembly (Wasm) that runs on web browsers (and NodeJS).
 
