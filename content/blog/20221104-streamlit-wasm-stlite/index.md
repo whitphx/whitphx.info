@@ -38,7 +38,7 @@ So I customized Streamlit to run on Pyodide runtime and released it as "[stlite]
 
 [![stlite logo](https://raw.githubusercontent.com/whitphx/stlite/main/docs/images/logo.svg)](https://github.com/whitphx/stlite)
 
-On _stlite_, the entry point is a JavaScript file that mounts the Streamlit frontend SPA into the HTML page, loads the Pyodide environment, and launches the Streamlit Python server on the Pyodide environment **on the web browser**.
+On _stlite_, the entry point is a JavaScript file that mounts the Streamlit frontend SPA into the HTML page, loads the Pyodide environment, and launches the Streamlit Python server in the Pyodide environment **on the web browser**.
 
 With this architecture, thanks to Pyodide, the Python runtime no longer exists on the server side since it runs on the web browser.
 The web server is only for serving the static files such as HTML, JS, and CSS.
@@ -69,7 +69,7 @@ As it runs completely on the browsers, _stlite_ has some benefits that the origi
 On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
 
 * **Some packages are not available**:
-  Some C extension packages such as TensorFlow cannot be installed because C extensions must be compiled for the Pyodide runtime specifically.
+  Some C extension packages such as TensorFlow cannot be installed because C extensions must be compiled for the Pyodide runtime specifically, while many popular C extensions are already [available](https://github.com/pyodide/pyodide/tree/main/packages) such as NumPy or Pandas.
   For more details, read the Pyodide articles such as [this one](https://pyodide.org/en/stable/usage/faq.html#micropip-can-t-find-a-pure-python-wheel).
 
 * **Large initial payload**:
@@ -78,8 +78,8 @@ On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
 * **Network restriction**:
   For the security reasons, accessing remote resources from the _stlite_ applications are restricted by the browser, e.g. CORS.
 
-* **The source code and data are open**:
-  Note that all the source code and data are sent to the client side, so they are visible to the users. You must not put any secrets on the source code of the _stlite_ apps.
+* **The source code is open**:
+  Note that all the source code and hosted data are sent to the client side, so they are visible to the users. You must not put any secrets on the source code of the _stlite_ apps.
 
 (This section is highly inspired by [the blog post about Shinylive](https://shiny.rstudio.com/py/docs/shinylive.html).)
 
@@ -89,7 +89,7 @@ On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
 
 [![stlite sharing OGP](https://edit.share.stlite.net/ogp.png)](https://edit.share.stlite.net/)
 
-The following screenshot is the online editor & app preview mode of **stlite sharing**. You can try it out at https://edit.share.stlite.net/ .
+The following screenshot is the online editing & app preview mode of **stlite sharing**. You can try it out at https://edit.share.stlite.net/ .
 
 ![stlite sharing screenshot](./images/stlite_sharing_screenshot.png)
 
@@ -103,7 +103,7 @@ You can also add or delete the files on the file tabs.
 
 ### Shareable URLs
 
-On stlite sharing, you can find the shareable URL of the current app at top right. There is also the "Open App" link next to it, through which you can open the URL.
+On _stlite sharing_, you can get the shareable URL of the current app displayed at top right. There is also the "Open App" link next to it, through which you can open the URL.
 
 ![stlite sharing screenshot on the file change](./images/stlite_sharing_screenshot_sharable_link.png)
 
@@ -113,7 +113,7 @@ By navigating to the URL or clicking the link, the app opens in the sharing mode
 
 Its URL is `https://share.stlite.net/` with a long hash like `#!ChBz...`.
 
-The host `https://share.stlite.net/` is for the app sharing mode of **stlite sharing**, while the editor mode we have seen above is at `https://edit.share.stlite.net/`.
+The host `https://share.stlite.net/` is for the app sharing mode of _stlite sharing_ while the editor mode we have seen above is at `https://edit.share.stlite.net/`.
 
 In the long hash part of the URL like `#!ChBz...`,
 all the source code and data edited on the editor are encoded and embedded, so you can share the app only by copying this URL.
@@ -141,7 +141,7 @@ You can edit the file name on the tab, and importantly, by inserting the file pa
 ![](./images/stlite_sharing_files_new_page.png)
 
 With this feature, _stlite sharing_ supports the Streamlit's **Multipage apps**.
-In short, by creating a Python file in the `pages/` directory (`pages/*.py`), you can add a new page on the app.
+In short, by creating a Python file in the `pages/` directory (`pages/*.py`), you can add a new page in the app.
 For the details, read the [official document about Multipage apps](https://docs.streamlit.io/library/get-started/multipage-apps).
 
 ### Installing packages
@@ -150,7 +150,7 @@ When you need to install some packages, use the special "requirements" tab.
 
 ![The requirements tab](./images/stlite_sharing_requirements_tab.png)
 
-The package names written in the editor on this tab will be passed to [`micropip.install()`](https://pyodide.org/en/stable/usage/api/micropip-api.html#micropip.install) (with _stlite_ on the Pyodide runtime, [`micropip`](https://pyodide.org/en/stable/usage/api/micropip-api.html) is used as a package manager) when clicking the "Save" button.
+The package names written in the editor on this tab will be passed to the package installer [`micropip.install()`](https://pyodide.org/en/stable/usage/api/micropip-api.html#micropip.install) internally (on the Pyodide runtime, [`micropip`](https://pyodide.org/en/stable/usage/api/micropip-api.html) is used as a package manager) when clicking the "Save" button.
 Write one package name per line.
 
 This is a special tab in that the file content is not saved into the file system. It is used only for specifying the package names passed to `micropip.install()`.
@@ -267,7 +267,7 @@ This YouTube video may guide you to set it up on GitHub Pages (although the _stl
 
 https://youtu.be/VQdktxgbmmg
 
-**Please read the [README](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) for the details about self-hosting the apps!**.
+**Please read the [README](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) for the details about self-hosting apps!**.
 
 ## Bundle your Streamlit app as a desktop app
 
@@ -288,9 +288,8 @@ There is a sample app repository and its distributable files too.
 
 When you create some apps with _stlite_, please share it!
 
-If it's on **stlite sharing**, all you need to do is copy and paste the URL from it 👍
+If it's on **stlite sharing**, all you have to do is copy and paste the URL 👍
 
 These are good places to share your apps, samples, or case studies!
-
 * [**stlite** GitHub Discussions](https://github.com/whitphx/stlite/discussions/categories/show-and-tell)
 * [Streamlit community forum](https://discuss.streamlit.io/)
