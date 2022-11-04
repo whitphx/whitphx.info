@@ -45,49 +45,43 @@ The web server is only for serving the static files such as HTML, JS, and CSS.
 
 ![](./images/stlite_archtecture/stlite_archtecture.002.png)
 
-## Benefits
+## Pros and Cons
+
+(This section is highly inspired by [the blog post about Shinylive](https://shiny.rstudio.com/py/docs/shinylive.html).)
 
 As it runs completely on the browsers, the serverless Streamlit, _stlite_ has some benefits that the original Streamlit does not have.
 
-(This section and the next are highly inspired by [the blog post about Shinylive](https://shiny.rstudio.com/py/docs/shinylive.html).)
+* **Offline capability**:
+  As even the Streamlit "server" runs on the browser, all the components resides on the client side, so once all the resources are loaded from the web server, the app can run in offline.
 
-### Offline capability
-As even the Streamlit "server" runs on the browser, all the components resides on the client side, so once all the resources are loaded from the web server, the app can run in offline.
+* **Data privacy**:
+  Since the entire app runs on your browser, even when you do "upload" some files from the file uploader on the page, these files are NEVER sent to any remote servers and only processed within your machine. \
+  This feature is sometimes beneficial especially in the applications of data science, machine learning, or statistics where Streamlit is widely used for, as these often have strict privacy rules.
 
-<!-- If you serve the stlite web app as a [Progressive Web App (PWA)](https://web.dev/progressive-web-apps/), it becomes an installable stand-alone application.
+* **Scalability**:
+  The main workload such as machine learning computation written in Python moves from the server to each browser, so the system becomes scalable. It can be seen as one type of distributed computing.
 
-_stlite_ also supports bundling desktop applications (e.g. `.exe` files) too, as we will see in the following section. -->
+* **Multi-platform (web, desktop, mobile)**:
+  As it runs on web browsers, it can also be an installable app ([PWA](https://web.dev/progressive-web-apps/)), and can be bundled into a desktop app (Electron) or a mobile app (Capacitor).
 
-### Data privacy
-Since the entire app runs on your browser, even when you do "upload" some files from the file uploader on the page, these files are NEVER sent to any remote servers and only processed within your machine.
+* **Online editing experience**:
+  I developed the online editor & real-time preview service for Streamlit apps based on _stlite_ - **stlite sharing** that we will see below soon.\
+  Precisely, this is not purely because of WebAssembly, but the Wasm-based architecture made it easier to create such a service which could have not existed before.
 
-This feature is sometimes beneficial especially in the applications of data science, machine learning, or statistics where Streamlit is widely used for, as these often have strict privacy rules.
-
-### Scalability
-The main workload such as machine learning computation written in Python moves from the server to each browser, so the system becomes scalable. It can be seen as one type of distributed computing.
-
-### Multi-platform: web, desktop, mobile
-As it runs on web browsers, it can also be an installable app ([PWA](https://web.dev/progressive-web-apps/)), and can be bundled into a desktop app (Electron) or a mobile app (Capacitor).
-
-### Online editing experience
-I developed the online editor & real-time preview service for Streamlit apps based on _stlite_ - **stlite sharing** that we will see below soon.
-Precisely, this is not purely because of WebAssembly, but the Wasm-based architecture made it easier to create such a service which could have not existed before.
-
-## Disadvantages
 On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
 
-### Some packages are not available
-Some C extension packages such as TensorFlow cannot be installed because C extensions must be built for the Pyodide runtime specifically.
-For more details, read the Pyodide articles such as [this](https://pyodide.org/en/stable/usage/faq.html#micropip-can-t-find-a-pure-python-wheel)
+* **Some packages are not available**:
+  Some C extension packages such as TensorFlow cannot be installed because C extensions must be built for the Pyodide runtime specifically.
+  For more details, read the Pyodide articles such as [this](https://pyodide.org/en/stable/usage/faq.html#micropip-can-t-find-a-pure-python-wheel)
 
-### Large initial payload
-A large amount of resources will be downloaded when the user opens the app because Pyodide loads the whole Python runtime and the standard libraries, and _slite_ also downloads the necessary wheel files including the `streamlit` package.
+* **Large initial payload**:
+  A large amount of resources will be downloaded when the user opens the app because Pyodide loads the whole Python runtime and the standard libraries, and _slite_ also downloads the necessary wheel files including the `streamlit` package.
 
-### Network restriction
-For the security reasons, accessing remote resources from the _stlite_ applications are restricted by the browser, e.g. CORS.
+* **Network restriction**:
+  For the security reasons, accessing remote resources from the _stlite_ applications are restricted by the browser, e.g. CORS.
 
-### The source code and data are open
-Note that all the source code and data are sent to the client side, so they are visible by the users. You cannot set any secrets on the source code.
+* **The source code and data are open**:
+  Note that all the source code and data are sent to the client side, so they are visible by the users. You cannot set any secrets on the source code.
 
 ## Online code editor + app sharing platform: stlite sharing
 
