@@ -3,6 +3,7 @@ title: Best way to encode binary data into URL-safe string
 date: "2022-09-22T15:20:57+09:00"
 description:
 tags: ["dev"]
+draft: true
 ---
 
 ## TL;DR
@@ -15,7 +16,8 @@ base64url is a base64 variant, replacing `+` and `/` in the original version wit
 
 ## Why?
 
-The URL-safe characters are `[A-Za-z0-9-._~]` which includes 66 characters.
+The URL-safe characters are `[A-Za-z0-9-._~]` including 66 characters, which means URL-safe string can encode and hold 6 bits data per char (`2^6 = 64`).
+
 
 [This StackOverflow answer](https://stackoverflow.com/a/695469/13103190) refers to the section 2.3 of [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt) that says the URL-safe characters ("Unreserved Characters") are
 >  unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
