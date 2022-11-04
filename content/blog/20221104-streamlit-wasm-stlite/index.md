@@ -13,7 +13,7 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
   * Data privacy
   * Scalability
   * Multi-platform availability
-* In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite apps on your web site or create offline desktop applications.
+* In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite apps [on your web site](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) or create [offline desktop applications](https://github.com/whitphx/stlite/tree/main/packages/desktop-cli#readme).
 
 ## Streamlit: a great Python web app framework
 
