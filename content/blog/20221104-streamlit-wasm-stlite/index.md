@@ -19,7 +19,7 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 
 <video controls="" loop=""><source src="https://s3-us-west-2.amazonaws.com/assets.streamlit.io/videos/hero-video.mp4"></video>
 
-Streamlit launches a web server and also serves a frontend app that is a single page application (SPA) whose contents are dynamically constructed according to the Python script written by the app developer. Then the frontend app continuously communicates with the web server and triggers the Python code executions on the server upon some events to get some results that dynamically update the frontend view.
+When you run a Streamlit app, the Streamlit framework starts a web server and it serves a frontend app that is a single page application (SPA) whose contents are dynamically constructed according to your app script written in Python. Then the frontend app continuously communicates with the web server and triggers the Python code executions on the server upon some events to get some results that dynamically update the frontend view.
 Due to this unique server-client architecture, we can construct interactive web apps only by writing the logics in the server-side Python code.
 
 ![](./images/stlite_archtecture/stlite_archtecture.001.png)
