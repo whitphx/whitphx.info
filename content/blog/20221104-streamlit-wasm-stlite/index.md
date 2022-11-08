@@ -1,7 +1,7 @@
 ---
 title: "Streamlit meets WebAssembly - stlite"
 date: "2022-11-04T18:17:00+09:00"
-description:
+description: "Streamlit apps can run completely on web browsers without the server-side Python runtime"
 tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 ---
 
