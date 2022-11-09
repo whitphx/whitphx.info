@@ -70,7 +70,7 @@ On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
   For more details, read the Pyodide articles such as [this one](https://pyodide.org/en/stable/usage/faq.html#micropip-can-t-find-a-pure-python-wheel).
 
 * **Large initial payload**:
-  A large amount of resources will be downloaded when the user opens the app because Pyodide loads the whole Python runtime and the standard libraries, and _slite_ also downloads the necessary wheel files including the `streamlit` package.
+  A large amount of resources will be downloaded when the user opens the app because Pyodide loads the whole Python runtime and the standard libraries, and _stlite_ also downloads the necessary wheel files including the `streamlit` package.
 
 * **Network restriction**:
   For the security reasons, accessing remote resources from the _stlite_ applications are restricted by the browser, e.g. CORS.
