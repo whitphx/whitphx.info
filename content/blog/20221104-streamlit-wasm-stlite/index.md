@@ -264,7 +264,7 @@ This YouTube video may guide you to set it up on GitHub Pages (although the _stl
 
 https://youtu.be/VQdktxgbmmg
 
-**Please read the [README](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) for the details about self-hosting apps!**.
+**Please read the [README](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) for the details about self-hosting apps!**
 
 ## Bundle your Streamlit app as a desktop app
 
