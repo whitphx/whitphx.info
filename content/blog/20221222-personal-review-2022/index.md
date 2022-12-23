@@ -17,9 +17,13 @@ VSCodeは公式が各種キーバインド拡張をVimもAtomもSublimeもBracke
 
 詳しい話は以前[VSCodeのキーバインド拡張を作ったので、その勘所を紹介 - Qiita](https://qiita.com/whitphx/items/af8baa19fc4280ac1c0a)に書いたりした。
 
-https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx
+[GitHub: `whitphx/vscode-emacs-mcx`](https://github.com/whitphx/vscode-emacs-mcx)
+
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx)
 
 ### streamlit-webrtc
+[GitHub: `whitphx/streamlit-webrtc`](https://github.com/whitphx/streamlit-webrtc)
+
 2021年から続けている、Streamlitで映像・音声をリアルタイムに扱うための拡張。
 
 今年はコアAPIの大幅刷新を行った[v0.40.0](https://github.com/whitphx/streamlit-webrtc/blob/main/CHANGELOG.md#0400---2022-06-07)をリリースして、より使いやすくなったはず。
@@ -35,6 +39,8 @@ https://youtu.be/D4F6GKaoLns
 https://youtu.be/ruSN7t2eor4
 
 ### stlite
+[GitHub: `whitphx/stlite`](https://github.com/whitphx/stlite)
+
 今年に新しく始めたプロジェクト。
 Streamlitをプラウザだけで動かせるようにする。
 この前[紹介記事](../20221104-streamlit-wasm-stlite/)も書いた。
