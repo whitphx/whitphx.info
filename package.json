@@ -36,6 +36,7 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "@graphql-eslint/eslint-plugin": "^3.14.3",
     "@types/react-helmet": "^6.1.6",
     "@typescript-eslint/eslint-plugin": "^5.48.0",
     "@typescript-eslint/parser": "^5.48.0",
