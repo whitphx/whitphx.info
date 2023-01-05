@@ -9,8 +9,9 @@ description: I became a member of the Streamlit Creators program!
 A few months after I released my first OSS related to Streamlit, [`streamlit-webrtc`](https://github.com/whitphx/streamlit-webrtc), and posted [an article about it](https://discuss.streamlit.io/t/new-component-streamlit-webrtc-a-new-way-to-deal-with-real-time-media-streams/8669) at the community forum on January 2021, I got an invitation for the membership!
 
 As written on the page, if you become a member of it,
-* they give you original swag!
-* they invite you to internal meetings and hackathons!
+
+- they give you original swag!
+- they invite you to internal meetings and hackathons!
 
 I actually received the swag this month 😃
 

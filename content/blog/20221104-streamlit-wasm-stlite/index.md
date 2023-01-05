@@ -6,10 +6,11 @@ tags: ["dev", "Streamlit", "Python", "stlite", "WebAssembly"]
 ---
 
 ## TL;DR
-* I created a **WebAssembly** (**Wasm**) port of **Streamlit**, "_stlite_".
-* You can try it out and share your apps on "[**stlite sharing**](https://edit.share.stlite.net/)", the online code editor + app sharing platform for _stlite_.
-* The Wasm-based runtime provides many benefits such as offline capability, data privacy, and scalability.
-* In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite apps [on your web site](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) or create [offline desktop applications](https://github.com/whitphx/stlite/tree/main/packages/desktop-cli#readme). So you can create multi-platform apps only with Python coding.
+
+- I created a **WebAssembly** (**Wasm**) port of **Streamlit**, "_stlite_".
+- You can try it out and share your apps on "[**stlite sharing**](https://edit.share.stlite.net/)", the online code editor + app sharing platform for _stlite_.
+- The Wasm-based runtime provides many benefits such as offline capability, data privacy, and scalability.
+- In addition to [stlite sharing](https://edit.share.stlite.net/), you can also host your Streamlit/stlite apps [on your web site](https://github.com/whitphx/stlite#use-stlite-on-your-web-page) or create [offline desktop applications](https://github.com/whitphx/stlite/tree/main/packages/desktop-cli#readme). So you can create multi-platform apps only with Python coding.
 
 ## Streamlit: a great Python web app framework
 
@@ -45,37 +46,37 @@ The web server is only for serving the static files such as HTML, JS, and CSS.
 
 As it runs completely on the browsers, _stlite_ has some benefits that the original Streamlit does not have.
 
-* **Offline capability**:
+- **Offline capability**:
   As even the Streamlit "server" runs on the browser, all the components resides on the client side, so once all the resources are loaded from the web server, the app can run offline.
 
-* **Data privacy**:
+- **Data privacy**:
   Since the entire app runs on your browser, even when you do "upload" some files from the file uploader on the page, these files are NEVER sent to any remote servers and only processed within your machine. \
   This feature is sometimes beneficial especially in the applications of data science, machine learning, or statistics where Streamlit is widely used, as these often have strict privacy rules.
 
-* **Scalability**:
+- **Scalability**:
   The main workload such as machine learning computation written in Python moves from the server to each browser, so the system becomes scalable.
 
-* **Multi-platform (web, desktop, mobile)**:
+- **Multi-platform (web, desktop, mobile)**:
   As it runs on web browsers, it can also be an installable app ([PWA](https://web.dev/progressive-web-apps/)), and can be bundled into a desktop app with Electron. Building mobile apps is also on the read map. \
   As a result, you can create interactive apps only in Python with Streamlit and bundle them for each platform.
 
-* **Online editing experience**:
+- **Online editing experience**:
   I developed the online editor & real-time preview service for Streamlit apps based on _stlite_ - **stlite sharing** that we will see below soon.\
   Precisely, this is not purely because of WebAssembly, but the Wasm-based architecture made it easier to create such a service which could not have existed before.
 
 On the other hand, _stlite_ and Pyodide has some disadvantages as a tradeoff.
 
-* **Some packages are not available**:
+- **Some packages are not available**:
   Some C extension packages such as TensorFlow cannot be installed because C extensions must be compiled for the Pyodide runtime specifically, while many popular C extensions are already [available](https://github.com/pyodide/pyodide/tree/main/packages) such as NumPy or Pandas.
   For more details, read the Pyodide articles such as [this one](https://pyodide.org/en/stable/usage/faq.html#micropip-can-t-find-a-pure-python-wheel).
 
-* **Large initial payload**:
+- **Large initial payload**:
   A large amount of resources will be downloaded when the user opens the app because Pyodide loads the whole Python runtime and the standard libraries, and _stlite_ also downloads the necessary wheel files including the `streamlit` package.
 
-* **Network restriction**:
+- **Network restriction**:
   For the security reasons, accessing remote resources from the _stlite_ applications are restricted by the browser, e.g. CORS.
 
-* **The source code is open**:
+- **The source code is open**:
   Note that all the source code and hosted data are sent to the client side, so they are visible to the users. You must not put any secrets on the source code of the _stlite_ apps.
 
 (This section is highly inspired by [the blog post about Shinylive](https://shiny.rstudio.com/py/docs/shinylive.html).)
@@ -156,6 +157,7 @@ Please note again that some C extension packages cannot be installed. The follow
 ![Installation failure](./images/stlite_sharing_failed_installing.png)
 
 ### Samples
+
 You can find some samples on the side menu, so check out these! I hope some inspire you.
 
 For example, the "Streamlit Hello" demo runs the official Streamlit demo on _stlite_ while it is available through the `streamlit hello` command with the original Streamlit.
@@ -182,9 +184,11 @@ If the URL is of GitHub or Gist, you can pass the preview page URL instead of th
 For example, https://share.stlite.net/#https://github.com/napoles-uach/test/blob/main/app.py works.
 
 When you need to install some packages, use the following format instead.
+
 ```
 https://share.stlite.net/#url=<Script URL>?req=<Package1>&req=<Package2>
 ```
+
 The example of this format installing `opencv-python` and `matplotlib` follows: https://share.stlite.net/#url=https://github.com/whitphx/stlite-sample/blob/main/opencv-image-processing.py&req=opencv-python&req=matplotlib \
 There is also the Gist version: https://share.stlite.net/#url=https://gist.github.com/whitphx/f23b7b2bbda19cd421121bd72ebf2101&req=opencv-python&req=matplotlib
 
@@ -224,7 +228,7 @@ name = st.text_input('Your name')
 st.write("Hello,", name or "world")
 `,
         document.getElementById("root")
-      );
+      )
     </script>
   </body>
 </html>
@@ -254,7 +258,7 @@ st.pyplot(fig)
     },
   },
   document.getElementById("root")
-);
+)
 ```
 
 After writing the HTML file, host it wherever you like, such as GitHub Pages.
@@ -278,8 +282,9 @@ To create your own desktop app with _stlite_,
 **follow this instruction! ->** https://github.com/whitphx/stlite/tree/main/packages/desktop-cli#readme
 
 There is a sample app repository and its distributable files too.
-* [A sample app repository](https://github.com/whitphx/stlite-desktop-example)
-* [Distributable files](https://github.com/whitphx/stlite-desktop-example/releases/tag/v0.2.0) (the macOS app file is not signed, so the security alert may be shown)
+
+- [A sample app repository](https://github.com/whitphx/stlite-desktop-example)
+- [Distributable files](https://github.com/whitphx/stlite-desktop-example/releases/tag/v0.2.0) (the macOS app file is not signed, so the security alert may be shown)
 
 ## Tell us your story!
 
@@ -288,5 +293,6 @@ When you create some apps with _stlite_, please share it!
 If it's on **stlite sharing**, all you have to do is copy and paste the URL 👍
 
 These are good places to share your apps, samples, or case studies!
-* [**stlite** GitHub Discussions](https://github.com/whitphx/stlite/discussions/categories/show-and-tell)
-* [Streamlit community forum](https://discuss.streamlit.io/)
+
+- [**stlite** GitHub Discussions](https://github.com/whitphx/stlite/discussions/categories/show-and-tell)
+- [Streamlit community forum](https://discuss.streamlit.io/)

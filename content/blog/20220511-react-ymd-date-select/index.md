@@ -16,13 +16,15 @@ For example, when asking users to select their birth dates, Y-M-D dropdown is pr
 
 I actually encountered such a situation, however, I could not find any existing packages that meet my needs.
 In turn, building it by myself looks simple, but actually, there are some nuts as below.
-* Generating the arrays of year, month, and day numbers and labels.
-* Validating the combination of Y-M-D. For example, `2022-02-29` (Feb 29, 2022) is an invalid combination - that date does not exist.
-* Combining the 3 values from Y, M, D `<select >`s into one date string, and integrating it with the form component state or form library, e.g. [React Hook Form](https://react-hook-form.com/) through `value` and `onChange` props.
+
+- Generating the arrays of year, month, and day numbers and labels.
+- Validating the combination of Y-M-D. For example, `2022-02-29` (Feb 29, 2022) is an invalid combination - that date does not exist.
+- Combining the 3 values from Y, M, D `<select >`s into one date string, and integrating it with the form component state or form library, e.g. [React Hook Form](https://react-hook-form.com/) through `value` and `onChange` props.
 
 And sometimes there come more requirements like
-* To set the default year.
-* To show only year and month selects (hide the day dropdown).
+
+- To set the default year.
+- To show only year and month selects (hide the day dropdown).
 
 So, to handle these, I made a library [`react-ymd-date-select`](https://whitphx.github.io/react-ymd-date-select/).
 
@@ -33,15 +35,15 @@ The `value` prop and the argument of `onChange()` are string formatted in `yyyy-
 See [the demo page](https://whitphx.github.io/react-ymd-date-select/) for more information.
 
 ```tsx
-import { useState } from "react";
-import { useDateSelect } from "react-ymd-date-select";
+import { useState } from "react"
+import { useDateSelect } from "react-ymd-date-select"
 
 interface CustomDateSelectProps {
-  onChange: (value: string) => void;
-  value: string;
+  onChange: (value: string) => void
+  value: string
 }
 function CustomDateSelect(props: CustomDateSelectProps) {
-  const dateSelect = useDateSelect(props.value, props.onChange);
+  const dateSelect = useDateSelect(props.value, props.onChange)
 
   return (
     <>
@@ -53,7 +55,7 @@ function CustomDateSelect(props: CustomDateSelectProps) {
       <label>
         Year
         <select value={dateSelect.yearValue} onChange={dateSelect.onYearChange}>
-          {dateSelect.yearOptions.map((yearOption) => (
+          {dateSelect.yearOptions.map(yearOption => (
             <option key={yearOption.value} value={yearOption.value}>
               {yearOption.label}
             </option>
@@ -66,7 +68,7 @@ function CustomDateSelect(props: CustomDateSelectProps) {
           value={dateSelect.monthValue}
           onChange={dateSelect.onMonthChange}
         >
-          {dateSelect.monthOptions.map((monthOption) => (
+          {dateSelect.monthOptions.map(monthOption => (
             <option key={monthOption.value} value={monthOption.value}>
               {monthOption.label}
             </option>
@@ -76,7 +78,7 @@ function CustomDateSelect(props: CustomDateSelectProps) {
       <label>
         Day
         <select value={dateSelect.dayValue} onChange={dateSelect.onDayChange}>
-          {dateSelect.dayOptions.map((dayOption) => (
+          {dateSelect.dayOptions.map(dayOption => (
             <option key={dayOption.value} value={dayOption.value}>
               {dayOption.label}
             </option>
@@ -84,6 +86,6 @@ function CustomDateSelect(props: CustomDateSelectProps) {
         </select>
       </label>
     </>
-  );
+  )
 }
 ```
