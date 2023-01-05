@@ -342,7 +342,9 @@ a:focus {
   font-family: var(--font-heading);
 }
 
-.blog-post p>img, p>a>img, p video {
+.blog-post p > img,
+p > a > img,
+p video {
   display: block;
   margin: 0 auto;
   max-width: 100%;
