@@ -105,6 +105,11 @@ footer {
   font-size: var(--fontSize-0);
 }
 
+footer .donations {
+  display: flex;
+  flex-direction: column;
+}
+
 hr {
   background: var(--color-accent);
   height: 1px;
