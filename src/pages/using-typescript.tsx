@@ -5,13 +5,7 @@ import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-type DataProps = {
-  site: {
-    buildTime: string
-  }
-}
-
-const UsingTypescript: React.FC<PageProps<DataProps>> = ({
+const UsingTypescript: React.FC<PageProps<Queries.UsingTypescriptQuery>> = ({
   data,
   path,
   location,
@@ -22,15 +16,15 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
     <p>
       This means that you can create and write <em>.ts/.tsx</em> files for your
       pages, components etc. Please note that the <em>gatsby-*.js</em> files
-      (like gatsby-node.js) currently don't support TypeScript yet.
+      (like gatsby-node.js) currently don&apos;t support TypeScript yet.
     </p>
     <p>
-      For type checking you'll want to install <em>typescript</em> via npm and
-      run <em>tsc --init</em> to create a <em>tsconfig</em> file.
+      For type checking you&apos;ll want to install <em>typescript</em> via npm
+      and run <em>tsc --init</em> to create a <em>tsconfig</em> file.
     </p>
     <p>
-      You're currently on the page "{path}" which was built on{" "}
-      {data.site.buildTime}.
+      You&apos;re currently on the page &quot;{path}&quot; which was built on{" "}
+      {data.site?.buildTime}.
     </p>
     <p>
       To learn more, head over to our{" "}
@@ -46,7 +40,7 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({
 export default UsingTypescript
 
 export const query = graphql`
-  {
+  query UsingTypescript {
     site {
       buildTime(formatString: "YYYY-MM-DD hh:mm a z")
     }
