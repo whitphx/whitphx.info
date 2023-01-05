@@ -1,4 +1,5 @@
 module.exports = {
+  graphqlTypegen: true,
   siteMetadata: {
     title: `coi munje`,
     author: {

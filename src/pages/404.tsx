@@ -4,9 +4,11 @@ import { graphql, PageProps } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-type Data = any // TODO:
-function NotFoundPage({ data, location }: PageProps<Data>) {
-  const siteTitle = data.site.siteMetadata.title
+function NotFoundPage({
+  data,
+  location,
+}: PageProps<Queries.NotFoundPageQuery>) {
+  const siteTitle = data.site?.siteMetadata?.title ?? "This site"
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -20,7 +22,7 @@ function NotFoundPage({ data, location }: PageProps<Data>) {
 export default NotFoundPage
 
 export const pageQuery = graphql`
-  query {
+  query NotFoundPage {
     site {
       siteMetadata {
         title
