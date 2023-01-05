@@ -25,11 +25,17 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        This site is using Google Analytics.
-        {` `}
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <p>
+          This site is using Google Analytics.
+          {` `}
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </p>
+        <div className="donations">
+          <a href="https://www.buymeacoffee.com/whitphx" target="_blank" rel="noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="180" height="50" /></a>
+          <a href="https://ko-fi.com/D1D2ERWFG" target="_blank" rel="noreferrer"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Support me on Ko-fi" /></a>
+        </div>
       </footer>
     </div>
   )
