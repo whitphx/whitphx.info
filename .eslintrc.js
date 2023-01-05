@@ -8,14 +8,15 @@ module.exports = {
   // Ref: https://www.gatsbyjs.com/docs/how-to/local-development/graphql-typegen/#graphql-eslint
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
-      processor: '@graphql-eslint/graphql',
+      files: ["*.ts", "*.tsx"],
+      processor: "@graphql-eslint/graphql",
       parser: "@typescript-eslint/parser",
       plugins: ["react", "@typescript-eslint"],
       extends: [
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
+        "prettier",
       ],
       env: {
         browser: true,
@@ -23,18 +24,18 @@ module.exports = {
       },
     },
     {
-      files: ['*.graphql'],
-      parser: '@graphql-eslint/eslint-plugin',
-      plugins: ['@graphql-eslint'],
+      files: ["*.graphql"],
+      parser: "@graphql-eslint/eslint-plugin",
+      plugins: ["@graphql-eslint"],
       rules: {
-        '@graphql-eslint/no-anonymous-operations': 'error',
-        '@graphql-eslint/naming-convention': [
-          'error',
+        "@graphql-eslint/no-anonymous-operations": "error",
+        "@graphql-eslint/naming-convention": [
+          "error",
           {
             OperationDefinition: {
-              style: 'PascalCase',
-              forbiddenPrefixes: ['Query', 'Mutation', 'Subscription', 'Get'],
-              forbiddenSuffixes: ['Query', 'Mutation', 'Subscription'],
+              style: "PascalCase",
+              forbiddenPrefixes: ["Query", "Mutation", "Subscription", "Get"],
+              forbiddenSuffixes: ["Query", "Mutation", "Subscription"],
             },
           },
         ],
