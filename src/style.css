@@ -39,7 +39,7 @@
   --fontWeight-bold: 700;
   --fontWeight-extrabold: 800;
   --fontWeight-black: 900;
-  --fontSize-root: 16px;
+  --fontSize-root: 18px;
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
@@ -59,12 +59,6 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
-}
-
-@media (min-width: 640px) {
-  :root {
-    --fontSize-root: 18px;
-  }
 }
 
 /* HTML elements */
@@ -258,6 +252,10 @@ a:focus {
 /* Media queries */
 
 @media (max-width: 42rem) {
+  :root {
+    --fontSize-root: 16px;
+  }
+
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
     margin-left: var(--spacing-0);
