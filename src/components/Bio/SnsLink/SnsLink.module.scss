@@ -6,13 +6,13 @@
 
   .snsIcon {
     color: var(--color-text-light);
-    font-size: var(--fontSize-6);
+    font-size: var(--fontSize-5);
   }
   .snsSubIcon {
     position: absolute;
     right: 0;
     bottom: 0;
-    font-size: var(--fontSize-2);
+    font-size: var(--fontSize-1);
   }
 
   &:hover {
