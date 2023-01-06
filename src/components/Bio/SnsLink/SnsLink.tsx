@@ -18,6 +18,7 @@ function SnsLink(props: SnsLinkProps) {
       title={props.title}
       className={styles.snsIconContainer}
     >
+      {/* Accessibility settings, ref: https://kittygiraudel.com/2020/12/10/accessible-icon-links/ */}
       <span hidden>{props.title}</span>
       <props.Icon className={styles.snsIcon} aria-hidden focusable={false} />
       {props.subEmoji && (
