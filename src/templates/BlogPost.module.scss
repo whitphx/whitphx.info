@@ -1,0 +1,20 @@
+.blogPost header h1 {
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+}
+
+.blogPost header p {
+  font-size: var(--fontSize-2);
+  font-family: var(--font-heading);
+}
+
+.blogPost p > img,
+p > a > img,
+p video {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.blogPostNav ul {
+  margin: var(--spacing-0);
+}
