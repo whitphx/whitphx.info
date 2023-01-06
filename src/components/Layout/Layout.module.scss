@@ -1,0 +1,31 @@
+.globalWrapper {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-10) var(--spacing-5);
+}
+
+.globalHeader {
+  margin-bottom: var(--spacing-12);
+}
+
+.mainHeading {
+  font-size: var(--fontSize-7);
+  margin: 0;
+}
+
+.headerLinkHome {
+  font-weight: var(--fontWeight-bold);
+  font-family: var(--font-heading);
+  text-decoration: none;
+  font-size: var(--fontSize-2);
+}
+
+.footer {
+  padding: var(--spacing-6) var(--spacing-0);
+  font-size: var(--fontSize-0);
+}
+
+.donations {
+  display: flex;
+  flex-direction: column;
+}

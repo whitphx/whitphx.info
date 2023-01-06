@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, PageProps } from "gatsby"
+import * as styles from "./Layout.module.scss"
 
 export interface LayoutProps {
   location: PageProps["location"]
@@ -13,30 +14,30 @@ function Layout({ location, title, children }: LayoutProps) {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
+      <h1 className={styles.mainHeading}>
         <Link to="/">{title}</Link>
       </h1>
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
+      <Link className={styles.headerLinkHome} to="/">
         {title}
       </Link>
     )
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+    <div className={styles.globalWrapper} data-is-root-path={isRootPath}>
+      <header className={styles.globalHeader}>{header}</header>
       <main>{children}</main>
-      <footer>
+      <footer className={styles.footer}>
         <p>
           This site is using Google Analytics.
           {` `}© {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </p>
-        <div className="donations">
+        <div className={styles.donations}>
           <a
             href="https://www.buymeacoffee.com/whitphx"
             target="_blank"
