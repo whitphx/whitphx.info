@@ -8,6 +8,8 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import SnsLink from "./SnsLink";
 import * as styles from "./Bio.module.scss";
 
 function Bio() {
@@ -43,7 +45,44 @@ function Bio() {
         quality={95}
         alt="Profile picture"
       />
-      {author?.name && (
+      <div>
+        <h3>Yuichiro Tachibana (Tsuchiya)</h3>
+        <div>
+          <ul className={styles.snsList}>
+            <li>
+              <SnsLink
+                href="https://twitter.com/whitphx"
+                title="Twitter (en)"
+                Icon={FaTwitter}
+                subEmoji="🇬🇧"
+              />
+            </li>
+            <li>
+              <SnsLink
+                href="https://twitter.com/whitphx_ja"
+                title="Twitter (ja)"
+                Icon={FaTwitter}
+                subEmoji="🇯🇵"
+              />
+            </li>
+            <li>
+              <SnsLink
+                href="https://www.linkedin.com/in/whitphx/"
+                title="LinkedIn"
+                Icon={FaLinkedin}
+              />
+            </li>
+            <li>
+              <SnsLink
+                href="https://github.com/whitphx"
+                title="GitHub"
+                Icon={FaGithub}
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      {/* {author?.name && (
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
@@ -51,7 +90,7 @@ function Bio() {
             You should follow him on Twitter
           </a>
         </p>
-      )}
+      )} */}
     </div>
   );
 }
