@@ -26,6 +26,10 @@
 }
 
 .donations {
-  display: flex;
-  flex-direction: column;
+  list-style: none;
+  margin: 0;
+
+  li {
+    margin: 0;
+  }
 }
