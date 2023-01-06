@@ -4,7 +4,7 @@ module.exports = {
     title: `coi munje`,
     author: {
       name: `whitphx (Yuichiro Tachibana)`,
-      summary: `who works as a software developer.`,
+      // summary: `who works as a software developer.`,
     },
     // description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://whitphx.info/`,
