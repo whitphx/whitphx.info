@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import formatDate from "date-fns/format";
-import * as styles from "./index.module.scss";
+import * as styles from "./BlogIndex.module.scss";
 
 interface Post {
   slug: string;
