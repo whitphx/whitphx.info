@@ -264,6 +264,6 @@ a:focus {
   }
   ul,
   ol {
-    list-style-position: inside;
+    margin-left: var(--spacing-0);
   }
 }
