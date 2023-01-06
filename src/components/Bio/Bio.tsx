@@ -8,6 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import * as styles from "./Bio.module.scss"
 
 function Bio() {
   const data: Queries.BioQuery = useStaticQuery(graphql`
@@ -31,12 +32,12 @@ function Bio() {
   const social = data.site?.siteMetadata?.social
 
   return (
-    <div className="bio">
+    <div className={styles.bio}>
       <StaticImage
-        className="bio-avatar"
+        className={styles.bioAvatar}
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.jpg"
+        src="../../images/profile-pic.jpg"
         width={50}
         height={50}
         quality={95}

@@ -5,6 +5,8 @@ import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
+import * as styles from "./BlogPost.module.scss"
+
 function BlogPostTemplate({
   data,
   location,
@@ -27,7 +29,7 @@ function BlogPostTemplate({
         lang={post.frontmatter?.lang || "en"}
       />
       <article
-        className="blog-post"
+        className={styles.blogPost}
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -44,7 +46,7 @@ function BlogPostTemplate({
           <Bio />
         </footer>
       </article>
-      <nav className="blog-post-nav">
+      <nav className={styles.blogPostNav}>
         <ul
           style={{
             display: `flex`,
