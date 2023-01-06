@@ -1,0 +1,48 @@
+.postList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--spacing-4);;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-accent);
+  font-size: 1rem;
+  font-weight: var(--fontWeight-normal);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+  @media (max-width: 42rem) {
+    & {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}
+
+.date {
+  font-size: 0.8rem;
+  font-family: monospace;
+  padding-left: var(--spacing-6);
+
+  @media (max-width: 42rem) {
+    & {
+      text-align: right;
+      padding-top: var(--spacing-1);
+    }
+  }
+}

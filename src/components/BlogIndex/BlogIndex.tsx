@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import formatDate from "date-fns/format";
-import * as styles from "./index.module.scss";
+import * as styles from "./BlogIndex.module.scss";
 
 interface Post {
   slug: string;
@@ -18,12 +18,12 @@ function BlogIndex(props: BlogIndexProps) {
         <li key={post.slug} className={styles.listItem}>
           <article itemScope itemType="http://schema.org/Article">
             <Link to={post.slug} itemProp="url">
-              <h3 className={styles.title} itemProp="headline">
-                {post.title}
+              <h3 className={styles.title}>
+                <span itemProp="headline">{post.title}</span>
+                <small className={styles.date}>
+                  {formatDate(post.date, "yyyy/MM/dd")}
+                </small>
               </h3>
-              <span className={styles.date}>
-                {formatDate(post.date, "yyyy/MM/dd")}
-              </span>
             </Link>
           </article>
         </li>
