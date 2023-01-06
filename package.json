@@ -36,9 +36,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.57.1",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "sass": "^1.57.1"
   },
   "devDependencies": {
     "@graphql-eslint/eslint-plugin": "^3.14.3",
