@@ -35,15 +35,15 @@ The `value` prop and the argument of `onChange()` are string formatted in `yyyy-
 See [the demo page](https://whitphx.github.io/react-ymd-date-select/) for more information.
 
 ```tsx
-import { useState } from "react"
-import { useDateSelect } from "react-ymd-date-select"
+import { useState } from "react";
+import { useDateSelect } from "react-ymd-date-select";
 
 interface CustomDateSelectProps {
-  onChange: (value: string) => void
-  value: string
+  onChange: (value: string) => void;
+  value: string;
 }
 function CustomDateSelect(props: CustomDateSelectProps) {
-  const dateSelect = useDateSelect(props.value, props.onChange)
+  const dateSelect = useDateSelect(props.value, props.onChange);
 
   return (
     <>
@@ -55,7 +55,7 @@ function CustomDateSelect(props: CustomDateSelectProps) {
       <label>
         Year
         <select value={dateSelect.yearValue} onChange={dateSelect.onYearChange}>
-          {dateSelect.yearOptions.map(yearOption => (
+          {dateSelect.yearOptions.map((yearOption) => (
             <option key={yearOption.value} value={yearOption.value}>
               {yearOption.label}
             </option>
@@ -68,7 +68,7 @@ function CustomDateSelect(props: CustomDateSelectProps) {
           value={dateSelect.monthValue}
           onChange={dateSelect.onMonthChange}
         >
-          {dateSelect.monthOptions.map(monthOption => (
+          {dateSelect.monthOptions.map((monthOption) => (
             <option key={monthOption.value} value={monthOption.value}>
               {monthOption.label}
             </option>
@@ -78,7 +78,7 @@ function CustomDateSelect(props: CustomDateSelectProps) {
       <label>
         Day
         <select value={dateSelect.dayValue} onChange={dateSelect.onDayChange}>
-          {dateSelect.dayOptions.map(dayOption => (
+          {dateSelect.dayOptions.map((dayOption) => (
             <option key={dayOption.value} value={dayOption.value}>
               {dayOption.label}
             </option>
@@ -86,6 +86,6 @@ function CustomDateSelect(props: CustomDateSelectProps) {
         </select>
       </label>
     </>
-  )
+  );
 }
 ```

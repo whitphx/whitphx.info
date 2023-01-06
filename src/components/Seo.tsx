@@ -5,16 +5,16 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import { Helmet, HelmetProps } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-import iconImage from "../images/icon.png"
+import * as React from "react";
+import { Helmet, HelmetProps } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import iconImage from "../images/icon.png";
 
 export interface SeoProps {
-  description?: string
-  title?: string
-  lang?: string
-  meta?: HelmetProps["meta"]
+  description?: string;
+  title?: string;
+  lang?: string;
+  meta?: HelmetProps["meta"];
 }
 function Seo({ description, lang, meta: additionalMeta, title }: SeoProps) {
   const { site }: Queries.SeoQuery = useStaticQuery(
@@ -32,13 +32,13 @@ function Seo({ description, lang, meta: additionalMeta, title }: SeoProps) {
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site?.siteMetadata?.description
-  const defaultTitle = site?.siteMetadata?.title
+  const metaDescription = description || site?.siteMetadata?.description;
+  const defaultTitle = site?.siteMetadata?.title;
 
-  const siteUrl = site?.siteMetadata?.siteUrl
-  const ogpImage = siteUrl ? siteUrl + iconImage : null
+  const siteUrl = site?.siteMetadata?.siteUrl;
+  const ogpImage = siteUrl ? siteUrl + iconImage : null;
 
   const meta = [
     {
@@ -77,7 +77,7 @@ function Seo({ description, lang, meta: additionalMeta, title }: SeoProps) {
       name: `twitter:description`,
       content: metaDescription,
     },
-  ] as NonNullable<HelmetProps["meta"]>
+  ] as NonNullable<HelmetProps["meta"]>;
 
   return (
     <Helmet
@@ -88,7 +88,7 @@ function Seo({ description, lang, meta: additionalMeta, title }: SeoProps) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={meta.concat(additionalMeta ?? [])}
     />
-  )
+  );
 }
 
-export default Seo
+export default Seo;

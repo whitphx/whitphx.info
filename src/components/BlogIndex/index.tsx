@@ -1,20 +1,20 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import formatDate from "date-fns/format"
-import * as styles from "./index.module.scss"
+import * as React from "react";
+import { Link } from "gatsby";
+import formatDate from "date-fns/format";
+import * as styles from "./index.module.scss";
 
 interface Post {
-  slug: string
-  title: string
-  date: Date
+  slug: string;
+  title: string;
+  date: Date;
 }
 export interface BlogIndexProps {
-  posts: Post[]
+  posts: Post[];
 }
 function BlogIndex(props: BlogIndexProps) {
   return (
     <ol className={styles.postList}>
-      {props.posts.map(post => (
+      {props.posts.map((post) => (
         <li key={post.slug} className={styles.listItem}>
           <article itemScope itemType="http://schema.org/Article">
             <Link to={post.slug} itemProp="url">
@@ -29,7 +29,7 @@ function BlogIndex(props: BlogIndexProps) {
         </li>
       ))}
     </ol>
-  )
+  );
 }
 
-export default BlogIndex
+export default BlogIndex;

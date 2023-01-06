@@ -228,7 +228,7 @@ name = st.text_input('Your name')
 st.write("Hello,", name or "world")
 `,
         document.getElementById("root")
-      )
+      );
     </script>
   </body>
 </html>
@@ -258,7 +258,7 @@ st.pyplot(fig)
     },
   },
   document.getElementById("root")
-)
+);
 ```
 
 After writing the HTML file, host it wherever you like, such as GitHub Pages.

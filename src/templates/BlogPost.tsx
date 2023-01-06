@@ -1,22 +1,22 @@
-import * as React from "react"
-import { Link, graphql, PageProps } from "gatsby"
+import * as React from "react";
+import { Link, graphql, PageProps } from "gatsby";
 
-import Bio from "../components/Bio"
-import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import Bio from "../components/Bio";
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
 
-import * as styles from "./BlogPost.module.scss"
+import * as styles from "./BlogPost.module.scss";
 
 function BlogPostTemplate({
   data,
   location,
 }: PageProps<Queries.BlogPostQuery>) {
-  const post = data.markdownRemark
-  const siteTitle = data.site?.siteMetadata?.title || `Title`
-  const { previous: prev, next } = data
+  const post = data.markdownRemark;
+  const siteTitle = data.site?.siteMetadata?.title || `Title`;
+  const { previous: prev, next } = data;
 
   if (post == null) {
-    return null
+    return null;
   }
 
   return (
@@ -73,10 +73,10 @@ function BlogPostTemplate({
         </ul>
       </nav>
     </Layout>
-  )
+  );
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPost($id: String!, $previousPostId: String, $nextPostId: String) {
@@ -113,4 +113,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

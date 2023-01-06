@@ -93,10 +93,10 @@ This was also a nice solution as I could have each sample code as a separate `*.
 // Sample.tsx
 
 function SampleComponent() {
-  return <div>This is a sample</div>
+  return <div>This is a sample</div>;
 }
 
-export default SampleComponent
+export default SampleComponent;
 ```
 
 ```tsx
