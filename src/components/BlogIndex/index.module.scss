@@ -8,16 +8,16 @@
   margin: 0;
   padding: 0;
   margin-bottom: 1.1rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--color-accent);
 
   a {
     text-decoration: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
-    @media (min-width: 640px) {
+    @media (max-width: 42rem) {
       & {
-        flex-direction: row;
+        flex-direction: column;
       }
     }
   }
