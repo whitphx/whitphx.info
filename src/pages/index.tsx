@@ -1,13 +1,35 @@
 import * as React from "react"
-import { Link, graphql, PageProps } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import BlogIndex, { BlogIndexProps } from "../components/BlogIndex"
 
-function BlogIndex({ data, location }: PageProps<Queries.BlogIndexQuery>) {
+function TopPage({ data, location }: PageProps<Queries.BlogIndexQuery>) {
   const siteTitle = data.site?.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const posts: BlogIndexProps["posts"] = data.allMarkdownRemark.nodes.map(
+    node => {
+      const slug = node.fields?.slug
+      if (slug == null) {
+        throw new Error(`Slug is null: ${JSON.stringify(node)}`)
+      }
+
+      const dateStr = node.frontmatter?.date
+      if (dateStr == null) {
+        throw new Error(`Date is null: ${JSON.stringify(node)}`)
+      }
+      const date = new Date(dateStr)
+
+      const title = node.frontmatter?.title || slug
+
+      return {
+        slug,
+        title,
+        date,
+      }
+    }
+  )
 
   if (posts.length === 0) {
     return (
@@ -27,50 +49,12 @@ function BlogIndex({ data, location }: PageProps<Queries.BlogIndexQuery>) {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter?.title || post.fields?.slug
-          const slug = post.fields?.slug
-          if (slug == null) {
-            throw new Error(
-              `Slug for the page ${post.frontmatter?.title} is null`
-            )
-          }
-
-          return (
-            <li key={post.fields?.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter?.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        post.frontmatter?.description || post.excerpt || "",
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+      <BlogIndex posts={posts} />
     </Layout>
   )
 }
 
-export default BlogIndex
+export default TopPage
 
 export const pageQuery = graphql`
   query BlogIndex {
@@ -89,7 +73,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date
           title
           description
         }

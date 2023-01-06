@@ -1,0 +1,39 @@
+.postList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listItem {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.1rem;
+  border-bottom: 1px solid #ccc;
+
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 640px) {
+      & {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+.date {
+  font-size: 0.8rem;
+  font-family: monospace;
+  padding-left: 1rem;
+  text-align: right;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  flex-grow: 1;
+}
