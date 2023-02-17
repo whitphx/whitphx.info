@@ -5,10 +5,10 @@ description:
 tags: ["dev"]
 ---
 
-## VSCode's when clause contexts
+## Command to get the VSCode's when clause contexts
 VSCode has many undocumented [when clause contexts](https://code.visualstudio.com/api/references/when-clause-contexts) that still can be used in the `when` clauses in `keybindings.json`.
 
-You can get the list of when clause contexts including the undocumented ones by running the following steps.
+You can get the list of when clause contexts including such undocumented ones by running the following steps.
 
 1. Clone the [VSCode repository](https://github.com/microsoft/vscode).
 2. Run the command below at the repository root.
@@ -18,13 +18,13 @@ You can get the list of when clause contexts including the undocumented ones by 
 
 You can see the result at the bottom of this page.
 
-We can get only the context names, so we have to infer what each one is from its name or by reading the code.
+We can get only the context names with this command, so we have to infer what each one is from its name or by reading the code.
 
 ## What it does
 It looks like the `RawContextKey` class is used to register the contexts in the VSCode source code, so this command extracts the literal arguments passed to that class.
 
 ## Some exceptions
-Some arguments passed to `new RawContextKey()` are not literals but variables, so we have to read the code to get the context names in such cases.
+Some arguments passed to `new RawContextKey()` are not literals but variables that the command can't extract, so we have to read the code to get the context names in such cases.
 
 The following command returns all such lines at least.
 ```shell
