@@ -1,5 +1,5 @@
 ---
-title: Conf-driven Travels✈️
+title: Conf-driven Traveling✈️
 date: "2023-05-11T00:15:41+02:00"
 description:
 tags: []
