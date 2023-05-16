@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Link, graphql, PageProps } from "gatsby";
 
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import Bio from "../components/Bio";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
@@ -36,6 +38,14 @@ function BlogPostTemplate({
         <header>
           <h1 itemProp="headline">{post.frontmatter?.title}</h1>
           <p>{post.frontmatter?.date}</p>
+          {post.frontmatter?.heroImage && (
+            <GatsbyImage
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
+              image={getImage(post.frontmatter.heroImage) ?? undefined}
+              alt={post.frontmatter?.title ?? ""}
+            />
+          )}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html ?? "" }}
@@ -94,6 +104,15 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         lang
+        heroImage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 800
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

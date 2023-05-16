@@ -4,6 +4,7 @@ date: "2023-05-16T15:42:51+03:00"
 description:
 tags: ["travel"]
 lang: ja
+heroImage: ./images/PXL_20230516_102918492.jpg
 ---
 
 ## 予定
