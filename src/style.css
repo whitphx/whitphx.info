@@ -223,6 +223,9 @@ table {
 }
 
 table thead tr th {
+  border-bottom: 2px solid var(--color-accent);
+}
+table tr td {
   border-bottom: 1px solid var(--color-accent);
 }
 
