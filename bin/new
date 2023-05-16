@@ -21,6 +21,7 @@ title:
 date: "${formatDateISO(now)}"
 description:
 tags: []
+lang: en
 ---
 `
 
