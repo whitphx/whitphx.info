@@ -2,7 +2,7 @@
 title: Conf-driven Traveling✈️
 date: "2023-05-11T00:15:41+02:00"
 description:
-tags: []
+tags: ["dev", "travel"]
 ---
 
 ![An image of a traveler with a laptop](./images/anete-lusina-rFKBUwLg_WQ-unsplash.jpg)

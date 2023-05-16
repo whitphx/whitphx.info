@@ -2,7 +2,7 @@
 title: "2022年OSS活動振り返り - 今年作ったOSSと得た報酬について"
 date: "2022-12-22T11:51:26+09:00"
 description:
-tags: []
+tags: ["dev"]
 lang: ja
 ---
 
