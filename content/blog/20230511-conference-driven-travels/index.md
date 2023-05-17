@@ -3,11 +3,9 @@ title: Conf-driven Traveling✈️
 date: "2023-05-11T00:15:41+02:00"
 description:
 tags: ["dev", "travel"]
+heroImage: ./images/anete-lusina-rFKBUwLg_WQ-unsplash.jpg
+heroCaption: Photo by <a href="https://unsplash.com/@anete_lusina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anete Lūsiņa</a> on <a href="https://unsplash.com/@whitphx/likes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
-
-![An image of a traveler with a laptop](./images/anete-lusina-rFKBUwLg_WQ-unsplash.jpg)
-Photo by <a href="https://unsplash.com/@anete_lusina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anete Lūsiņa</a> on <a href="https://unsplash.com/@whitphx/likes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
 
 ## Sign up for a conference, then plan the trip
 If you are a tech person such as a programmer, and if you like to go somewhere but you always hesitate planning trips, why not sign up for a programming conference first? You will get a huge driver to travel there.

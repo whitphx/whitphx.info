@@ -693,7 +693,7 @@ type FileFieldsEnum =
   | 'childMarkdownRemark.frontmatter.date'
   | 'childMarkdownRemark.frontmatter.description'
   | 'childMarkdownRemark.frontmatter.draft'
-  | 'childMarkdownRemark.frontmatter.featuredImage'
+  | 'childMarkdownRemark.frontmatter.heroCaption'
   | 'childMarkdownRemark.frontmatter.heroImage.absolutePath'
   | 'childMarkdownRemark.frontmatter.heroImage.accessTime'
   | 'childMarkdownRemark.frontmatter.heroImage.atime'
@@ -871,7 +871,7 @@ type FileFieldsEnum =
   | 'childrenMarkdownRemark.frontmatter.date'
   | 'childrenMarkdownRemark.frontmatter.description'
   | 'childrenMarkdownRemark.frontmatter.draft'
-  | 'childrenMarkdownRemark.frontmatter.featuredImage'
+  | 'childrenMarkdownRemark.frontmatter.heroCaption'
   | 'childrenMarkdownRemark.frontmatter.heroImage.absolutePath'
   | 'childrenMarkdownRemark.frontmatter.heroImage.accessTime'
   | 'childrenMarkdownRemark.frontmatter.heroImage.atime'
@@ -1172,7 +1172,7 @@ type Frontmatter = {
   readonly date: Maybe<Scalars['Date']>;
   readonly description: Maybe<Scalars['String']>;
   readonly draft: Maybe<Scalars['Boolean']>;
-  readonly featuredImage: Maybe<Scalars['String']>;
+  readonly heroCaption: Maybe<Scalars['String']>;
   readonly heroImage: Maybe<File>;
   readonly lang: Maybe<Scalars['String']>;
   readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
@@ -1191,7 +1191,7 @@ type FrontmatterFilterInput = {
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly draft: InputMaybe<BooleanQueryOperatorInput>;
-  readonly featuredImage: InputMaybe<StringQueryOperatorInput>;
+  readonly heroCaption: InputMaybe<StringQueryOperatorInput>;
   readonly heroImage: InputMaybe<FileFilterInput>;
   readonly lang: InputMaybe<StringQueryOperatorInput>;
   readonly tags: InputMaybe<StringQueryOperatorInput>;
@@ -1906,7 +1906,7 @@ type MarkdownRemarkFieldsEnum =
   | 'frontmatter.date'
   | 'frontmatter.description'
   | 'frontmatter.draft'
-  | 'frontmatter.featuredImage'
+  | 'frontmatter.heroCaption'
   | 'frontmatter.heroImage.absolutePath'
   | 'frontmatter.heroImage.accessTime'
   | 'frontmatter.heroImage.atime'
@@ -4123,7 +4123,7 @@ type BlogPostQueryVariables = Exact<{
 }>;
 
 
-type BlogPostQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly markdownRemark: { readonly id: string, readonly excerpt: string | null, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly description: string | null, readonly lang: string | null, readonly heroImage: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly previous: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null, readonly next: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null };
+type BlogPostQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly markdownRemark: { readonly id: string, readonly excerpt: string | null, readonly html: string | null, readonly frontmatter: { readonly title: string | null, readonly date: string | null, readonly description: string | null, readonly lang: string | null, readonly heroCaption: string | null, readonly heroImage: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } | null } | null, readonly previous: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null, readonly next: { readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly title: string | null } | null } | null };
 
 type GatsbyImageSharpFixedFragment = { readonly base64: string | null, readonly width: number, readonly height: number, readonly src: string, readonly srcSet: string };
 

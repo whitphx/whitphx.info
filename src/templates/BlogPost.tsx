@@ -39,12 +39,23 @@ function BlogPostTemplate({
           <h1 itemProp="headline">{post.frontmatter?.title}</h1>
           <p>{post.frontmatter?.date}</p>
           {post.frontmatter?.heroImage && (
-            <GatsbyImage
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
-              image={getImage(post.frontmatter.heroImage) ?? undefined}
-              alt={post.frontmatter?.title ?? ""}
-            />
+            <figure className={styles.hero}>
+              <GatsbyImage
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                image={getImage(post.frontmatter.heroImage) ?? undefined}
+                alt={
+                  post.frontmatter.heroCaption ?? post.frontmatter?.title ?? ""
+                }
+              />
+              {post.frontmatter?.heroCaption && (
+                <figcaption
+                  dangerouslySetInnerHTML={{
+                    __html: post.frontmatter?.heroCaption,
+                  }}
+                ></figcaption>
+              )}
+            </figure>
           )}
         </header>
         <section
@@ -113,6 +124,7 @@ export const pageQuery = graphql`
             )
           }
         }
+        heroCaption
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
