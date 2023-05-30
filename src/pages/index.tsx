@@ -56,28 +56,26 @@ function TopPage({ data, location }: PageProps<Queries.BlogIndexQuery>) {
 
 export default TopPage;
 
-export const pageQuery = graphql`
-  query BlogIndex {
-    site {
-      siteMetadata {
-        title
-      }
+export const pageQuery = graphql`query BlogIndex {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { ne: true } } }
-    ) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date
-          title
-          description
-        }
+  }
+  allMarkdownRemark(
+    sort: {frontmatter: {date: DESC}}
+    filter: {frontmatter: {draft: {ne: true}}}
+  ) {
+    nodes {
+      excerpt
+      fields {
+        slug
+      }
+      frontmatter {
+        date
+        title
+        description
       }
     }
   }
-`;
+}`;
