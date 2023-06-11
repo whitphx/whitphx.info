@@ -19,7 +19,7 @@ _This is a screenshot of https://cloud.google.com/appengine/docs/the-appengine-e
 
 ### Custom runtime is not necessary
 
-You **do not have to** use a custom runtime (an original Docker image).
+You **do not have to** use a custom runtime (a customized Docker image).
 The flexible environment offers an official Python runtime as https://cloud.google.com/appengine/docs/flexible/python/runtime and you can use it.
 
 Still, you can also use a custom runtime. For example, it is a nice option when you want to use a different Python version or when you already have a working Docker image.
