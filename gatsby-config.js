@@ -41,6 +41,11 @@ module.exports = {
                 // that adds js to the page.
                 // If you do not need them.
                 exclude: ["Reddit"],
+                settings: {
+                  Instagram: {
+                    access_token: process.env.INSTAGRAM_ACCESS_TOKEN,
+                  }
+                }
               },
             },
           },

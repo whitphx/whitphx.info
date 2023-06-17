@@ -2222,7 +2222,7 @@
 
 "@raae/gatsby-remark-oembed@^0.3.3":
   version "0.3.3"
-  resolved "https://registry.npmjs.org/@raae/gatsby-remark-oembed/-/gatsby-remark-oembed-0.3.3.tgz"
+  resolved "https://registry.yarnpkg.com/@raae/gatsby-remark-oembed/-/gatsby-remark-oembed-0.3.3.tgz#7bef853aa2d03c10cbf122eb2119caa66d2db4d1"
   integrity sha512-7x7I0lqwEkqYVMeyc1bTV4Zn4CBNs5vCkJMvF+lHR/iUTs2lTFZfRuQjOxTU/pvLlNUecJkYNiTnU2KMR632ZQ==
   dependencies:
     axios "0.27.2"
