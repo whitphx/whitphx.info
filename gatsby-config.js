@@ -34,16 +34,26 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-embedder`,
+            resolve: `gatsby-transformer-remark`,
             options: {
-              customTransformers: [
-                // Your custom transformers
-              ],
-              services: {
-                Instagram: {
-                  accessToken: process.env.INSTAGRAM_ACCESS_TOKEN,
+              plugins: [
+                {
+                  resolve: `@raae/gatsby-remark-oembed`,
+                  options: {
+                    providers: {
+                      // Important to exclude providers
+                      // that adds js to the page.
+                      // If you do not need them.
+                      exclude: ["Reddit"],
+                      settings: {
+                        Instagram: {
+                          access_token: process.env.INSTAGRAM_ACCESS_TOKEN,
+                        }
+                      }
+                    },
+                  },
                 },
-              },
+              ],
             },
           },
           {

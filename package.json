@@ -25,7 +25,6 @@
     "gatsby-plugin-sitemap": "^6.10.0",
     "gatsby-remark-autolink-headers": "^6.10.0",
     "gatsby-remark-copy-linked-files": "^6.10.0",
-    "gatsby-remark-embedder": "^7.0.0",
     "gatsby-remark-images": "^7.10.0",
     "gatsby-remark-prismjs": "^7.10.0",
     "gatsby-remark-responsive-iframe": "^6.10.0",
