@@ -79,17 +79,19 @@ PyCon DEに出したプロポーザルを少し手直ししてこちらにも出
 * みんな英語が話せる。特にPyCon DEの懇親会では、ここはアメリカかと思うくらいみんなペラペラだった。
     * ディナーしたStreamlitの人に聞いたら、ベルリンの、特にテック業界はドイツの中でも特殊らしい。そういう場所だと、ドイツ人同士でも仕事中は英語で話すそう。
 
-https://www.instagram.com/p/CrQ3AtEtwks/
-
 PyCon DE
 
-https://www.instagram.com/p/CrQ5tPbMJuC/
+https://www.instagram.com/p/CrQ3AtEtwks/
 
 観光
 
-https://www.instagram.com/p/CrRnFj_szXR/
+https://www.instagram.com/p/CrQ5tPbMJuC/
 
 Streamlitディナー2次会で路地裏のバーに連れて行ってもらった。いかにもベルリンという感じの雰囲気。
+
+https://www.instagram.com/p/CrRnFj_szXR/
+
+PyCon DEでの自分の発表
 
 https://www.instagram.com/p/Cr8-LgcLhHx/
 
