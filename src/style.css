@@ -253,6 +253,10 @@ a:focus {
   margin-bottom: var(--spacing-4);
 }
 
+.instagram-media {
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0) !important;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
