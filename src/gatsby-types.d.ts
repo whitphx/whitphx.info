@@ -2765,7 +2765,7 @@ type WebPOptions = {
 type BlogIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogIndexQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null } | null }> } };
+type BlogIndexQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly blogPosts: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly fields: { readonly slug: string | null, readonly fileSourceInstanceName: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null } | null }> } };
 
 type BlogPostQueryVariables = Exact<{
   id: Scalars['String'];
