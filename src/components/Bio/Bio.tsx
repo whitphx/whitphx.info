@@ -9,6 +9,7 @@ import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import SnsLink from "./SnsLink";
+import Works from "./Works";
 import * as styles from "./Bio.module.scss";
 
 function Bio() {
@@ -61,6 +62,7 @@ function Bio() {
             />
           </li>
         </ul>
+        <Works />
       </div>
     </div>
   );

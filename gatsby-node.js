@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `{
   allMarkdownRemark(
     sort: {frontmatter: {date: ASC}}
-    filter: {frontmatter: {draft: {ne: true}}}
+    filter: {fields: {fileSourceInstanceName: {eq: "blog"}}, frontmatter: {draft: {ne: true}}}
     limit: 1000
   ) {
     nodes {
@@ -58,11 +58,26 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 };
 
+const slugPrefixes = {
+  blog: "/posts",
+  works: "/works",
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const prefix = "/posts";
+    // Inherit parent node's sourceInstanceName
+    // Ref: https://takumon.com/how-to-distinct-2-kinds-of-markdown-in-gatsby/
+    const parent = getNode(node.parent);
+    const sourceInstanceName = parent.sourceInstanceName
+    createNodeField({
+      node,
+      name: 'fileSourceInstanceName',
+      value: sourceInstanceName,
+    })
+
+    const prefix = slugPrefixes[sourceInstanceName] ?? "";
 
     const filePath = createFilePath({ node, getNode });
     const value = `${prefix}${filePath}`;

@@ -56,26 +56,31 @@ function TopPage({ data, location }: PageProps<Queries.BlogIndexQuery>) {
 
 export default TopPage;
 
-export const pageQuery = graphql`query BlogIndex {
-  site {
-    siteMetadata {
-      title
-    }
-  }
-  allMarkdownRemark(
-    sort: {frontmatter: {date: DESC}}
-    filter: {frontmatter: {draft: {ne: true}}}
-  ) {
-    nodes {
-      excerpt
-      fields {
-        slug
-      }
-      frontmatter {
-        date
+export const pageQuery = graphql`
+  query BlogIndex {
+    site {
+      siteMetadata {
         title
-        description
+      }
+    }
+    allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: {
+        fields: { fileSourceInstanceName: { eq: "blog" } }
+        frontmatter: { draft: { ne: true } }
+      }
+    ) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date
+          title
+          description
+        }
       }
     }
   }
-}`;
+`;
