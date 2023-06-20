@@ -61,6 +61,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 const slugPrefixes = {
   blog: "/posts",
   works: "/works",
+  publications: "/publications",
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {

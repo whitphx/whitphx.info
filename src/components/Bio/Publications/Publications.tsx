@@ -1,14 +1,14 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import * as styles from "./Works.module.scss";
+import * as styles from "./Publications.module.scss";
 
-function Works() {
-  const { works } = useStaticQuery<Queries.WorksQuery>(
+function Publications() {
+  const { publications } = useStaticQuery<Queries.PublicationsQuery>(
     graphql`
-      query Works {
-        works: allMarkdownRemark(
-          filter: { fields: { fileSourceInstanceName: { eq: "works" } } }
+      query Publications {
+        publications: allMarkdownRemark(
+          filter: { fields: { fileSourceInstanceName: { eq: "publications" } } }
         ) {
           nodes {
             id
@@ -21,7 +21,7 @@ function Works() {
       }
     `
   );
-  const normalizedWorks = works.nodes.map((node) => {
+  const normalizedPublications = publications.nodes.map((node) => {
     const title = node.frontmatter?.title;
     if (title == null) {
       throw new Error(`Title is null: ${JSON.stringify(node)}`);
@@ -41,12 +41,12 @@ function Works() {
 
   return (
     <section>
-      <h2 className={styles.heading}>Works</h2>
+      <h2 className={styles.heading}>Publications</h2>
       <ul className={styles.listContainer}>
-        {normalizedWorks.map((work) => (
-          <li key={work.id} className={styles.listItem}>
-            <a href={work.url} target="_blank" rel="noreferrer noopener">
-              {work.title}
+        {normalizedPublications.map((publication) => (
+          <li key={publication.id} className={styles.listItem}>
+            <a href={publication.url} target="_blank" rel="noreferrer noopener">
+              {publication.title}
             </a>
           </li>
         ))}
@@ -55,4 +55,4 @@ function Works() {
   );
 }
 
-export default Works;
+export default Publications;

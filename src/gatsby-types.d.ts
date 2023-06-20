@@ -2807,6 +2807,11 @@ type NotFoundPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 type NotFoundPageQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null };
 
+type PublicationsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type PublicationsQuery = { readonly publications: { readonly nodes: ReadonlyArray<{ readonly id: string, readonly frontmatter: { readonly title: string | null, readonly url: string | null } | null }> } };
+
 type SeoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
