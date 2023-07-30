@@ -7,7 +7,13 @@
 
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import {
+  BiLogoTwitter,
+  BiLogoLinkedinSquare,
+  BiLogoGithub,
+  BiLogoDevTo,
+  BiLogoMedium,
+} from "react-icons/bi";
 import SnsLink from "./SnsLink";
 import Works from "./Works";
 import Publications from "./Publications";
@@ -36,7 +42,7 @@ function Bio() {
             <SnsLink
               href="https://twitter.com/whitphx"
               title="Twitter (en)"
-              Icon={FaTwitter}
+              Icon={BiLogoTwitter}
               subEmoji="🇬🇧"
             />
           </li>
@@ -44,7 +50,7 @@ function Bio() {
             <SnsLink
               href="https://twitter.com/whitphx_ja"
               title="Twitter (ja)"
-              Icon={FaTwitter}
+              Icon={BiLogoTwitter}
               subEmoji="🇯🇵"
             />
           </li>
@@ -52,14 +58,28 @@ function Bio() {
             <SnsLink
               href="https://www.linkedin.com/in/whitphx/"
               title="LinkedIn"
-              Icon={FaLinkedin}
+              Icon={BiLogoLinkedinSquare}
             />
           </li>
           <li>
             <SnsLink
               href="https://github.com/whitphx"
               title="GitHub"
-              Icon={FaGithub}
+              Icon={BiLogoGithub}
+            />
+          </li>
+          <li>
+            <SnsLink
+              href="https://dev.to/whitphx"
+              title="DEV Community"
+              Icon={BiLogoDevTo}
+            />
+          </li>
+          <li>
+            <SnsLink
+              href="https://medium.com/@whitphx"
+              title="Medium"
+              Icon={BiLogoMedium}
             />
           </li>
         </ul>
