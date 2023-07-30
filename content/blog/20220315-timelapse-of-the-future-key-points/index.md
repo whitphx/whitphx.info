@@ -4,6 +4,7 @@ date: "2022-03-15T23:09:50+09:00"
 description:
 tags: []
 draft: true
+lang: ja
 ---
 
 > We will travel through time exponentially, doubling our speed every 5 seconds.
