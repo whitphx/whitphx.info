@@ -2,7 +2,7 @@
 title: ウォール街のランダムウォーカーが主張する長期投資によるリスク低減効果は正しいのか
 date: "2023-06-27T01:49:47+09:00"
 description:
-tags: ["investment"]
+tags: ["investment", "finance"]
 lang: ja
 ---
 
