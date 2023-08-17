@@ -1,2 +1,2 @@
-import Publications from "./Publications"
+import Publications from "./Publications";
 export default Publications;

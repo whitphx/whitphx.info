@@ -4,23 +4,21 @@ import { useStaticQuery, graphql } from "gatsby";
 import * as styles from "./Works.module.scss";
 
 function Works() {
-  const { works } = useStaticQuery<Queries.WorksQuery>(
-    graphql`
-      query Works {
-        works: allMarkdownRemark(
-          filter: { fields: { fileSourceInstanceName: { eq: "works" } } }
-        ) {
-          nodes {
-            id
-            frontmatter {
-              title
-              url
-            }
+  const { works } = useStaticQuery<Queries.WorksQuery>(graphql`
+    query Works {
+      works: allMarkdownRemark(
+        filter: { fields: { fileSourceInstanceName: { eq: "works" } } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+            url
           }
         }
       }
-    `
-  );
+    }
+  `);
   const normalizedWorks = works.nodes.map((node) => {
     const title = node.frontmatter?.title;
     if (title == null) {

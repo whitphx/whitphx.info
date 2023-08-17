@@ -1,2 +1,2 @@
-import Works from "./Works"
+import Works from "./Works";
 export default Works;

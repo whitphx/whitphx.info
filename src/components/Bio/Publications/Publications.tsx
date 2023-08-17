@@ -4,23 +4,21 @@ import { useStaticQuery, graphql } from "gatsby";
 import * as styles from "./Publications.module.scss";
 
 function Publications() {
-  const { publications } = useStaticQuery<Queries.PublicationsQuery>(
-    graphql`
-      query Publications {
-        publications: allMarkdownRemark(
-          filter: { fields: { fileSourceInstanceName: { eq: "publications" } } }
-        ) {
-          nodes {
-            id
-            frontmatter {
-              title
-              url
-            }
+  const { publications } = useStaticQuery<Queries.PublicationsQuery>(graphql`
+    query Publications {
+      publications: allMarkdownRemark(
+        filter: { fields: { fileSourceInstanceName: { eq: "publications" } } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+            url
           }
         }
       }
-    `
-  );
+    }
+  `);
   const normalizedPublications = publications.nodes.map((node) => {
     const title = node.frontmatter?.title;
     if (title == null) {

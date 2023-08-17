@@ -201,7 +201,7 @@ All you have to do is write and host a single HTML file.
 It would be something like below, where you can embed the Python source code into the JS code as a string literal.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -227,7 +227,7 @@ import streamlit as st
 name = st.text_input('Your name')
 st.write("Hello,", name or "world")
 `,
-        document.getElementById("root")
+        document.getElementById("root"),
       );
     </script>
   </body>
@@ -257,7 +257,7 @@ st.pyplot(fig)
 `,
     },
   },
-  document.getElementById("root")
+  document.getElementById("root"),
 );
 ```
 
