@@ -8,6 +8,7 @@ heroCaption: Photo by <a href="https://unsplash.com/@anete_lusina?utm_source=uns
 ---
 
 ## Sign up for a conference, then plan the trip
+
 If you are a tech person such as a programmer, and if you like to go somewhere but you always hesitate planning trips, why not sign up for a programming conference first? You will get a huge driver to travel there.
 No need to choose where to go. Just search a conference that will be held soon, or whose CfP is open if you want to attend it as a speaker. You will have excellent experiences wherever you go.
 
@@ -31,22 +32,24 @@ _Then traveled around European cities._
 Unlike academic conferences, there are normally no restrictions on posting a proposal about the same topic to multiple Python conferences.
 So I have submitted the proposal to other PyCons, then I will have more chances to travel if it is accepted!
 
-
 ## Bonuses🎉
+
 There are some bonuses if you take this strategy.
-* You will have local friends at the conference.\
+
+- You will have local friends at the conference.\
   Many conferences have social events where attendees can meet each other. You can also talk to speakers after their presentations, chat with other attendees at lunch or coffee break, or attend sponsors' booths. If you would attend the conference as a (beginner) speaker, joining a mentorship program or speaker workshops is also a good chance to meet the community members.\
   At the first place, building the community is one main goal of the conference of course.
   For travelers, in addition, making local friends is a good way to get to know the city and get involved into there. Going local restaurants or bars with them is a wonderful experience.
-* Some conferences provide Financial Aid Programs.
+- Some conferences provide Financial Aid Programs.
   It will cover (some amount of) your travel expenses, accommodation, and/or a ticket. If you find a conference to go, check if it has the program.
-* In most conferences, the ticket includes lunch and coffee break.
+- In most conferences, the ticket includes lunch and coffee break.
   You don't have to worry about where to eat. You can focus on the conference and enjoy the lunch with other attendees.
   In addition, if you are a speaker, most conferences will provide a free ticket.
 
-
 ## Wrap up
+
 What you have to do is simple.
+
 1. Search a conference that will be held soon, or whose CfP is open.
 2. Buy a ticket or submit a proposal.
 

@@ -8,27 +8,30 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogPost = path.resolve(`./src/templates/BlogPost.tsx`);
 
   // Get all markdown blog posts sorted by date
-  const result = await graphql(
-    `{
-  allMarkdownRemark(
-    sort: {frontmatter: {date: ASC}}
-    filter: {fields: {fileSourceInstanceName: {eq: "blog"}}, frontmatter: {draft: {ne: true}}}
-    limit: 1000
-  ) {
-    nodes {
-      id
-      fields {
-        slug
+  const result = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { frontmatter: { date: ASC } }
+        filter: {
+          fields: { fileSourceInstanceName: { eq: "blog" } }
+          frontmatter: { draft: { ne: true } }
+        }
+        limit: 1000
+      ) {
+        nodes {
+          id
+          fields {
+            slug
+          }
+        }
       }
     }
-  }
-}`
-  );
+  `);
 
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
-      result.errors
+      result.errors,
     );
     return;
   }
@@ -62,7 +65,7 @@ const slugPrefixes = {
   blog: "/posts",
   works: "/works",
   publications: "/publications",
-}
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -71,12 +74,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // Inherit parent node's sourceInstanceName
     // Ref: https://takumon.com/how-to-distinct-2-kinds-of-markdown-in-gatsby/
     const parent = getNode(node.parent);
-    const sourceInstanceName = parent.sourceInstanceName
+    const sourceInstanceName = parent.sourceInstanceName;
     createNodeField({
       node,
-      name: 'fileSourceInstanceName',
+      name: "fileSourceInstanceName",
       value: sourceInstanceName,
-    })
+    });
 
     const prefix = slugPrefixes[sourceInstanceName] ?? "";
 

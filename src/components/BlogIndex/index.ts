@@ -1,2 +1,2 @@
-import BlogIndex from "./BlogIndex"
+import BlogIndex from "./BlogIndex";
 export default BlogIndex;

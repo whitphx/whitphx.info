@@ -15,7 +15,6 @@ heroImage: ./images/PXL_20230519_172317304.jpg
 
 [^1]: この記述の出典の一つは[A Brief History of the Cat Café](https://www.mentalfloss.com/article/56592/brief-history-cat-cafe)で、記事中には"The world's first cat cafe, Cat Flower Garden, opened in Taipei, Taiwan in 1998."とあった。一方で[今回行った猫カフェのサイト](https://kaciukavine.lt/)には"Pirmosios tokios kavinės atsidarė 1998 metais Japonijoje ir šiuo metu yra paplitusios po visą pasaulį."（DeepL翻訳「1998年に日本で初めてオープンしたこのカフェは、今や世界中に広がっています。」）とある。どちらが本当かはわからない。
 
-
 ## 場所
 
 [Kačių kavinė: Cat Cafe Vilnius](https://kaciukavine.lt/)
@@ -27,12 +26,14 @@ TripAdviserのページは[Cat Cafe Kačių Kavinė](https://www.tripadvisor.com
 ![ヴィリニュスの猫カフェの外観](./images/PXL_20230518_160447424.jpg)
 
 ## 訪問
+
 TripAdviserやGoogle Mapsのレビューには予約推奨とあったが、とりあえず予約なしで行ってみた。スケジュール的に余裕があったので、入れなければその場で予約して後日出直そうと思っていた。
 
 行ったのは金曜の夜8時くらい。
 結局それほど混んでおらずすんなり入れた。
 
 ## 店内
+
 店員さんは全員英語が通じた（そもそも今回のヴィリニュス観光で行った場所は全部英語でOKだった）。
 TripAdviserなどのレビューにも同じことが書いてあったので、心配はないと思う。
 
@@ -74,6 +75,7 @@ TripAdviserなどのレビューにも同じことが書いてあったので、
 ![出口前で座る猫](./images/PXL_20230519_183034819.jpg)
 
 ## 感想
+
 とてもよかった。
 
 このカフェには15匹も猫がいるらしい。全員に会えたわけではないし、仮に会えても触れ合える保証はないが、単純に密度が高いと楽しい。せっかく猫カフェに来ているので。しかも今回は運良く2匹と仲良くできた（と思う）。

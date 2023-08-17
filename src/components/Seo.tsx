@@ -17,22 +17,20 @@ export interface SeoProps {
   meta?: HelmetProps["meta"];
 }
 function Seo({ description, lang, meta: additionalMeta, title }: SeoProps) {
-  const { site }: Queries.SeoQuery = useStaticQuery(
-    graphql`
-      query Seo {
-        site {
-          siteMetadata {
-            title
-            description
-            siteUrl
-            social {
-              twitter
-            }
+  const { site }: Queries.SeoQuery = useStaticQuery(graphql`
+    query Seo {
+      site {
+        siteMetadata {
+          title
+          description
+          siteUrl
+          social {
+            twitter
           }
         }
       }
-    `
-  );
+    }
+  `);
 
   const metaDescription = description || site?.siteMetadata?.description;
   const defaultTitle = site?.siteMetadata?.title;

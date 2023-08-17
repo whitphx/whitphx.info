@@ -58,8 +58,8 @@ module.exports = {
                 settings: {
                   Instagram: {
                     access_token: process.env.INSTAGRAM_ACCESS_TOKEN,
-                  }
-                }
+                  },
+                },
               },
             },
           },
