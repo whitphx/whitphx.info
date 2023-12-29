@@ -63,7 +63,7 @@ https://twitter.com/whitphx/status/1578356200441532417
     * さらに去年に引き続き、企業からのスポンサーが2社。[Databutton](https://www.databutton.io/)と[Hal9](https://hal9.com/)。ありがとうございます。
 * Streamlit/Snowflakeからstliteに対してお金が出た。
 * Streamlitコミュニティの友人が[Databutton](https://www.databutton.io/)に[入社した](https://twitter.com/DatabuttonHQ/status/1699487845717622815)。この会社は私のstliteをsponsorしてくれてもいる。この会社はStreamlitを利用してプロダクトを開発しており、彼を雇用したり、私のstliteの将来性に期待して支援するインセンティブがある。
-  私のHF入社もそうだが、営利企業Streamlit inc.(買収後はSnowflake)がStreamlitというOSSとそのコミュニティを開発・運営し、そこから別の営利企業に雇用される個人が生まれる、というのはOSSを介した個人のキャリア形成の面白いモデルだと思うし、コミュニティのある側面での成熟を感じる。
+  私のHF入社もそうだが、営利企業Streamlit inc.(買収後はSnowflake)がStreamlitというOSSとそのコミュニティを開発・運営し、そこから別の営利企業に経済合理性に基づいて雇用される個人が生まれる、というのは、OSSを介した個人のキャリア形成にもOSSエコシステムの持続可能性にも意味のある面白いモデルだと思うし、当該コミュニティのある側面での成熟を感じる。
 * この辺りの話はTokyo Streamlit Meetupの[スライド](https://slides.com/whitphx/oss-career)にも盛り込んだ。私個人として最近の大きな関心ごとだし、Webで関連情報が増えてきているとも感じる。
 
 ## Python/PyCon
