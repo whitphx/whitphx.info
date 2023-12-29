@@ -51,14 +51,14 @@ https://twitter.com/whitphx/status/1578356200441532417
 * そろそろ5年目になるが、今年もちびちび[機能改善やバグ修正をやった](https://github.com/whitphx/vscode-emacs-mcx/pulls?q=is%3Apr+author%3Awhitphx+is%3Aclosed+updated%3A%3E%3D2023-01-01)。
 * [Visual Studio Marketplaceの"emacs"タグ](https://marketplace.visualstudio.com/search?term=tag:emacs&target=VSCode&category=All%20categories&sortBy=Relevance)での検索順位で、["Emacs Keymap"](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)を抜いて3位から2位になった。
     * 以前「Awesome Emacs Keymapのできはいいが検索結果のトップにないのが残念」という旨のコメントをもらったことがある。Marketplaceでの検索順位の上げ方が分からず対応できずにいたが、とりあえず一つ上がってよかった。
-    * 正直、1位の[Emacs Friendly Keymap](https://marketplace.visualstudio.com/items?itemName=lfs.vscode-emacs-friendly)も3位の[Emacs Keymap](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)も4年以上更新されていないし、[Awesome Emacs Keymap](https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx)はレビューもダントツなので、なぜ1位にならないのかずっと不思議。「1位だからたくさんDLされて1位になる」ポジティブフィードバックがかかっているだけだと思う。自分がこれら2つに不満を持って作ったので当然だが、Awesome Emacs Keymapはこの2つより絶対に良いと信じている。
+    * 正直、1位の[Emacs Friendly Keymap](https://marketplace.visualstudio.com/items?itemName=lfs.vscode-emacs-friendly)も3位の[Emacs Keymap](https://marketplace.visualstudio.com/items?itemName=hiro-sun.vscode-emacs)も4年以上更新されていないし、[Awesome Emacs Keymap](https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx)はレビューもダントツなので、なぜ1位にならないのかずっと不思議。1位には「1位だからたくさんDLされて1位になる」ポジティブフィードバックがかかっているだけだと思う。自分がこれら2つに不満を持って作ったので当然だが、Awesome Emacs Keymapはこの2つより絶対に良いと信じている。
 
 ### OSSの収益化について
 
 * 引き続き、[GitHub Sponsors](https://github.com/sponsors/whitphx), [Buy Me a Coffee](https://www.buymeacoffee.com/whitphx), [Ko-fi](https://ko-fi.com/D1D2ERWFG)経由で寄付をいただいている。ありがとうございます。
-    * また去年に引き続き、企業からのスポンサーが2社。[Databutton](https://www.databutton.io/)と[Hal9](https://hal9.com/)。ありがとうございます。
+    * さらに去年に引き続き、企業からのスポンサーが2社。[Databutton](https://www.databutton.io/)と[Hal9](https://hal9.com/)。ありがとうございます。
 * Streamlit/Snowflakeからstliteに対してお金が出た。
-* Streamlitコミュニティの友人が[Databutton](https://www.databutton.io/)に[入社した](https://twitter.com/DatabuttonHQ/status/1699487845717622815)。この会社は私のstliteをsponsorしてくれてもいる。この会社はStreamlitを利用してプロダクトを開発しており、彼を雇用したり、私のstliteの将来性に期待してスポンサーするインセンティブがある。
+* Streamlitコミュニティの友人が[Databutton](https://www.databutton.io/)に[入社した](https://twitter.com/DatabuttonHQ/status/1699487845717622815)。この会社は私のstliteをsponsorしてくれてもいる。この会社はStreamlitを利用してプロダクトを開発しており、彼を雇用したり、私のstliteの将来性に期待して支援するインセンティブがある。
   私のHF入社もそうだが、営利企業Streamlit inc.(買収後はSnowflake)がStreamlitというOSSとそのコミュニティを開発・運営し、そこから別の営利企業に雇用される個人が生まれる、というのはOSSを介した個人のキャリア形成の面白いモデルだと思うし、コミュニティのある側面での成熟を感じる。
 * この辺りの話はTokyo Streamlit Meetupの[スライド](https://slides.com/whitphx/oss-career)にも盛り込んだ。私個人として最近の大きな関心ごとだし、Webで関連情報が増えてきているとも感じる。
 
