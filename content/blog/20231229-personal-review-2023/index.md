@@ -38,7 +38,7 @@ OSSからの収益化に関しては強い関心がある。
 * [Tokyo Streamlit Meetup](https://info.streamlit.io/december-tokyo-meetup)に登壇した。Streamlitに絡めて、OSS貢献やそれをお金にする方法について話した。個人的に今の興味のど真ん中の話をする機会を頂けて嬉しかった。
     * スライド: https://slides.com/whitphx/oss-career
     * また、国内のStreamlitやOSSに関心のある層の厚さにいい意味で驚かされた。自分はStreamlitを機械学習・コンピュータビジョン系の分野で活用していて、StreamlitがSnowflakeに買収される前にWebの英語コミュニティにいたタイプ。他にリーチするにしてもPyCon周辺だった。一方、このイベントはSnowflakeの日本オフィスや日本ユーザグループの方々が主催していて、私が今まで出会えていなかったデータ畑の人たちや日本語圏のコミュニティとStreamlit買収をきっかけに（？）出会えたことになる。
-* ついに[streamlit-webrtc](https://github.com/whitphx/streamlit-webrtc)のスターが1kを超えた。自分がホストするOSSでは初めてなので嬉しい。
+* ついに[streamlit-webrtc](https://github.com/whitphx/streamlit-webrtc)のスターが1kを超えた。自分がホストするOSSでは初めて。嬉しい。
 
 ### Hugging Face/Gradio
 * 上述の通り、Hugging Faceでフルタイムの職を得た。当初のタイトルは"Streamlit Advocate"だったが、おそらくStreamlit以外のこともやるようになったのを反映して、正式採用のタイミングで"ML Developer Advocate"になった。タイトルはAdvocateだが業務時間の半分以上は開発をしている。
