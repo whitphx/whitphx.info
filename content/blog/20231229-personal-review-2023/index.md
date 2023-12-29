@@ -37,7 +37,7 @@ OSSからの収益化に関しては強い関心がある。
 * Hugging FaceがStreamlit関連のポジションをオープンし、そこで採用された。採用情報自体はパブリックで特に裏口入社的なことはないのだが、私のことを知っているStreamlitコミュニティの知り合いが「このポジションは君に合ってると思うよ」と背中を押してくれたのが大きかった。実際、それまでのStreamlitコミュニティでのアウトプットが特にこのポジションの採用では名刺がわりになったはず。
 * [Tokyo Streamlit Meetup](https://info.streamlit.io/december-tokyo-meetup)に登壇した。Streamlitに絡めて、OSS貢献やそれをお金にする方法について話した。個人的に今の興味のど真ん中の話をする機会を頂けて嬉しかった。
     * スライド: https://slides.com/whitphx/oss-career
-    * また、国内のStreamlitやOSSに関心のある層の厚さにいい意味で驚かされた。自分はStreamlitを機械学習・コンピュータビジョン系の分野で活用していて、StreamlitがSnowflakeに買収される前にWebの英語コミュニティにいたタイプ。他にリーチするにしてもPyCon周辺だった。一方、このイベントはSnowflakeの日本オフィスや日本ユーザグループの方々が主催していて、私が今まで出会えていなかった人たちとStreamlit買収をきっかけに（？）出会えたことになる。
+    * また、国内のStreamlitやOSSに関心のある層の厚さにいい意味で驚かされた。自分はStreamlitを機械学習・コンピュータビジョン系の分野で活用していて、StreamlitがSnowflakeに買収される前にWebの英語コミュニティにいたタイプ。他にリーチするにしてもPyCon周辺だった。一方、このイベントはSnowflakeの日本オフィスや日本ユーザグループの方々が主催していて、私が今まで出会えていなかったデータ畑の人たちや日本語圏のコミュニティとStreamlit買収をきっかけに（？）出会えたことになる。
 * ついに[streamlit-webrtc](https://github.com/whitphx/streamlit-webrtc)のスターが1kを超えた。自分がホストするOSSでは初めてなので嬉しい。
 
 ### Hugging Face/Gradio
@@ -46,7 +46,9 @@ OSSからの収益化に関しては強い関心がある。
   本体からフォークした個人プロジェクトであるstliteとは違い、Gradio-Liteでは本体のリポジトリに直接コードをコミットし、Gradioブランドとしてリリースした。
 https://twitter.com/whitphx/status/1578356200441532417
 * Gradio-Liteを作っていると、Gradioそのもののコードにもそれなりに手を入れることになる。通常のPython環境ではないところで動かすことで、既存のあまり綺麗な設計ではないがとりあえず動いているみたいな部分を特殊なエッジケースでストレステストすることになり、より良い設計に書き換える強制力が働くという感じ。あとは単純にGradio-Liteのテストで本体由来のバグを見つけたり。そんな感じで本体のコードにもそこそこ貢献するようになった。
-* Gradio-Liteのリリースに際してThursdAIというpodcast/X spaceに出演した。CEOがほとんど喋ってくれたので自分の下手な英語をあまり晒さずに済んだがいい経験だった。stliteではこういう機会はなかったので、ブランドを持っている会社の一員として何かをリリースするのは広報力に下駄が履けて良い。
+* Gradio-Liteやstliteで見栄えのするアプリを作りたいモチベーションから出発して[transformers.js.py](https://github.com/whitphx/transformers.js.py)を作った。Transformers、Transformers.jsの作者がHF社内にいるのでそういう意味でも自然な流れだった。
+    * React Native Webみたいな一周した名前で面白いと思っている
+* Gradio-Liteのリリースに際してThursdAIというpodcast/X spaceに出演した。一緒に出たCEOやTransformers.jsの作者がほとんど喋ってくれたので自分の下手な英語をあまり晒さずに済んだがいい経験だった。stliteではこういう機会はなかったので、ブランドを持っている会社の一員として何かをリリースするのは広報力に下駄が履けて良い。
     * https://twitter.com/i/spaces/1PlJQDWQZQyGE （前半1時間は別の話題。後半1時間がGradio-Lite）
 
 ### Awesome Emacs Keymap
