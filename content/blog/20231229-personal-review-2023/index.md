@@ -1,5 +1,5 @@
 ---
-title: "2023年にやったこと; OSSやPyConの話"
+title: "2023年やったこと; OSSやその収益化、PyConの話"
 date: "2023-12-29T15:17:56+09:00"
 description:
 tags: ["dev", "log"]
