@@ -34,6 +34,8 @@ lang: ja
 
 その後来た道を戻り出国。
 
+https://www.instagram.com/p/C0Sh4upy-JX/
+
 ## リスボン
 
 夜に着いて空港から市街のホテルまでUberで移動。15EURくらい。
@@ -73,12 +75,17 @@ lang: ja
 * Lisboa Story Centre
     * リスボンの歴史の展示。こういうのはナメていたけど普通に面白かった。
 
+https://www.instagram.com/p/C0VIr2YtRaR/
+
 ## ポルト
 
 リスボンから電車で移動。
 
 リスボンとは違う地形で高低差がすごい街だった。川の両岸が崖みたいになっている。
-映える街だった。
+そんなに大きくはないが、映える街だった。
+ディナーでFADOを聴きながら食事。
+
+https://www.instagram.com/p/C0XXquMMaIG/
 
 ## バルセロナ
 
@@ -124,6 +131,21 @@ lang: ja
 * [Artquemy Gallery](https://artquemy.com/)
     * ↑で絵を買ってストリートアートツアーを勧めてもらったところ。
 
+Hidden Street Art Tour
+https://www.instagram.com/p/C0fL70mrj_v/
+
+FC Barcelona vs Girona
+https://www.instagram.com/p/C0sL6__Mb3k/
+
+サグラダ・ファミリア
+https://www.instagram.com/p/C05DIXQyGc9/
+
+街中・とある教会に展示されていたアート・ブケリア市場・グエル公園・Moco Museum・Artquemy Gallery地下のアトリエ
+https://www.instagram.com/p/C05D7pCSRBu/
+
+FCバルセロナ ミュージアム
+https://www.instagram.com/p/C07r14sSt_x/
+
 ## マドリード
 
 バルセロナから電車で移動。格安の高速鉄道（電車版LCC）が複数ある。今回はOUIGOを利用。
@@ -143,3 +165,12 @@ lang: ja
     * 寝ていれば着くバスツアーは楽。それに一人旅だと詰め込み気味で不安になりそうな旅程でも安心。
     * 古い建造物や街並みを見て回る。こういうタイプの観光地だと、ガイドの解説があるツアーの方が一人で漫然と見るより情報を楽しめていいかもしれない。
 * マドリード自体はそんなに面白くなく、バルセロナに戻ることにした。
+
+マドリード
+https://www.instagram.com/p/C05Ru7Ryik9/
+
+セゴビア
+https://www.instagram.com/p/C064EkdyTzt/
+
+トレド
+https://www.instagram.com/p/C07qu7pStb8/
