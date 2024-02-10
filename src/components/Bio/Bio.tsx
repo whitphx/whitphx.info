@@ -35,7 +35,7 @@ function Bio() {
       <div>
         <h3 className={styles.authorName}>Yuichiro Tachibana (Tsuchiya)</h3>
         <div className={styles.bioBody}>
-          Software Developer/Indie Dev/OSS Lover
+          Software Developer/Indie Dev/OSS Enthusiast
         </div>
         <ul className={styles.snsList}>
           <li>
