@@ -42,6 +42,8 @@ with st.spinner("Running a compute-intensive task"):
 st.write("Task completed")
 ```
 
+Note that, with this lock-based approach, the concurrency of the locked task is limited to 1 per lock, while the queue and worker pattern can be used to control the concurrency to any number.
+
 Practically, it would be a good idea to add a button to manually trigger the compute-intensive task in such cases. Without it, the task would be executed every time a new user accesses the app or the app is reloaded, which is not efficient.
 
 ```python
@@ -68,8 +70,6 @@ if st.button("Run a compute-intensive task"):
 
     st.write("Task completed")
 ```
-
-With this lock-based approach, the concurrency of the locked task is limited to 1 per lock, while the queue and worker pattern can be used to control the concurrency to any number.
 
 If you want something like "concurrency group", you can create multiple locks and use them in the same way as below. To do so, `get_global_lock()` is changed to accept a `key` argument so it returns different locks for different keys, as the `st.cache_resource` decorator controls the cache with the func arguments (and the func's source code).
 
