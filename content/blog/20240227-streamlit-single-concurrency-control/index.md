@@ -43,3 +43,32 @@ st.write("Task completed")
 ```
 
 With this lock-based control, the concurrency of the locked task is limited to 1, while the queue and worker pattern can be used to control the concurrency to any number.
+
+If you want something like "concurrency group", you can create multiple locks and use them in the same way as below. To do so, `get_global_lock()` is changed to accept a `key` argument so it returns different locks for different keys, as the `st.cache_resource` decorator controls the cache with the func arguments (and the func's source code).
+
+```python
+import streamlit as st
+import threading
+
+
+@st.cache_resource
+def get_global_lock(key):
+    return threading.Lock()
+
+
+global_lock_A = get_global_lock("A")
+
+with st.spinner("Running a compute-intensive task A"):
+    with global_lock_A:
+        st.write("Task A started")
+        compute_intensive_task_A()
+
+global_lock_B = get_global_lock("B")
+
+with st.spinner("Running a compute-intensive task B"):
+    with global_lock_B:
+        st.write("Task B started")
+        compute_intensive_task_B()
+
+st.write("Task completed")
+```
