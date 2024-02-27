@@ -42,7 +42,7 @@ with st.spinner("Running a compute-intensive task"):
 st.write("Task completed")
 ```
 
-With this lock-based control, the concurrency of the locked task is limited to 1, while the queue and worker pattern can be used to control the concurrency to any number.
+With this lock-based control, the concurrency of the locked task is limited to 1 per lock, while the queue and worker pattern can be used to control the concurrency to any number.
 
 If you want something like "concurrency group", you can create multiple locks and use them in the same way as below. To do so, `get_global_lock()` is changed to accept a `key` argument so it returns different locks for different keys, as the `st.cache_resource` decorator controls the cache with the func arguments (and the func's source code).
 
