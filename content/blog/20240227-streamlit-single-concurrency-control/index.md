@@ -42,6 +42,33 @@ with st.spinner("Running a compute-intensive task"):
 st.write("Task completed")
 ```
 
+Practically, it would be a good idea to add a button to manually trigger the compute-intensive task in such cases. Without it, the task would be executed every time a new user accesses the app or the app is reloaded, which is not efficient.
+
+```python
+import streamlit as st
+import threading
+
+
+def compute_intensive_task():
+    " Your compute-intensive code here "
+
+
+@st.cache_resource
+def get_global_lock():
+    return threading.Lock()
+
+
+global_lock = get_global_lock()
+
+if st.button("Run a compute-intensive task"):
+    with st.spinner("Running a compute-intensive task"):
+        with global_lock:
+            st.write("Task started")
+            compute_intensive_task()
+
+    st.write("Task completed")
+```
+
 With this lock-based approach, the concurrency of the locked task is limited to 1 per lock, while the queue and worker pattern can be used to control the concurrency to any number.
 
 If you want something like "concurrency group", you can create multiple locks and use them in the same way as below. To do so, `get_global_lock()` is changed to accept a `key` argument so it returns different locks for different keys, as the `st.cache_resource` decorator controls the cache with the func arguments (and the func's source code).
