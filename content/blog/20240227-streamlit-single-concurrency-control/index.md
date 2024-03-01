@@ -19,7 +19,7 @@ Streamlit creates a separate thread for each user session, so you can use a lock
 
 Here is an example of how to use a lock in a Streamlit app.
 `st.cache_resource` is used to create a global lock that is shared among the threads,
-and the lock is used to ensure that `compute_intensive_task()` is executed by only one thread at a time.
+and the lock is used to ensure that `compute_intensive_task()` is executed by only one thread at a time (if `compute_intensive_task()` is defined in another module, see the last section).
 
 ```python
 import streamlit as st
