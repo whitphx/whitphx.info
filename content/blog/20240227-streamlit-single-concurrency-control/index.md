@@ -4,7 +4,10 @@ date: "2024-02-27T17:44:09+09:00"
 description:
 tags: ["dev"]
 lang: en
+coauthors: ["https://twitter.com/multimodalart"]
 ---
+
+_Co-written and improved by [@multimodalart](https://twitter.com/multimodalart)._
 
 When you are developing a Streamlit app that includes a compute- or resource-intensive task, for example, machine-learning inference using a GPU,
 you may want to make sure that such a part of the code runs only in a single thread (session) at a time, even with concurrent multiple user accesses.
