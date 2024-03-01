@@ -102,3 +102,32 @@ with st.spinner("Running a compute-intensive task B"):
 
 st.write("Task completed")
 ```
+
+If the task is defined in another module and the Streamlit app script imports it, you can define the lock object in the module scope and simply use it in the function. This lock object will be shared among the threads.
+This is because, while Streamlit runs the main app script in a separate namespace in a different thread for each user session, the imported modules are loaded only once and shared among the threads like normal Python module usage.
+
+```python
+# app.py (main Streamlit app script)
+import streamlit as st
+
+from foo import compute_intensive_task
+
+
+with st.spinner("Running a compute-intensive task"):
+    compute_intensive_task()
+
+st.write("Task completed")
+```
+
+```python
+# foo.py (module containing the compute-intensive task)
+import threading
+
+
+lock = threading.Lock()
+
+
+def compute_intensive_task():
+    with lock:
+        " Your compute-intensive code here "
+```
