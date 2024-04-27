@@ -12,6 +12,8 @@ _Co-written and improved by [@multimodalart](https://twitter.com/multimodalart).
 When you are developing a Streamlit app that includes a compute- or resource-intensive task, such as machine learning inference using a GPU,
 you may want to ensure that such a piece of the code only runs in a single thread (session) at a time, even when multiple users are accessing the app at the same time.
 
+**Update**: [`concurrency_limiter` in `streamlit-extras`](https://arnaudmiribel.github.io/streamlit-extras/extras/concurrency_limiter/) is now available for this purpose.
+
 In such a case, using a **lock** is a solution.
 Streamlit creates a separate thread for each user session, so you can use a lock shared among the threads to control the execution of the compute-intensive code.
 
