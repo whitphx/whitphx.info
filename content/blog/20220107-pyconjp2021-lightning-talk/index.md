@@ -11,7 +11,7 @@ I had an opportunity to have a lightning talk at PyCon JP 2021[^1] and its video
 
 https://youtu.be/_LuLs8H1gJc
 
-In this LT, I demonstrated live coding of a real-time video app using Streamlit. Its content is also a part of [this post](../20211231-streamlit-webrtc-video-app-tutorial/index.md).\
+In this LT, I demonstrated live coding of a real-time video app using Streamlit. Its content is also a part of [this post](../20211231-streamlit-webrtc-video-app-tutorial).\
 The LT also contains live demos of the example apps.
 
 I constructed the talk only with live coding and live demos and did not use any slides.\
