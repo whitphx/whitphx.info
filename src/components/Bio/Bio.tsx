@@ -13,6 +13,8 @@ import {
   SiGithub,
   SiDevdotto,
   SiMedium,
+  SiZenn,
+  SiQiita,
 } from "react-icons/si";
 import SnsLink from "./SnsLink";
 import Works from "./Works";
@@ -80,6 +82,20 @@ function Bio() {
               href="https://medium.com/@whitphx"
               title="Medium"
               Icon={SiMedium}
+            />
+          </li>
+          <li>
+            <SnsLink
+              href="https://zenn.dev/whitphx"
+              title="Zenn"
+              Icon={SiZenn}
+            />
+          </li>
+          <li>
+            <SnsLink
+              href="https://qiita.com/whitphx"
+              title="Qiita"
+              Icon={SiQiita}
             />
           </li>
         </ul>
