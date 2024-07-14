@@ -377,141 +377,145 @@ type DuotoneGradient = {
   readonly shadow: Scalars['String'];
 };
 
-type ExternalArticlesYaml = Node & {
+type ExternalContentsYaml = Node & {
   readonly children: ReadonlyArray<Node>;
   readonly date: Maybe<Scalars['Date']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
   readonly parent: Maybe<Node>;
   readonly title: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
   readonly url: Maybe<Scalars['String']>;
 };
 
 
-type ExternalArticlesYaml_dateArgs = {
+type ExternalContentsYaml_dateArgs = {
   difference: InputMaybe<Scalars['String']>;
   formatString: InputMaybe<Scalars['String']>;
   fromNow: InputMaybe<Scalars['Boolean']>;
   locale: InputMaybe<Scalars['String']>;
 };
 
-type ExternalArticlesYamlConnection = {
+type ExternalContentsYamlConnection = {
   readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<ExternalArticlesYamlEdge>;
-  readonly group: ReadonlyArray<ExternalArticlesYamlGroupConnection>;
+  readonly edges: ReadonlyArray<ExternalContentsYamlEdge>;
+  readonly group: ReadonlyArray<ExternalContentsYamlGroupConnection>;
   readonly max: Maybe<Scalars['Float']>;
   readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<ExternalArticlesYaml>;
+  readonly nodes: ReadonlyArray<ExternalContentsYaml>;
   readonly pageInfo: PageInfo;
   readonly sum: Maybe<Scalars['Float']>;
   readonly totalCount: Scalars['Int'];
 };
 
 
-type ExternalArticlesYamlConnection_distinctArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlConnection_distinctArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
 
-type ExternalArticlesYamlConnection_groupArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlConnection_groupArgs = {
+  field: ExternalContentsYamlFieldSelector;
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
 };
 
 
-type ExternalArticlesYamlConnection_maxArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlConnection_maxArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
 
-type ExternalArticlesYamlConnection_minArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlConnection_minArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
 
-type ExternalArticlesYamlConnection_sumArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlConnection_sumArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
-type ExternalArticlesYamlEdge = {
-  readonly next: Maybe<ExternalArticlesYaml>;
-  readonly node: ExternalArticlesYaml;
-  readonly previous: Maybe<ExternalArticlesYaml>;
+type ExternalContentsYamlEdge = {
+  readonly next: Maybe<ExternalContentsYaml>;
+  readonly node: ExternalContentsYaml;
+  readonly previous: Maybe<ExternalContentsYaml>;
 };
 
-type ExternalArticlesYamlFieldSelector = {
+type ExternalContentsYamlFieldSelector = {
   readonly children: InputMaybe<NodeFieldSelector>;
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly id: InputMaybe<FieldSelectorEnum>;
   readonly internal: InputMaybe<InternalFieldSelector>;
   readonly parent: InputMaybe<NodeFieldSelector>;
   readonly title: InputMaybe<FieldSelectorEnum>;
+  readonly type: InputMaybe<FieldSelectorEnum>;
   readonly url: InputMaybe<FieldSelectorEnum>;
 };
 
-type ExternalArticlesYamlFilterInput = {
+type ExternalContentsYamlFilterInput = {
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
+  readonly type: InputMaybe<StringQueryOperatorInput>;
   readonly url: InputMaybe<StringQueryOperatorInput>;
 };
 
-type ExternalArticlesYamlFilterListInput = {
-  readonly elemMatch: InputMaybe<ExternalArticlesYamlFilterInput>;
+type ExternalContentsYamlFilterListInput = {
+  readonly elemMatch: InputMaybe<ExternalContentsYamlFilterInput>;
 };
 
-type ExternalArticlesYamlGroupConnection = {
+type ExternalContentsYamlGroupConnection = {
   readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<ExternalArticlesYamlEdge>;
+  readonly edges: ReadonlyArray<ExternalContentsYamlEdge>;
   readonly field: Scalars['String'];
   readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<ExternalArticlesYamlGroupConnection>;
+  readonly group: ReadonlyArray<ExternalContentsYamlGroupConnection>;
   readonly max: Maybe<Scalars['Float']>;
   readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<ExternalArticlesYaml>;
+  readonly nodes: ReadonlyArray<ExternalContentsYaml>;
   readonly pageInfo: PageInfo;
   readonly sum: Maybe<Scalars['Float']>;
   readonly totalCount: Scalars['Int'];
 };
 
 
-type ExternalArticlesYamlGroupConnection_distinctArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlGroupConnection_distinctArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
 
-type ExternalArticlesYamlGroupConnection_groupArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlGroupConnection_groupArgs = {
+  field: ExternalContentsYamlFieldSelector;
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
 };
 
 
-type ExternalArticlesYamlGroupConnection_maxArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlGroupConnection_maxArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
 
-type ExternalArticlesYamlGroupConnection_minArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlGroupConnection_minArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
 
-type ExternalArticlesYamlGroupConnection_sumArgs = {
-  field: ExternalArticlesYamlFieldSelector;
+type ExternalContentsYamlGroupConnection_sumArgs = {
+  field: ExternalContentsYamlFieldSelector;
 };
 
-type ExternalArticlesYamlSortInput = {
+type ExternalContentsYamlSortInput = {
   readonly children: InputMaybe<NodeSortInput>;
   readonly date: InputMaybe<SortOrderEnum>;
   readonly id: InputMaybe<SortOrderEnum>;
   readonly internal: InputMaybe<InternalSortInput>;
   readonly parent: InputMaybe<NodeSortInput>;
   readonly title: InputMaybe<SortOrderEnum>;
+  readonly type: InputMaybe<SortOrderEnum>;
   readonly url: InputMaybe<SortOrderEnum>;
 };
 
@@ -552,15 +556,15 @@ type File = Node & {
   readonly blksize: Maybe<Scalars['Int']>;
   readonly blocks: Maybe<Scalars['Int']>;
   readonly changeTime: Scalars['Date'];
-  /** Returns the first child node of type ExternalArticlesYaml or null if there are no children of given type on this node */
-  readonly childExternalArticlesYaml: Maybe<ExternalArticlesYaml>;
+  /** Returns the first child node of type ExternalContentsYaml or null if there are no children of given type on this node */
+  readonly childExternalContentsYaml: Maybe<ExternalContentsYaml>;
   /** Returns the first child node of type ImageSharp or null if there are no children of given type on this node */
   readonly childImageSharp: Maybe<ImageSharp>;
   /** Returns the first child node of type MarkdownRemark or null if there are no children of given type on this node */
   readonly childMarkdownRemark: Maybe<MarkdownRemark>;
   readonly children: ReadonlyArray<Node>;
-  /** Returns all children nodes filtered by type ExternalArticlesYaml */
-  readonly childrenExternalArticlesYaml: Maybe<ReadonlyArray<Maybe<ExternalArticlesYaml>>>;
+  /** Returns all children nodes filtered by type ExternalContentsYaml */
+  readonly childrenExternalContentsYaml: Maybe<ReadonlyArray<Maybe<ExternalContentsYaml>>>;
   /** Returns all children nodes filtered by type ImageSharp */
   readonly childrenImageSharp: Maybe<ReadonlyArray<Maybe<ImageSharp>>>;
   /** Returns all children nodes filtered by type MarkdownRemark */
@@ -707,11 +711,11 @@ type FileFieldSelector = {
   readonly blksize: InputMaybe<FieldSelectorEnum>;
   readonly blocks: InputMaybe<FieldSelectorEnum>;
   readonly changeTime: InputMaybe<FieldSelectorEnum>;
-  readonly childExternalArticlesYaml: InputMaybe<ExternalArticlesYamlFieldSelector>;
+  readonly childExternalContentsYaml: InputMaybe<ExternalContentsYamlFieldSelector>;
   readonly childImageSharp: InputMaybe<ImageSharpFieldSelector>;
   readonly childMarkdownRemark: InputMaybe<MarkdownRemarkFieldSelector>;
   readonly children: InputMaybe<NodeFieldSelector>;
-  readonly childrenExternalArticlesYaml: InputMaybe<ExternalArticlesYamlFieldSelector>;
+  readonly childrenExternalContentsYaml: InputMaybe<ExternalContentsYamlFieldSelector>;
   readonly childrenImageSharp: InputMaybe<ImageSharpFieldSelector>;
   readonly childrenMarkdownRemark: InputMaybe<MarkdownRemarkFieldSelector>;
   readonly ctime: InputMaybe<FieldSelectorEnum>;
@@ -754,11 +758,11 @@ type FileFilterInput = {
   readonly blksize: InputMaybe<IntQueryOperatorInput>;
   readonly blocks: InputMaybe<IntQueryOperatorInput>;
   readonly changeTime: InputMaybe<DateQueryOperatorInput>;
-  readonly childExternalArticlesYaml: InputMaybe<ExternalArticlesYamlFilterInput>;
+  readonly childExternalContentsYaml: InputMaybe<ExternalContentsYamlFilterInput>;
   readonly childImageSharp: InputMaybe<ImageSharpFilterInput>;
   readonly childMarkdownRemark: InputMaybe<MarkdownRemarkFilterInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
-  readonly childrenExternalArticlesYaml: InputMaybe<ExternalArticlesYamlFilterListInput>;
+  readonly childrenExternalContentsYaml: InputMaybe<ExternalContentsYamlFilterListInput>;
   readonly childrenImageSharp: InputMaybe<ImageSharpFilterListInput>;
   readonly childrenMarkdownRemark: InputMaybe<MarkdownRemarkFilterListInput>;
   readonly ctime: InputMaybe<DateQueryOperatorInput>;
@@ -842,11 +846,11 @@ type FileSortInput = {
   readonly blksize: InputMaybe<SortOrderEnum>;
   readonly blocks: InputMaybe<SortOrderEnum>;
   readonly changeTime: InputMaybe<SortOrderEnum>;
-  readonly childExternalArticlesYaml: InputMaybe<ExternalArticlesYamlSortInput>;
+  readonly childExternalContentsYaml: InputMaybe<ExternalContentsYamlSortInput>;
   readonly childImageSharp: InputMaybe<ImageSharpSortInput>;
   readonly childMarkdownRemark: InputMaybe<MarkdownRemarkSortInput>;
   readonly children: InputMaybe<NodeSortInput>;
-  readonly childrenExternalArticlesYaml: InputMaybe<ExternalArticlesYamlSortInput>;
+  readonly childrenExternalContentsYaml: InputMaybe<ExternalContentsYamlSortInput>;
   readonly childrenImageSharp: InputMaybe<ImageSharpSortInput>;
   readonly childrenMarkdownRemark: InputMaybe<MarkdownRemarkSortInput>;
   readonly ctime: InputMaybe<SortOrderEnum>;
@@ -1816,7 +1820,7 @@ type PotraceTurnPolicy =
 
 type Query = {
   readonly allDirectory: DirectoryConnection;
-  readonly allExternalArticlesYaml: ExternalArticlesYamlConnection;
+  readonly allExternalContentsYaml: ExternalContentsYamlConnection;
   readonly allFile: FileConnection;
   readonly allImageSharp: ImageSharpConnection;
   readonly allMarkdownRemark: MarkdownRemarkConnection;
@@ -1826,7 +1830,7 @@ type Query = {
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
   readonly directory: Maybe<Directory>;
-  readonly externalArticlesYaml: Maybe<ExternalArticlesYaml>;
+  readonly externalContentsYaml: Maybe<ExternalContentsYaml>;
   readonly file: Maybe<File>;
   readonly imageSharp: Maybe<ImageSharp>;
   readonly markdownRemark: Maybe<MarkdownRemark>;
@@ -1846,11 +1850,11 @@ type Query_allDirectoryArgs = {
 };
 
 
-type Query_allExternalArticlesYamlArgs = {
-  filter: InputMaybe<ExternalArticlesYamlFilterInput>;
+type Query_allExternalContentsYamlArgs = {
+  filter: InputMaybe<ExternalContentsYamlFilterInput>;
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<ReadonlyArray<InputMaybe<ExternalArticlesYamlSortInput>>>;
+  sort: InputMaybe<ReadonlyArray<InputMaybe<ExternalContentsYamlSortInput>>>;
 };
 
 
@@ -1957,13 +1961,14 @@ type Query_directoryArgs = {
 };
 
 
-type Query_externalArticlesYamlArgs = {
+type Query_externalContentsYamlArgs = {
   children: InputMaybe<NodeFilterListInput>;
   date: InputMaybe<DateQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
   parent: InputMaybe<NodeFilterInput>;
   title: InputMaybe<StringQueryOperatorInput>;
+  type: InputMaybe<StringQueryOperatorInput>;
   url: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -1980,11 +1985,11 @@ type Query_fileArgs = {
   blksize: InputMaybe<IntQueryOperatorInput>;
   blocks: InputMaybe<IntQueryOperatorInput>;
   changeTime: InputMaybe<DateQueryOperatorInput>;
-  childExternalArticlesYaml: InputMaybe<ExternalArticlesYamlFilterInput>;
+  childExternalContentsYaml: InputMaybe<ExternalContentsYamlFilterInput>;
   childImageSharp: InputMaybe<ImageSharpFilterInput>;
   childMarkdownRemark: InputMaybe<MarkdownRemarkFilterInput>;
   children: InputMaybe<NodeFilterListInput>;
-  childrenExternalArticlesYaml: InputMaybe<ExternalArticlesYamlFilterListInput>;
+  childrenExternalContentsYaml: InputMaybe<ExternalContentsYamlFilterListInput>;
   childrenImageSharp: InputMaybe<ImageSharpFilterListInput>;
   childrenMarkdownRemark: InputMaybe<MarkdownRemarkFilterListInput>;
   ctime: InputMaybe<DateQueryOperatorInput>;
@@ -2940,7 +2945,7 @@ type WebPOptions = {
 type BlogIndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type BlogIndexQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly blogPosts: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly fields: { readonly slug: string | null, readonly fileSourceInstanceName: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null } | null }> }, readonly externalArticles: { readonly edges: ReadonlyArray<{ readonly node: { readonly title: string | null, readonly url: string | null, readonly date: string | null } }> } };
+type BlogIndexQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly blogPosts: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly fields: { readonly slug: string | null, readonly fileSourceInstanceName: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null } | null }> }, readonly externalContents: { readonly edges: ReadonlyArray<{ readonly node: { readonly title: string | null, readonly url: string | null, readonly date: string | null } }> } };
 
 type BlogPostQueryVariables = Exact<{
   id: Scalars['String'];

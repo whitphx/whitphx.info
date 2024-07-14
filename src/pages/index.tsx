@@ -28,7 +28,7 @@ function TopPage({ data, location }: PageProps<Queries.BlogIndexQuery>) {
       date,
     };
   });
-  const externalArticles = data.externalArticles.edges.map((edge) => {
+  const externalContents = data.externalContents.edges.map((edge) => {
     const node = edge.node;
     const title = node.title;
     if (title == null) {
@@ -57,8 +57,8 @@ function TopPage({ data, location }: PageProps<Queries.BlogIndexQuery>) {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      {blogPosts.length > 0 || externalArticles.length > 0 ? (
-        <BlogIndex blogPosts={blogPosts} externalArticles={externalArticles} />
+      {blogPosts.length > 0 || externalContents.length > 0 ? (
+        <BlogIndex blogPosts={blogPosts} externalContents={externalContents} />
       ) : (
         <p>
           No blog posts found. Add markdown posts to &quot;content/blog&quot;
@@ -99,7 +99,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    externalArticles: allExternalArticlesYaml {
+    externalContents: allExternalContentsYaml {
       edges {
         node {
           title

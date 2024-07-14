@@ -9,7 +9,7 @@ interface BlogPost {
   title: string;
   date: Date;
 }
-interface ExternalArticle {
+interface ExternalContent {
   title: string;
   url: string;
   date: Date;
@@ -28,29 +28,29 @@ function BlogPostLink(props: { post: BlogPost }) {
   );
 }
 
-function ExternalArticleLink(props: { article: ExternalArticle }) {
-  const url = new URL(props.article.url);
+function ExternalContentLink(props: { content: ExternalContent }) {
+  const url = new URL(props.content.url);
 
   return (
     <a
-      href={props.article.url}
+      href={props.content.url}
       itemProp="url"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Visit ${props.article.title} on ${url.host}`}
+      aria-label={`Visit ${props.content.title} on ${url.host}`}
     >
       <h3 className={styles.title}>
         <span className={styles.headline} itemProp="headline">
-          {props.article.title}
+          {props.content.title}
           <small className={styles.externalSiteHost}>
             ({url.host})<BiLinkExternal />
           </small>
         </span>
         <time
-          dateTime={props.article.date.toISOString()}
+          dateTime={props.content.date.toISOString()}
           className={styles.date}
         >
-          {formatDate(props.article.date, "yyyy/MM/dd")}
+          {formatDate(props.content.date, "yyyy/MM/dd")}
         </time>
       </h3>
     </a>
@@ -59,12 +59,12 @@ function ExternalArticleLink(props: { article: ExternalArticle }) {
 
 export interface BlogIndexProps {
   blogPosts: BlogPost[];
-  externalArticles: ExternalArticle[];
+  externalContents: ExternalContent[];
 }
 function BlogIndex(props: BlogIndexProps) {
-  const items: Array<BlogPost | ExternalArticle> = [
+  const items: Array<BlogPost | ExternalContent> = [
     ...props.blogPosts,
-    ...props.externalArticles,
+    ...props.externalContents,
   ].sort((a, b) => b.date.getTime() - a.date.getTime());
   return (
     <ol className={styles.postList}>
@@ -76,7 +76,7 @@ function BlogIndex(props: BlogIndexProps) {
               {"slug" in post ? (
                 <BlogPostLink post={post} />
               ) : (
-                <ExternalArticleLink article={post} />
+                <ExternalContentLink content={post} />
               )}
             </article>
           </li>

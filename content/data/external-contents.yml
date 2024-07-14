@@ -1,0 +1,23 @@
+- title: "Developing a streamlit-webrtc component for real-time video processing"
+  url: https://blog.streamlit.io/how-to-build-the-streamlit-webrtc-component/
+  date: 2021-02-12
+- title: Accessible color themes for Streamlit apps
+  url: https://blog.streamlit.io/accessible-color-themes-for-streamlit-apps/
+  date: 2023-05-05
+- title: "Gradio-Lite: Serverless Gradio Running Entirely in Your Browser"
+  url: https://huggingface.co/blog/gradio-lite
+  date: 2023-10-19
+- title: "Building Serverless Machine Learning Apps with Gradio-Lite and Transformers.js"
+  url: https://www.gradio.app/guides/gradio-lite-and-transformers-js
+  date: 2024-05-04
+- title: "OSS貢献からキャリアを模索する"
+  url: https://slides.com/whitphx/oss-career
+  date: 2023-12-21
+  type: presentation
+- title: "Building a career in open source with Hugging Face's Yuichiro Tachibana"
+  url: https://www.youtube.com/live/oRKjVfJfy3w
+  date: "2024-02-13T08:00:00.000-07:00"
+  type: video
+- title: "In-browser LLM app in pure Python: Gemini Nano + Gradio-Lite"
+  url: https://huggingface.co/blog/whitphx/in-browser-llm-gemini-nano-gradio-lite
+  date: 2024-07-12
