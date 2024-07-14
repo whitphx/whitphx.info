@@ -25,8 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/external-articles`,
-        name: `externalArticles`,
+        path: `${__dirname}/content/data`,
       },
     },
     {
