@@ -8,12 +8,14 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import {
-  BiLogoTwitter,
-  BiLogoLinkedinSquare,
-  BiLogoGithub,
-  BiLogoDevTo,
-  BiLogoMedium,
-} from "react-icons/bi";
+  SiX,
+  SiLinkedin,
+  SiGithub,
+  SiDevdotto,
+  SiMedium,
+  SiZenn,
+  SiQiita,
+} from "react-icons/si";
 import SnsLink from "./SnsLink";
 import Works from "./Works";
 import Publications from "./Publications";
@@ -40,17 +42,17 @@ function Bio() {
         <ul className={styles.snsList}>
           <li>
             <SnsLink
-              href="https://twitter.com/whitphx"
+              href="https://x.com/whitphx"
               title="Twitter (en)"
-              Icon={BiLogoTwitter}
+              Icon={SiX}
               subEmoji="🇬🇧"
             />
           </li>
           <li>
             <SnsLink
-              href="https://twitter.com/whitphx_ja"
+              href="https://x.com/whitphx_ja"
               title="Twitter (ja)"
-              Icon={BiLogoTwitter}
+              Icon={SiX}
               subEmoji="🇯🇵"
             />
           </li>
@@ -58,28 +60,42 @@ function Bio() {
             <SnsLink
               href="https://www.linkedin.com/in/whitphx/"
               title="LinkedIn"
-              Icon={BiLogoLinkedinSquare}
+              Icon={SiLinkedin}
             />
           </li>
           <li>
             <SnsLink
               href="https://github.com/whitphx"
               title="GitHub"
-              Icon={BiLogoGithub}
+              Icon={SiGithub}
             />
           </li>
           <li>
             <SnsLink
               href="https://dev.to/whitphx"
               title="DEV Community"
-              Icon={BiLogoDevTo}
+              Icon={SiDevdotto}
             />
           </li>
           <li>
             <SnsLink
               href="https://medium.com/@whitphx"
               title="Medium"
-              Icon={BiLogoMedium}
+              Icon={SiMedium}
+            />
+          </li>
+          <li>
+            <SnsLink
+              href="https://zenn.dev/whitphx"
+              title="Zenn"
+              Icon={SiZenn}
+            />
+          </li>
+          <li>
+            <SnsLink
+              href="https://qiita.com/whitphx"
+              title="Qiita"
+              Icon={SiQiita}
             />
           </li>
         </ul>
