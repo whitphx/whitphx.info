@@ -32,6 +32,13 @@
       align-items: stretch;
     }
   }
+
+  .externalSiteHost {
+    font-size: 0.8rem;
+    font-family: monospace;
+    margin-left: var(--spacing-2);
+    display: inline-flex;
+  }
 }
 
 .date {

@@ -28,13 +28,37 @@ function TopPage({ data, location }: PageProps<Queries.BlogIndexQuery>) {
       date,
     };
   });
+  const externalArticles = data.externalArticles.edges.map((edge) => {
+    const node = edge.node;
+    const title = node.title;
+    if (title == null) {
+      throw new Error(`Title is null: ${JSON.stringify(node)}`);
+    }
+
+    const url = node.url;
+    if (url == null) {
+      throw new Error(`URL is null: ${JSON.stringify(node)}`);
+    }
+
+    const dateStr = node.date;
+    if (dateStr == null) {
+      throw new Error(`Date is null: ${JSON.stringify(node)}`);
+    }
+    const date = new Date(dateStr);
+
+    return {
+      title,
+      url,
+      date,
+    };
+  });
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
-      {blogPosts.length > 0 ? (
-        <BlogIndex posts={blogPosts} />
+      {blogPosts.length > 0 || externalArticles.length > 0 ? (
+        <BlogIndex blogPosts={blogPosts} externalArticles={externalArticles} />
       ) : (
         <p>
           No blog posts found. Add markdown posts to &quot;content/blog&quot;
@@ -72,6 +96,15 @@ export const pageQuery = graphql`
           date
           title
           description
+        }
+      }
+    }
+    externalArticles: allExternalArticlesYaml {
+      edges {
+        node {
+          title
+          url
+          date
         }
       }
     }
