@@ -25,6 +25,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/external-articles`,
+        name: `externalArticles`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/works`,
         name: `works`,
       },
@@ -43,6 +50,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
