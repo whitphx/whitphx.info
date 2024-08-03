@@ -21,3 +21,15 @@
 - title: "In-browser LLM app in pure Python: Gemini Nano + Gradio-Lite"
   url: https://huggingface.co/blog/whitphx/in-browser-llm-gemini-nano-gradio-lite
   date: 2024-07-12
+- title: "#74 whitphxさんをゲストに PyCon DE / LT とヨーロッパ旅行記から始まるOSS話"
+  url: https://podcast.terapyon.net/episodes/0083.html
+  date: 2023-06-01
+  type: podcast
+- title: "#82 小山さんwhitphxさんをゲストに OSSを仕事にをキーワードにHugging Faceや周辺のPython UIフレームワークについて語る"
+  url: https://podcast.terapyon.net/episodes/0091.html
+  date: 2023-08-24
+  type: podcast
+- title: "#91 whitphxさんと福田さんをゲストに Python Web UIフレームワーク特集"
+  url: https://podcast.terapyon.net/episodes/0100.html
+  date: 2024-02-06
+  type: podcast
