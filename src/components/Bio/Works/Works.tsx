@@ -38,18 +38,15 @@ function Works() {
   });
 
   return (
-    <section>
-      <h2 className={styles.heading}>Works</h2>
-      <ul className={styles.listContainer}>
-        {normalizedWorks.map((work) => (
-          <li key={work.id} className={styles.listItem}>
-            <a href={work.url} target="_blank" rel="noreferrer noopener">
-              {work.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <ul className={styles.listContainer}>
+      {normalizedWorks.map((work) => (
+        <li key={work.id} className={styles.listItem}>
+          <a href={work.url} target="_blank" rel="noreferrer noopener">
+            {work.title}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
 

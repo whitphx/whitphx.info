@@ -7,18 +7,9 @@
 
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import {
-  SiX,
-  SiLinkedin,
-  SiGithub,
-  SiDevdotto,
-  SiMedium,
-  SiZenn,
-  SiQiita,
-} from "react-icons/si";
-import SnsLink from "./SnsLink";
 import Works from "./Works";
 import Publications from "./Publications";
+import SnsList from "./SnsList";
 import * as styles from "./Bio.module.scss";
 
 function Bio() {
@@ -39,68 +30,18 @@ function Bio() {
         <div className={styles.bioBody}>
           Software Developer/Indie Dev/OSS Enthusiast
         </div>
-        <ul className={styles.snsList}>
-          <li>
-            <SnsLink
-              href="https://x.com/whitphx"
-              title="Twitter (en)"
-              Icon={SiX}
-              subEmoji="🇬🇧"
-            />
-          </li>
-          <li>
-            <SnsLink
-              href="https://x.com/whitphx_ja"
-              title="Twitter (ja)"
-              Icon={SiX}
-              subEmoji="🇯🇵"
-            />
-          </li>
-          <li>
-            <SnsLink
-              href="https://www.linkedin.com/in/whitphx/"
-              title="LinkedIn"
-              Icon={SiLinkedin}
-            />
-          </li>
-          <li>
-            <SnsLink
-              href="https://github.com/whitphx"
-              title="GitHub"
-              Icon={SiGithub}
-            />
-          </li>
-          <li>
-            <SnsLink
-              href="https://dev.to/whitphx"
-              title="DEV Community"
-              Icon={SiDevdotto}
-            />
-          </li>
-          <li>
-            <SnsLink
-              href="https://medium.com/@whitphx"
-              title="Medium"
-              Icon={SiMedium}
-            />
-          </li>
-          <li>
-            <SnsLink
-              href="https://zenn.dev/whitphx"
-              title="Zenn"
-              Icon={SiZenn}
-            />
-          </li>
-          <li>
-            <SnsLink
-              href="https://qiita.com/whitphx"
-              title="Qiita"
-              Icon={SiQiita}
-            />
-          </li>
-        </ul>
-        <Works />
-        <Publications />
+        <section>
+          <h2 className={styles.heading}>SNS</h2>
+          <SnsList />
+        </section>
+        <section>
+          <h2 className={styles.heading}>Works</h2>
+          <Works />
+        </section>
+        <section>
+          <h2 className={styles.heading}>Publications</h2>
+          <Publications />
+        </section>
       </div>
     </div>
   );

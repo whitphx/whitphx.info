@@ -38,18 +38,15 @@ function Publications() {
   });
 
   return (
-    <section>
-      <h2 className={styles.heading}>Publications</h2>
-      <ul className={styles.listContainer}>
-        {normalizedPublications.map((publication) => (
-          <li key={publication.id} className={styles.listItem}>
-            <a href={publication.url} target="_blank" rel="noreferrer noopener">
-              {publication.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <ul className={styles.listContainer}>
+      {normalizedPublications.map((publication) => (
+        <li key={publication.id} className={styles.listItem}>
+          <a href={publication.url} target="_blank" rel="noreferrer noopener">
+            {publication.title}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
 
