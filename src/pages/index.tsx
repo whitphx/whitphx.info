@@ -50,6 +50,7 @@ function TopPage({ data, location }: PageProps<Queries.BlogIndexQuery>) {
       title,
       url,
       date,
+      type: node.type,
     };
   });
 
@@ -105,6 +106,7 @@ export const pageQuery = graphql`
           title
           url
           date
+          type
         }
       }
     }
