@@ -5,6 +5,7 @@ import {
   SiGithub,
   SiDevdotto,
   SiMedium,
+  SiStackoverflow,
   SiZenn,
   SiQiita,
 } from "react-icons/si";
@@ -56,6 +57,13 @@ function SnsLinks() {
           href="https://medium.com/@whitphx"
           title="Medium"
           Icon={SiMedium}
+        />
+      </li>
+      <li>
+        <SnsLink
+          href="https://stackoverflow.com/users/13103190/whitphx"
+          title="Stack Overflow"
+          Icon={SiStackoverflow}
         />
       </li>
       <li>
