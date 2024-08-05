@@ -13,16 +13,34 @@ interface ExternalContent {
   title: string;
   url: string;
   date: Date;
+  type: string | null;
 }
+
+const CONTENT_TYPE_EMOJI_MAP: Record<string, string> = {
+  article: "📖",
+  video: "🎥",
+  podcast: "🎙️",
+  presentation: "🖼️",
+} as const;
 
 function BlogPostLink(props: { post: BlogPost }) {
   return (
     <Link to={props.post.slug} itemProp="url">
       <h3 className={styles.title}>
-        <span itemProp="headline">{props.post.title}</span>
-        <time className={styles.date}>
-          {formatDate(props.post.date, "yyyy/MM/dd")}
-        </time>
+        <span itemProp="headline" className={styles.headline}>
+          {props.post.title}
+        </span>
+        <span className={styles.subData}>
+          <span className={styles.emoji}>
+            {CONTENT_TYPE_EMOJI_MAP["article"]}
+          </span>
+          <time
+            className={styles.date}
+            dateTime={props.post.date.toISOString()}
+          >
+            {formatDate(props.post.date, "yyyy/MM/dd")}
+          </time>
+        </span>
       </h3>
     </Link>
   );
@@ -30,6 +48,9 @@ function BlogPostLink(props: { post: BlogPost }) {
 
 function ExternalContentLink(props: { content: ExternalContent }) {
   const url = new URL(props.content.url);
+  const subEmoji =
+    (props.content.type && CONTENT_TYPE_EMOJI_MAP[props.content.type]) ??
+    CONTENT_TYPE_EMOJI_MAP["article"];
 
   return (
     <a
@@ -46,12 +67,15 @@ function ExternalContentLink(props: { content: ExternalContent }) {
             ({url.host})<BiLinkExternal />
           </small>
         </span>
-        <time
-          dateTime={props.content.date.toISOString()}
-          className={styles.date}
-        >
-          {formatDate(props.content.date, "yyyy/MM/dd")}
-        </time>
+        <span className={styles.subData}>
+          <span className={styles.emoji}>{subEmoji}</span>
+          <time
+            dateTime={props.content.date.toISOString()}
+            className={styles.date}
+          >
+            {formatDate(props.content.date, "yyyy/MM/dd")}
+          </time>
+        </span>
       </h3>
     </a>
   );
