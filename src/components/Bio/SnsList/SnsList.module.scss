@@ -1,6 +1,7 @@
 ul.snsList {
   list-style: none;
   margin: 0 0 var(--spacing-2);
+  margin-left: calc(var(--spacing-2) * -1);
   padding: 0;
 
   display: flex;
@@ -10,5 +11,4 @@ ul.snsList {
   & li {
     margin: var(--spacing-1) var(--spacing-2);
   }
-  margin-left: calc(var(--spacing-2) * -1);
 }
