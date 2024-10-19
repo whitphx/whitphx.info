@@ -21,7 +21,8 @@ I have rebranded my OSS product [Stlite](https://github.com/whitphx/stlite). For
 
 I made [this issue](https://github.com/whitphx/stlite/issues/1009) for the rebranding discussion.
 
-### Old vs New Logo
+### Old logo
 ![Old logo](./images/old_logo.svg)
 
+### New logo
 ![New logo](./images/new_logo.svg)
