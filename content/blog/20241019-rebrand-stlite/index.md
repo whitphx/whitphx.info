@@ -4,6 +4,7 @@ date: "2024-10-19T12:13:43+09:00"
 description:
 tags: ["dev"]
 lang: en
+heroImage: ./images/hero.png
 ---
 
 I have rebranded my OSS product [Stlite](https://github.com/whitphx/stlite). For the details about the project itself, see [this post](../20221104-streamlit-wasm-stlite/).
