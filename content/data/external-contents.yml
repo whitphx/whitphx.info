@@ -33,3 +33,7 @@
   url: https://podcast.terapyon.net/episodes/0100.html
   date: 2024-02-06
   type: podcast
+- title: "What Streamlit Can and Can't (or Shouldn't) Do"
+  url: https://slides.com/whitphx/what-streamlit-can-and-cant-do
+  date: 2024-11-03
+  type: presentation
