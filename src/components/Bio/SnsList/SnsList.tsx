@@ -9,6 +9,7 @@ import {
   SiZenn,
   SiQiita,
   SiInstagram,
+  SiFacebook,
 } from "react-icons/si";
 import SnsLink from "./SnsLink";
 import * as styles from "./SnsList.module.scss";
@@ -82,6 +83,13 @@ function SnsLinks() {
           href="https://www.instagram.com/whitphx/"
           title="Instagram"
           Icon={SiInstagram}
+        />
+      </li>
+      <li>
+        <SnsLink
+          href="https://www.facebook.com/whitphx/"
+          title="Facebook"
+          Icon={SiFacebook}
         />
       </li>
     </ul>
